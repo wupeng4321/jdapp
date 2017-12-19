@@ -1,5 +1,5 @@
 //
-//  AllocDellocViewController.swift
+//  JDHomeViewController.swift
 //  jdapp
 //
 //  Created by wupeng on 2017/12/19.
@@ -8,19 +8,20 @@
 
 import UIKit
 
-class AllocDellocViewController: UIViewController {
+class JDHomeViewController: AllocDellocViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.view.backgroundColor = UIColor.red
     }
-    init() {
-        
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
+
     /*
     // MARK: - Navigation
 

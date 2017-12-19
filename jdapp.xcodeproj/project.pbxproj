@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0820A7D7D257D338FEC7C114 /* Pods_jdappUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD48AE609168EBE49959CB6 /* Pods_jdappUITests.framework */; };
 		7618B2D41FE8C1ED000F91F4 /* AllocDellocViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7618B2D31FE8C1ED000F91F4 /* AllocDellocViewController.swift */; };
+		7618B2D71FE90FB0000F91F4 /* JDHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7618B2D61FE90FB0000F91F4 /* JDHomeViewController.swift */; };
 		764C64711FE7658E002329AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764C64701FE7658E002329AD /* AppDelegate.swift */; };
 		764C64731FE7658E002329AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764C64721FE7658E002329AD /* ViewController.swift */; };
 		764C64761FE7658E002329AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 764C64741FE7658E002329AD /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		51C0D1454BDBC95A220975F5 /* Pods_jdapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jdapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6332969F15EB458D5B63BA7F /* Pods-jdappUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jdappUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-jdappUITests/Pods-jdappUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7618B2D31FE8C1ED000F91F4 /* AllocDellocViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllocDellocViewController.swift; sourceTree = "<group>"; };
+		7618B2D61FE90FB0000F91F4 /* JDHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDHomeViewController.swift; sourceTree = "<group>"; };
 		764C646D1FE7658E002329AD /* jdapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jdapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		764C64701FE7658E002329AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		764C64721FE7658E002329AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 		7618B2D51FE90475000F91F4 /* SupportFiles */ = {
 			isa = PBXGroup;
 			children = (
+				764C647C1FE7658E002329AD /* Info.plist */,
 				764C64701FE7658E002329AD /* AppDelegate.swift */,
 				764C64721FE7658E002329AD /* ViewController.swift */,
 				764C64741FE7658E002329AD /* Main.storyboard */,
@@ -159,7 +162,6 @@
 		764C646F1FE7658E002329AD /* jdapp */ = {
 			isa = PBXGroup;
 			children = (
-				764C647C1FE7658E002329AD /* Info.plist */,
 				7618B2D51FE90475000F91F4 /* SupportFiles */,
 				76936F661FE8B7300009AB2F /* Helper */,
 				76936F651FE8B66E0009AB2F /* JDMy */,
@@ -192,6 +194,7 @@
 		76936F611FE8B5DA0009AB2F /* JDHome */ = {
 			isa = PBXGroup;
 			children = (
+				7618B2D61FE90FB0000F91F4 /* JDHomeViewController.swift */,
 			);
 			path = JDHome;
 			sourceTree = "<group>";
@@ -528,6 +531,7 @@
 				764C64731FE7658E002329AD /* ViewController.swift in Sources */,
 				7618B2D41FE8C1ED000F91F4 /* AllocDellocViewController.swift in Sources */,
 				764C64711FE7658E002329AD /* AppDelegate.swift in Sources */,
+				7618B2D71FE90FB0000F91F4 /* JDHomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -696,7 +700,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7NQEQBKMMR;
-				INFOPLIST_FILE = jdapp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/jdapp/SupportFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.wupeng.jdapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -712,7 +716,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7NQEQBKMMR;
-				INFOPLIST_FILE = jdapp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/jdapp/SupportFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.wupeng.jdapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
