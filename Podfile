@@ -1,20 +1,23 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '9.0'
 
-target 'jdapp' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+
+#  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for jdapp
-
-  target 'jdappTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'jdappUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-    pod 'AFNetworking'
+def fundation
+    pod 'Alamofire', '~>4.5.0'
 end
+
+target 'jdapp' do
+    fundation
+end
+
+target 'jdappTests' do
+#    fundation
+end
+
+target 'jdappUITests' do
+#    fundation
+end
+

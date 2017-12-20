@@ -16,7 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         self.window = UIWindow.init(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = JDHomeViewController()
+        let vc = JDTabBarController()
+        let nc = JDNavigationController.init(rootViewController: vc)
+        self.window?.rootViewController = nc
+        self.window?.backgroundColor = UIColor.white
+        self.window?.makeKeyAndVisible()
         return true
     }
 

@@ -1,0 +1,15 @@
+/* 
+  File.strings
+  jdapp
+
+  Created by wupeng on 2017/12/20.
+  Copyright © 2017年 wupeng. All rights reserved.
+*/
+
+/************************tabbar************************/
+"s_homepage"="首页";
+"s_category"="分类";
+"s_finder"="发现";
+"s_shopcar"="购物车";
+"s_user"="我的";
+
