@@ -219,12 +219,12 @@
 			path = jdappUITests;
 			sourceTree = "<group>";
 		};
-		7661AF931FEA448E00C20389 /* ViewControllers */ = {
+		7661AF931FEA448E00C20389 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				7618B2D61FE90FB0000F91F4 /* JDHomeViewController.swift */,
 			);
-			path = ViewControllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		7661AF941FEA44A000C20389 /* Views */ = {
@@ -241,12 +241,12 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		7661AF961FEA459D00C20389 /* ViewControllers */ = {
+		7661AF961FEA459D00C20389 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				7661AF9B1FEA466100C20389 /* JDShopCarViewController.swift */,
 			);
-			path = ViewControllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		7661AF971FEA45AF00C20389 /* Views */ = {
@@ -263,12 +263,12 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		7661AF9D1FEA485700C20389 /* ViewControllers */ = {
+		7661AF9D1FEA485700C20389 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				7661AFA31FEA48C900C20389 /* JDCategoryViewController.swift */,
 			);
-			path = ViewControllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		7661AF9E1FEA486600C20389 /* Views */ = {
@@ -285,12 +285,12 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		7661AFA01FEA487800C20389 /* ViewControllers */ = {
+		7661AFA01FEA487800C20389 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				7661AFA51FEA48E000C20389 /* JDFinderViewController.swift */,
 			);
-			path = ViewControllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		7661AFA11FEA488200C20389 /* Views */ = {
@@ -307,12 +307,12 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		7661AFA71FEA48E800C20389 /* ViewControllers */ = {
+		7661AFA71FEA48E800C20389 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				7661AFAA1FEA491500C20389 /* JDUserViewController.swift */,
 			);
-			path = ViewControllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		7661AFA81FEA48F500C20389 /* Views */ = {
@@ -342,7 +342,7 @@
 			children = (
 				7661AF951FEA44B500C20389 /* ViewModels */,
 				7661AF941FEA44A000C20389 /* Views */,
-				7661AF931FEA448E00C20389 /* ViewControllers */,
+				7661AF931FEA448E00C20389 /* Controllers */,
 			);
 			path = JDHome;
 			sourceTree = "<group>";
@@ -352,7 +352,7 @@
 			children = (
 				7661AF9F1FEA486E00C20389 /* ViewModels */,
 				7661AF9E1FEA486600C20389 /* Views */,
-				7661AF9D1FEA485700C20389 /* ViewControllers */,
+				7661AF9D1FEA485700C20389 /* Controllers */,
 			);
 			path = JDCategory;
 			sourceTree = "<group>";
@@ -362,7 +362,7 @@
 			children = (
 				7661AFA21FEA488900C20389 /* ViewModels */,
 				7661AFA11FEA488200C20389 /* Views */,
-				7661AFA01FEA487800C20389 /* ViewControllers */,
+				7661AFA01FEA487800C20389 /* Controllers */,
 			);
 			path = JDFinder;
 			sourceTree = "<group>";
@@ -372,7 +372,7 @@
 			children = (
 				7661AF981FEA45B700C20389 /* ViewModels */,
 				7661AF971FEA45AF00C20389 /* Views */,
-				7661AF961FEA459D00C20389 /* ViewControllers */,
+				7661AF961FEA459D00C20389 /* Controllers */,
 			);
 			path = JDShopCar;
 			sourceTree = "<group>";
@@ -382,7 +382,7 @@
 			children = (
 				7661AFA91FEA48FC00C20389 /* ViewModels */,
 				7661AFA81FEA48F500C20389 /* Views */,
-				7661AFA71FEA48E800C20389 /* ViewControllers */,
+				7661AFA71FEA48E800C20389 /* Controllers */,
 			);
 			path = JDUser;
 			sourceTree = "<group>";

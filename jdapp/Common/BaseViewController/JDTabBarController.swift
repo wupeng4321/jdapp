@@ -20,22 +20,16 @@ class JDTabBarController: UITabBarController {
     
     func setUpAllChildViewControllers() {
         let titles = ["首页", "分类", "发现", "购物车", "我的"]
-//        let vc = NSClassFromString(<#T##aClassName: String##String#>)
         
-        let appName: String = (Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as! String?)!
-        let childVCs = ["JDHomeViewController", "JDCategoryViewController", "JDFinderViewController", "JDShopCarViewController", "JDUserViewController"]
-        
-        
-        
-        
-        
+        let home = JDHomeViewController()
+        let category = JDCategoryViewController()
+        let finder = JDFinderViewController()
+        let shopCar = JDShopCarViewController()
+        let user = JDUserViewController()
+        let childs = [home, category, finder, shopCar, user]
         
         for i in 0 ..< titles.count {
-            
-            let classStringName = "\(appName).\(childVCs[i])"
-            
-            let classType = NSClassFromString(classStringName) as? UIViewController.Type
-            self.setUpChildViewController(childVc: NSClassFromString(classType.init, title: titles[i], normalImage: nil, selectedImage: nil)
+            self.setUpChildViewController(childVc: childs[i], title: titles[i], normalImage: "", selectedImage: "")
         }
     }
     
