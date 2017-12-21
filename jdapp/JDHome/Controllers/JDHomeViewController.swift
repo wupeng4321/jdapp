@@ -15,5 +15,8 @@ class JDHomeViewController: BaseViewController {
         JDLog("s")
         let a = JDString("s_homepage")
         JDLog(a)
+        let s = type(of: self)
+        
+        print(type(of: self))
     }
 }

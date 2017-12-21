@@ -14,12 +14,14 @@ class AllocDellocViewController: UIViewController {
         super.viewDidLoad()
     }
     #if DEBUG
-    
+        var s_allocInfo = Dictionary<String, Int>()
     #endif
+    
+
 
     init() {
         super.init(nibName: nil, bundle: nil)
-        print("alloc")
+        self.allocInit()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -27,11 +29,20 @@ class AllocDellocViewController: UIViewController {
     }
     
     deinit {
-        print("delloc")
+        #if DEBUG
+            JDLog("----------------释放类----------------\(NSStringFromClass(type(of: self)))")
+            
+        #endif
     }
     
     func allocInit() {
-        
+        #if DEBUG
+            JDLog("----------------创建类----------------\(NSStringFromClass(type(of: self)))")
+            let controller:AllocDellocViewController.Type = type(of: self)
+            let str:String = NSStringFromClass(controller)
+            self.s_allocInfo[str] = self.s_allocInfo[str] ?? 0 + 1
+            JDLog(self.s_allocInfo)
+        #endif
     }
 
     
