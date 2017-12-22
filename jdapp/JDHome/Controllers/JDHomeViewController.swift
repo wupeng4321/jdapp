@@ -8,15 +8,24 @@
 
 import UIKit
 
-class JDHomeViewController: BaseViewController {
-
+class JDHomeViewController: BaseViewController  {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        JDLog("s")
-        let a = JDString("s_homepage")
-        JDLog(a)
-        let s = type(of: self)
-        
-        print(type(of: self))
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+
+    func setupUI() {
+        self.view.addSubview(collectionView)
+    }
+    
+    // MARK: - lazy loading
+    lazy var collectionView: UICollectionView = {
+        var col = UICollectionView.init(frame: self.view.bounds, collectionViewLayout: UICollectionViewLayout.init())
+        return col
+    }()
 }
