@@ -12,17 +12,18 @@ class BaseViewController: AllocDellocViewController, UINavigationControllerDeleg
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor.white
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.delegate = self
-
     }
     
     func isHiddenNavigationBar() -> Bool {
         return true
-        
     }
+    
     func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
         if self.isHiddenNavigationBar() {
             self.navigationController?.setNavigationBarHidden(true, animated: true)

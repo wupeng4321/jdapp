@@ -7,6 +7,7 @@ platform :ios, '9.0'
 
 def fundation
     pod 'Alamofire', '~>4.5.0'
+    pod 'ReactiveCocoa', '~> 7.0'
 end
 
 target 'jdapp' do
