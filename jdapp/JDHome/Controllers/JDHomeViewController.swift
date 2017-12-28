@@ -8,10 +8,17 @@
 
 import UIKit
 import ReactiveCocoa
+import Alamofire
+import SnapKit
 
-class JDHomeViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource {
+class JDHomeViewController: BaseViewController, UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
-    let cellId = "cellId"
+    
+    let cellId   = "cellId"
+    let headerId = "headerId"
+    let footerId = "footerId"
+    let headerViewHeight = CGFloat(280)
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,28 +26,40 @@ class JDHomeViewController: BaseViewController, UITableViewDelegate, UITableView
     }
 
     func setupUI() {
-        self.view.addSubview(collectionView)
+        self.view.addSubview(self.collectionView)
+        self.view.addSubview(self.headerView)
     }
     
     
     // MARK: - lazy loading
     lazy var collectionView: UICollectionView = {
-        var col = UICollectionView.init(frame: self.view.bounds, collectionViewLayout: UICollectionViewLayout.init())
-        col.delegate = self
-        col.dataSource = self
-        col.backgroundColor = UIColor.white
-        col.register(type(of: UICollectionViewCell), forCellWithReuseIdentifier: cellId)
+        let layout = UICollectionViewFlowLayout()
+        let collectionView = UICollectionView.init(frame: self.view.bounds, collectionViewLayout: layout)
+//        collectionView.contentInset = UIEdgeInsetsMake(Theme.paddingWithSize(headerViewHeight), 0, 0, 0)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.showsVerticalScrollIndicator = false
+        collectionView.backgroundColor = UIColor.white
+        if ios11 {
+            collectionView.contentInsetAdjustmentBehavior = .never
+        }
         
-        col.register(<#T##cellClass: AnyClass?##AnyClass?#>, forCellWithReuseIdentifier: <#T##String#>)
-        return col
+        collectionView.register(UICollectionViewCell.classForCoder(), forCellWithReuseIdentifier: cellId)
+        collectionView.register(UICollectionReusableView.classForCoder(), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId)
+        collectionView.register(UICollectionReusableView.classForCoder(), forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: footerId)
+        return collectionView
     }()
     
-    lazy var tableView:UITableView = {
-        var tableView = UITableView.init(frame: self.view.bounds, style: .plain)
-        tableView.delegate = self
-        tableView.dataSource = self
-        return tableView
+    lazy var headerView: TransparentNavigationBar = {
+//        var headerView = UIView(frame: CGRect(x: CGFloat(0), y: CGFloat(0), width: kScreenWidth, height: CGFloat(kStatusBarAndNavHeight)))
+        let headerView = TransparentNavigationBar.init(frame: CGRect(x: CGFloat(0), y: CGFloat(0), width: kScreenWidth, height: CGFloat(kStatusBarAndNavHeight)))
+        headerView.backgroundColor = ArcRandomColor()
+        headerView.scrollView = self.collectionView
+        return headerView
     }()
+    
+    
+
     
     //MARK: - collectionView delegate & dataSource
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -52,32 +71,65 @@ class JDHomeViewController: BaseViewController, UITableViewDelegate, UITableView
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        var cell:UICollectionViewCell? = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
-        if cell == nil {
-            cell = UICollectionViewCell.init()
-            cell?.backgroundColor = UIColor.red
-        }
-        return cell!
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
+        cell.backgroundColor = UIColor.gray
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         if kind == UICollectionElementKindSectionHeader {
-            
+            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath)
+            headerView.backgroundColor = UIColor.purple
+            return headerView
         }
+        if kind == UICollectionElementKindSectionFooter {
+            let footView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: footerId, for: indexPath)
+            footView.backgroundColor = UIColor.purple
+            return footView
+        }
+        return UICollectionReusableView.init()
     }
     
-    
-    // MARK: - tableView delegate & dataSource
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.backgroundColor = UIColor.green
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: "cellId")
-        if cell == nil {
-            cell = UITableViewCell.init()
+    func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, canMoveItemAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    //MARK: - UICollectionViewDelegateFlowLayout
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let a = indexPath.row
+        let b = Int(arc4random() % 10)
+        return CGSize(width: 34, height: 56 + a * b)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsetsMake(5, 5, 5, 5)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return CGFloat(5)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return CGFloat(5)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        if section == 0 {
+            return CGSize(width: kScreenWidth, height: headerViewHeight)
         }
-        cell?.textLabel?.text = "derqw"
-        return cell!
+        return CGSize(width: kScreenWidth, height: 44)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        return CGSize(width: kScreenWidth, height: 44)
     }
 }

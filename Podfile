@@ -6,8 +6,9 @@ platform :ios, '9.0'
   use_frameworks!
 
 def fundation
-    pod 'Alamofire', '~>4.5.0'
+    pod 'Alamofire', '~>4.5.0' #AFNetworking
     pod 'ReactiveCocoa', '~> 7.0'
+    pod 'SnapKit', '~> 4.0.0'
 end
 
 target 'jdapp' do

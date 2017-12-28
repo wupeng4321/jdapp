@@ -16,6 +16,7 @@
 		764C647B1FE7658E002329AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 764C64791FE7658E002329AD /* LaunchScreen.storyboard */; };
 		764C64861FE7658E002329AD /* jdappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764C64851FE7658E002329AD /* jdappTests.swift */; };
 		764C64911FE7658E002329AD /* jdappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764C64901FE7658E002329AD /* jdappUITests.swift */; };
+		7660B9ED1FF4D9D000082363 /* TransparentNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7660B9EC1FF4D9D000082363 /* TransparentNavigationBar.swift */; };
 		7661AF9A1FEA460C00C20389 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7661AF991FEA460C00C20389 /* BaseViewController.swift */; };
 		7661AF9C1FEA466100C20389 /* JDShopCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7661AF9B1FEA466100C20389 /* JDShopCarViewController.swift */; };
 		7661AFA41FEA48C900C20389 /* JDCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7661AFA31FEA48C900C20389 /* JDCategoryViewController.swift */; };
@@ -70,6 +71,9 @@
 		764C648C1FE7658E002329AD /* jdappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jdappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		764C64901FE7658E002329AD /* jdappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jdappUITests.swift; sourceTree = "<group>"; };
 		764C64921FE7658E002329AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7660B9E81FF4A1B500082363 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7660B9EA1FF4C2CF00082363 /* 京东首页导航栏.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "京东首页导航栏.md"; sourceTree = "<group>"; };
+		7660B9EC1FF4D9D000082363 /* TransparentNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentNavigationBar.swift; sourceTree = "<group>"; };
 		7661AF991FEA460C00C20389 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		7661AF9B1FEA466100C20389 /* JDShopCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDShopCarViewController.swift; sourceTree = "<group>"; };
 		7661AFA31FEA48C900C20389 /* JDCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDCategoryViewController.swift; sourceTree = "<group>"; };
@@ -167,6 +171,7 @@
 		764C64641FE7658E002329AD = {
 			isa = PBXGroup;
 			children = (
+				7660B9E91FF4A56F00082363 /* ReadMe */,
 				764C646F1FE7658E002329AD /* jdapp */,
 				764C64841FE7658E002329AD /* jdappTests */,
 				764C648F1FE7658E002329AD /* jdappUITests */,
@@ -217,6 +222,23 @@
 				764C64921FE7658E002329AD /* Info.plist */,
 			);
 			path = jdappUITests;
+			sourceTree = "<group>";
+		};
+		7660B9E91FF4A56F00082363 /* ReadMe */ = {
+			isa = PBXGroup;
+			children = (
+				7660B9E81FF4A1B500082363 /* README.md */,
+				7660B9EA1FF4C2CF00082363 /* 京东首页导航栏.md */,
+			);
+			path = ReadMe;
+			sourceTree = "<group>";
+		};
+		7660B9EB1FF4D99000082363 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7660B9EC1FF4D9D000082363 /* TransparentNavigationBar.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		7661AF931FEA448E00C20389 /* Controllers */ = {
@@ -332,6 +354,7 @@
 		7661AFAE1FEA49F800C20389 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				7660B9EB1FF4D99000082363 /* Views */,
 				7618B2D21FE8C1B4000F91F4 /* BaseViewController */,
 			);
 			path = Common;
@@ -602,6 +625,7 @@
 				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -609,6 +633,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -711,6 +736,7 @@
 				7661AFB01FEA4A5B00C20389 /* JDNavigationController.swift in Sources */,
 				764C64711FE7658E002329AD /* AppDelegate.swift in Sources */,
 				7661AFA61FEA48E000C20389 /* JDFinderViewController.swift in Sources */,
+				7660B9ED1FF4D9D000082363 /* TransparentNavigationBar.swift in Sources */,
 				7661AFA41FEA48C900C20389 /* JDCategoryViewController.swift in Sources */,
 				7618B2D71FE90FB0000F91F4 /* JDHomeViewController.swift in Sources */,
 				7661AFBE1FEA630100C20389 /* Theme.swift in Sources */,
