@@ -13,12 +13,10 @@ import SnapKit
 
 class JDHomeViewController: BaseViewController, UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
-    
     let cellId   = "cellId"
     let headerId = "headerId"
     let footerId = "footerId"
-    let headerViewHeight = CGFloat(280)
-    
+    let navigatorId = "navigatorId"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +43,7 @@ class JDHomeViewController: BaseViewController, UICollectionViewDelegate, UIColl
         }
         
         collectionView.register(UICollectionViewCell.classForCoder(), forCellWithReuseIdentifier: cellId)
+        collectionView.register(UICollectionViewCell.classForCoder(), forCellWithReuseIdentifier: navigatorId)
         collectionView.register(UICollectionReusableView.classForCoder(), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId)
         collectionView.register(UICollectionReusableView.classForCoder(), forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: footerId)
         return collectionView
@@ -53,7 +52,6 @@ class JDHomeViewController: BaseViewController, UICollectionViewDelegate, UIColl
     lazy var headerView: TransparentNavigationBar = {
 //        var headerView = UIView(frame: CGRect(x: CGFloat(0), y: CGFloat(0), width: kScreenWidth, height: CGFloat(kStatusBarAndNavHeight)))
         let headerView = TransparentNavigationBar.init(frame: CGRect(x: CGFloat(0), y: CGFloat(0), width: kScreenWidth, height: CGFloat(kStatusBarAndNavHeight)))
-        headerView.backgroundColor = ArcRandomColor()
         headerView.scrollView = self.collectionView
         return headerView
     }()
@@ -67,12 +65,19 @@ class JDHomeViewController: BaseViewController, UICollectionViewDelegate, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if section == 0 {
+            return 1
+        }
         return 23
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+       
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
         cell.backgroundColor = UIColor.gray
+        if indexPath.section == 0 {
+            cell.addSubview(NavigatorScrollView())
+        }
         return cell
     }
     
@@ -105,26 +110,31 @@ class JDHomeViewController: BaseViewController, UICollectionViewDelegate, UIColl
     
     //MARK: - UICollectionViewDelegateFlowLayout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        if indexPath.section == 0 {
+            return CGSize(width: kScreenWidth, height: 180)
+        }
+        
         let a = indexPath.row
         let b = Int(arc4random() % 10)
         return CGSize(width: 34, height: 56 + a * b)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsetsMake(5, 5, 5, 5)
+        return UIEdgeInsetsMake(0, 5, 5, 5)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return CGFloat(5)
+        return CGFloat(0)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return CGFloat(5)
+        return CGFloat(0)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         if section == 0 {
-            return CGSize(width: kScreenWidth, height: headerViewHeight)
+            return CGSize(width: kScreenWidth, height: CGFloat(kBannerHeight))
         }
         return CGSize(width: kScreenWidth, height: 44)
     }

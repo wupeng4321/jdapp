@@ -27,6 +27,13 @@
 		7661AFB41FEA5A3300C20389 /* UtilMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7661AFB31FEA5A3300C20389 /* UtilMacro.swift */; };
 		7661AFB71FEA5E1C00C20389 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7661AFB91FEA5E1C00C20389 /* Localizable.strings */; };
 		7661AFBE1FEA630100C20389 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7661AFBD1FEA630100C20389 /* Theme.swift */; };
+		76992B311FF627C50028F677 /* NavigatorScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76992B301FF627C50028F677 /* NavigatorScrollView.swift */; };
+		76992B331FF62BED0028F677 /* JDHomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76992B321FF62BED0028F677 /* JDHomeViewCell.swift */; };
+		76992B351FF630C70028F677 /* JDHomeBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76992B341FF630C70028F677 /* JDHomeBannerCell.swift */; };
+		76992B371FF630F80028F677 /* JDHomeNavigatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76992B361FF630F80028F677 /* JDHomeNavigatorCell.swift */; };
+		76992B391FF633080028F677 /* JDHomeGoodsCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76992B381FF633080028F677 /* JDHomeGoodsCategoryCell.swift */; };
+		76992B3C1FF633570028F677 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76992B3B1FF633570028F677 /* BaseViewModel.swift */; };
+		76992B3E1FF633900028F677 /* JDHomeGoodCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76992B3D1FF633900028F677 /* JDHomeGoodCategoryViewModel.swift */; };
 		AC31B07CBD8FAC5864A5CFBF /* Pods_jdappTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E5807BEFD1D3DC3355FF96 /* Pods_jdappTests.framework */; };
 		E33F46BE90054E7E4FBC0DB1 /* Pods_jdapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51C0D1454BDBC95A220975F5 /* Pods_jdapp.framework */; };
 		FB798A20B420FB8B44180CB9 /* Pods_jdappUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5183592F079C84E6CFE728B3 /* Pods_jdappUITests.framework */; };
@@ -87,6 +94,13 @@
 		7661AFBB1FEA5E3D00C20389 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		7661AFBC1FEA5E3D00C20389 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		7661AFBD1FEA630100C20389 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		76992B301FF627C50028F677 /* NavigatorScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorScrollView.swift; sourceTree = "<group>"; };
+		76992B321FF62BED0028F677 /* JDHomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDHomeViewCell.swift; sourceTree = "<group>"; };
+		76992B341FF630C70028F677 /* JDHomeBannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDHomeBannerCell.swift; sourceTree = "<group>"; };
+		76992B361FF630F80028F677 /* JDHomeNavigatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDHomeNavigatorCell.swift; sourceTree = "<group>"; };
+		76992B381FF633080028F677 /* JDHomeGoodsCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDHomeGoodsCategoryCell.swift; sourceTree = "<group>"; };
+		76992B3B1FF633570028F677 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		76992B3D1FF633900028F677 /* JDHomeGoodCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDHomeGoodCategoryViewModel.swift; sourceTree = "<group>"; };
 		A697D9B77D083E9AC853E4A8 /* Pods-jdapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jdapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-jdapp/Pods-jdapp.debug.xcconfig"; sourceTree = "<group>"; };
 		D799D89983D0B28CDCCB4974 /* Pods-jdappTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jdappTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-jdappTests/Pods-jdappTests.release.xcconfig"; sourceTree = "<group>"; };
 		F2B0D6871C46360AE6BF9BD7 /* Pods-jdappTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jdappTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-jdappTests/Pods-jdappTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -237,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				7660B9EC1FF4D9D000082363 /* TransparentNavigationBar.swift */,
+				76992B301FF627C50028F677 /* NavigatorScrollView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -252,6 +267,10 @@
 		7661AF941FEA44A000C20389 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				76992B321FF62BED0028F677 /* JDHomeViewCell.swift */,
+				76992B341FF630C70028F677 /* JDHomeBannerCell.swift */,
+				76992B361FF630F80028F677 /* JDHomeNavigatorCell.swift */,
+				76992B381FF633080028F677 /* JDHomeGoodsCategoryCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -259,6 +278,7 @@
 		7661AF951FEA44B500C20389 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				76992B3D1FF633900028F677 /* JDHomeGoodCategoryViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -354,6 +374,7 @@
 		7661AFAE1FEA49F800C20389 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				76992B3A1FF633380028F677 /* ViewModels */,
 				7660B9EB1FF4D99000082363 /* Views */,
 				7618B2D21FE8C1B4000F91F4 /* BaseViewController */,
 			);
@@ -417,6 +438,14 @@
 				7661AFBD1FEA630100C20389 /* Theme.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		76992B3A1FF633380028F677 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				76992B3B1FF633570028F677 /* BaseViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -729,19 +758,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				7661AFAD1FEA497600C20389 /* JDTabBarController.swift in Sources */,
+				76992B3C1FF633570028F677 /* BaseViewModel.swift in Sources */,
+				76992B331FF62BED0028F677 /* JDHomeViewCell.swift in Sources */,
 				7661AF9A1FEA460C00C20389 /* BaseViewController.swift in Sources */,
 				7661AFB41FEA5A3300C20389 /* UtilMacro.swift in Sources */,
+				76992B371FF630F80028F677 /* JDHomeNavigatorCell.swift in Sources */,
 				764C64731FE7658E002329AD /* ViewController.swift in Sources */,
 				7618B2D41FE8C1ED000F91F4 /* AllocDellocViewController.swift in Sources */,
 				7661AFB01FEA4A5B00C20389 /* JDNavigationController.swift in Sources */,
 				764C64711FE7658E002329AD /* AppDelegate.swift in Sources */,
 				7661AFA61FEA48E000C20389 /* JDFinderViewController.swift in Sources */,
 				7660B9ED1FF4D9D000082363 /* TransparentNavigationBar.swift in Sources */,
+				76992B391FF633080028F677 /* JDHomeGoodsCategoryCell.swift in Sources */,
 				7661AFA41FEA48C900C20389 /* JDCategoryViewController.swift in Sources */,
 				7618B2D71FE90FB0000F91F4 /* JDHomeViewController.swift in Sources */,
+				76992B351FF630C70028F677 /* JDHomeBannerCell.swift in Sources */,
 				7661AFBE1FEA630100C20389 /* Theme.swift in Sources */,
+				76992B311FF627C50028F677 /* NavigatorScrollView.swift in Sources */,
 				7661AFAB1FEA491500C20389 /* JDUserViewController.swift in Sources */,
 				7661AF9C1FEA466100C20389 /* JDShopCarViewController.swift in Sources */,
+				76992B3E1FF633900028F677 /* JDHomeGoodCategoryViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

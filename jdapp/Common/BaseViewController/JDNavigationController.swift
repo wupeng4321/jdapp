@@ -12,8 +12,6 @@ class JDNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
     }
     
     override init(rootViewController: UIViewController) {

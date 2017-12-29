@@ -28,6 +28,7 @@ let kColorDarkGray          = ColorFromRGB(0x333333) // text title
 let kColorGray              = ColorFromRGB(0x666666) // text body
 let kColorDimGray           = ColorFromRGB(0x999999) // text notes
 let kColorLightGray         = ColorFromRGB(0xd1d1d1) // text place holder
+let themeColor              = kColorWhite
 
 //==========================================================================
 //MARK - size
@@ -38,6 +39,8 @@ let kStatusBarHeight        = iphoneX ? 44 : 20
 let kTabBarHeight           = iphoneX ? 49 + 32 : 49
 let kStatusBarAndNavHeight  = iphoneX ? 88 : 64
 let kScale                  = kScreenWidth / 375
+let kBannerHeight           = 180
+let kPadding                = Theme.paddingWithSize(28) //left padding and right padding
 
 //==========================================================================
 //MARK - font
