@@ -14,5 +14,6 @@ class JDHomeGoodCategoryViewModel: BaseViewModel {
     var image: String?
     var subImage: String?
     var subLittleImage: String?
+    
 
 }
