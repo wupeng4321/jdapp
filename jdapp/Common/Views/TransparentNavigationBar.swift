@@ -7,6 +7,10 @@
 //
 
 import UIKit
+enum style:Int {
+    case defaultStyle = 0 //带有scrollview,动态调整颜色和透明度
+    case normalStyle  = 1 //不带有scrollView,无法动态调整颜色和透明度
+}
 
 
 class TransparentNavigationBar: UIView {
@@ -15,6 +19,8 @@ class TransparentNavigationBar: UIView {
     let padding = Theme.paddingWithSize(28)
     let searchTextFieldHeight = CGFloat(kNavigationBarHeight) * 0.7
     var _scrollView: UIScrollView?
+    var _textFieldBackgroundColor: UIColor?//defaultStyle默认情况为白色,normalStyle默认是灰色
+    var _style: style?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -114,6 +120,7 @@ class TransparentNavigationBar: UIView {
         return searchTextField
     }()
     
+    //MARK: - setter & getter
     var scrollView: UIScrollView {
         set(new) {
             _scrollView = new
@@ -121,6 +128,35 @@ class TransparentNavigationBar: UIView {
         }
         get {
             return _scrollView!
+        }
+    }
+    
+    var textFieldBackgroundColor: UIColor {
+        set(color) {
+            _textFieldBackgroundColor = color
+            self.searchTextField.backgroundColor = _textFieldBackgroundColor
+        }
+        get {
+            return _textFieldBackgroundColor!
+        }
+    }
+    
+    var style: style {
+        set(sty) {
+            _style = sty
+            if _style! == .normalStyle {
+                //noraml 状态下会有底部黑色阴影
+                let shadowView = UIView()
+                shadowView.backgroundColor = kColorForSeparatorLine
+                self.addSubview(shadowView)
+                shadowView.snp.makeConstraints({ (make) -> Void in
+                    make.left.right.bottom.equalTo(self)
+                    make.height.equalTo(1)
+                })
+            }
+        }
+        get {
+            return _style!
         }
     }
     

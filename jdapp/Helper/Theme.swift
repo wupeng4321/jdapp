@@ -28,6 +28,7 @@ let kColorDarkGray          = ColorFromRGB(0x333333) // text title
 let kColorGray              = ColorFromRGB(0x666666) // text body
 let kColorDimGray           = ColorFromRGB(0x999999) // text notes
 let kColorLightGray         = ColorFromRGB(0xd1d1d1) // text place holder
+let kColorForSeparatorLine  = ColorFromRGB(0xeaeaea)
 let themeColor              = kColorWhite
 
 //==========================================================================

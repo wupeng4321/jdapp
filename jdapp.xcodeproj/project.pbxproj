@@ -101,6 +101,7 @@
 		76620BDD1FFCC69B00414D4D /* GoodsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsView.swift; sourceTree = "<group>"; };
 		76620BDF1FFCC96500414D4D /* GoodsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsViewModel.swift; sourceTree = "<group>"; };
 		76620BE11FFCDAFE00414D4D /* JDHomeGoodsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDHomeGoodsViewCell.swift; sourceTree = "<group>"; };
+		76636F161FFDC53600E76CCA /* ReactiveSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReactiveSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76824FC31FFB6EDC00FAEB2C /* JDHomeGoodsCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDHomeGoodsCategoryCell.swift; sourceTree = "<group>"; };
 		76992B301FF627C50028F677 /* NavigatorScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorScrollView.swift; sourceTree = "<group>"; };
 		76992B321FF62BED0028F677 /* JDHomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDHomeViewCell.swift; sourceTree = "<group>"; };
@@ -144,6 +145,7 @@
 		1A255ED566A5A0017E3A9153 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				76636F161FFDC53600E76CCA /* ReactiveSwift.framework */,
 				51C0D1454BDBC95A220975F5 /* Pods_jdapp.framework */,
 				04E5807BEFD1D3DC3355FF96 /* Pods_jdappTests.framework */,
 				5183592F079C84E6CFE728B3 /* Pods_jdappUITests.framework */,

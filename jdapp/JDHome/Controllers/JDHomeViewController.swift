@@ -13,13 +13,13 @@ import SnapKit
 
 class JDHomeViewController: BaseViewController, UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
-    let cellId      = "cellId"
-    let headerId    = "headerId"
-    let footerId    = "footerId"
-    let navigatorId = "navigatorId"
-    let goodsCategory = "goodsCategory"
-    let bannerId = "bannerId"
-    let goodsId = "goodsId"
+    let cellId          = "cellId"
+    let headerId        = "headerId"
+    let footerId        = "footerId"
+    let navigatorId     = "navigatorId"
+    let goodsCategory   = "goodsCategory"
+    let bannerId        = "bannerId"
+    let goodsId         = "goodsId"
     
     let goodCategoryHeight = 100
     

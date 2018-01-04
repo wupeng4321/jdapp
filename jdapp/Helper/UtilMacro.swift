@@ -50,7 +50,7 @@ func Color(_ red:CGFloat, _ green:CGFloat, _ blue:CGFloat) -> UIColor {
 }
 
 func ColorA(_ red:CGFloat, _ green:CGFloat, _ blue:CGFloat, _ alpha:CGFloat) -> UIColor {
-    return UIColor.init(red: red, green: green, blue: blue, alpha: alpha)
+    return UIColor(red: red, green: green, blue: blue, alpha: alpha)
 }
 
 func ColorFromRGB(_ hexColor:Int) -> UIColor {
@@ -73,15 +73,30 @@ let kKeyWindow    = UIApplication.shared.keyWindow
 let kAppVersion   = Bundle.main.infoDictionary!["CFBundleShortVersionString"]
 let kAppAdIdentifier = ASIdentifierManager.shared().advertisingIdentifier.uuidString
 
-let ios9  = NLSystemVersionGreaterOrEqualThan(version: 9.0)
-let ios10 = NLSystemVersionGreaterOrEqualThan(version: 10.0)
-let ios11 = NLSystemVersionGreaterOrEqualThan(version: 11.0)
+let ios9  = { () -> Bool in
+    if #available(iOS 9.0, *) {
+        return true
+    }
+    return false
+}()
+let ios10 = { () -> Bool in
+    if #available(iOS 10.0, *) {
+        return true
+    }
+    return false
+}()
+let ios11 = { () -> Bool in
+    if #available(iOS 11.0, *) {
+        return true
+    }
+    return false
+}()
 
-
-func NLSystemVersionGreaterOrEqualThan(version:CGFloat) -> Bool {
-    let versionStr = UIDevice.current.systemVersion
-    return Float(versionStr)! > Float(version)
-}
+//func NLSystemVersionGreaterOrEqualThan(version:Double) -> Bool {
+//     UIDevice 在 macOS 中不存在，不能在所有平台上使用同样的代码路径
+//     let versionStr = UIDevice.current.systemVersion
+//     return Float(versionStr)! > Float(version)
+//}
 
 
 
