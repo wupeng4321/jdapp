@@ -109,6 +109,7 @@
 		76992B361FF630F80028F677 /* JDHomeNavigatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDHomeNavigatorCell.swift; sourceTree = "<group>"; };
 		76992B3B1FF633570028F677 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		76992B3D1FF633900028F677 /* JDHomeGoodCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDHomeGoodCategoryViewModel.swift; sourceTree = "<group>"; };
+		76C286342000E6C9006B1AA5 /* ShopCar.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ShopCar.md; sourceTree = "<group>"; };
 		A697D9B77D083E9AC853E4A8 /* Pods-jdapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jdapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-jdapp/Pods-jdapp.debug.xcconfig"; sourceTree = "<group>"; };
 		D799D89983D0B28CDCCB4974 /* Pods-jdappTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jdappTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-jdappTests/Pods-jdappTests.release.xcconfig"; sourceTree = "<group>"; };
 		F2B0D6871C46360AE6BF9BD7 /* Pods-jdappTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jdappTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-jdappTests/Pods-jdappTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -253,6 +254,7 @@
 				7660B9E81FF4A1B500082363 /* README.md */,
 				7660B9EA1FF4C2CF00082363 /* 京东首页导航栏.md */,
 				76620BDC1FFC7D4800414D4D /* Tips.md */,
+				76C286342000E6C9006B1AA5 /* ShopCar.md */,
 			);
 			path = ReadMe;
 			sourceTree = "<group>";
