@@ -45,6 +45,8 @@ class NavigatorScrollView: UIScrollView {
             }
             let btn = UIButton(frame: CGRect(x: x, y: y, width: kButtonWidth, height: kButtonHeight))
             btn.backgroundColor = ArcRandomColor()
+            let image = UIImage(named: "tabBar_myJD_normal")
+            btn.setImage(image, for: .normal)
             wraper.addSubview(btn)
         }
     }

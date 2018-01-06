@@ -20,6 +20,8 @@ class JDTabBarController: UITabBarController {
     
     func setUpAllChildViewControllers() {
         let titles = ["首页", "分类", "发现", "购物车", "我的"]
+        let normalImages = ["tabBar_home_normal", "tabBar_category_normal", "tabBar_me_normal", "tabBar_cart_normal", "tabBar_myJD_normal"]
+        let selectedImages = ["tabBar_home_press", "tabBar_category_press", "tabBar_me_press", "tabBar_cart_press", "tabBar_myJD_press"]
         
         let home = JDHomeViewController()
         let category = JDCategoryViewController()
@@ -29,12 +31,12 @@ class JDTabBarController: UITabBarController {
         let childs = [home, category, finder, shopCar, user]
         
         for i in 0 ..< titles.count {
-            self.setUpChildViewController(childVc: childs[i], title: titles[i], normalImage: "", selectedImage: "")
+            self.setUpChildViewController(childVc: childs[i], title: titles[i], normalImage: normalImages[i], selectedImage: selectedImages[i])
         }
     }
     
     func setUpChildViewController(childVc:UIViewController, title:String, normalImage:String, selectedImage:String) {
-        childVc.title = title;
+//        childVc.title = title;
         childVc.tabBarItem.image = UIImage(named: normalImage)
         childVc.tabBarItem.selectedImage = UIImage(named: selectedImage)
         tabBar.tintColor = UIColor.red
