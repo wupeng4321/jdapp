@@ -37,6 +37,7 @@
 		76992B371FF630F80028F677 /* JDHomeNavigatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76992B361FF630F80028F677 /* JDHomeNavigatorCell.swift */; };
 		76992B3C1FF633570028F677 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76992B3B1FF633570028F677 /* BaseViewModel.swift */; };
 		76992B3E1FF633900028F677 /* JDHomeGoodCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76992B3D1FF633900028F677 /* JDHomeGoodCategoryViewModel.swift */; };
+		76A0C62120026F2F00A3F500 /* JDShopCarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A0C62020026F2F00A3F500 /* JDShopCarViewModel.swift */; };
 		AC31B07CBD8FAC5864A5CFBF /* Pods_jdappTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E5807BEFD1D3DC3355FF96 /* Pods_jdappTests.framework */; };
 		E33F46BE90054E7E4FBC0DB1 /* Pods_jdapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51C0D1454BDBC95A220975F5 /* Pods_jdapp.framework */; };
 		FB798A20B420FB8B44180CB9 /* Pods_jdappUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5183592F079C84E6CFE728B3 /* Pods_jdappUITests.framework */; };
@@ -109,6 +110,7 @@
 		76992B361FF630F80028F677 /* JDHomeNavigatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDHomeNavigatorCell.swift; sourceTree = "<group>"; };
 		76992B3B1FF633570028F677 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		76992B3D1FF633900028F677 /* JDHomeGoodCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDHomeGoodCategoryViewModel.swift; sourceTree = "<group>"; };
+		76A0C62020026F2F00A3F500 /* JDShopCarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JDShopCarViewModel.swift; path = jdapp/JDShopCar/ViewModels/JDShopCarViewModel.swift; sourceTree = SOURCE_ROOT; };
 		76C286342000E6C9006B1AA5 /* ShopCar.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ShopCar.md; sourceTree = "<group>"; };
 		A697D9B77D083E9AC853E4A8 /* Pods-jdapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jdapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-jdapp/Pods-jdapp.debug.xcconfig"; sourceTree = "<group>"; };
 		D799D89983D0B28CDCCB4974 /* Pods-jdappTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jdappTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-jdappTests/Pods-jdappTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -305,20 +307,6 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		7661AF971FEA45AF00C20389 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		7661AF981FEA45B700C20389 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
 		7661AF9D1FEA485700C20389 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -435,8 +423,8 @@
 		76936F641FE8B65A0009AB2F /* JDShopCar */ = {
 			isa = PBXGroup;
 			children = (
-				7661AF981FEA45B700C20389 /* ViewModels */,
-				7661AF971FEA45AF00C20389 /* Views */,
+				76A0C62320026F5F00A3F500 /* ViewModels */,
+				76A0C62220026F5000A3F500 /* Views */,
 				7661AF961FEA459D00C20389 /* Controllers */,
 			);
 			path = JDShopCar;
@@ -467,6 +455,21 @@
 			children = (
 				76992B3B1FF633570028F677 /* BaseViewModel.swift */,
 				76620BDF1FFCC96500414D4D /* GoodsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		76A0C62220026F5000A3F500 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		76A0C62320026F5F00A3F500 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				76A0C62020026F2F00A3F500 /* JDShopCarViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -678,6 +681,7 @@
 				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -686,6 +690,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -785,6 +790,7 @@
 				76992B331FF62BED0028F677 /* JDHomeViewCell.swift in Sources */,
 				7661AF9A1FEA460C00C20389 /* BaseViewController.swift in Sources */,
 				7661AFB41FEA5A3300C20389 /* UtilMacro.swift in Sources */,
+				76A0C62120026F2F00A3F500 /* JDShopCarViewModel.swift in Sources */,
 				76992B371FF630F80028F677 /* JDHomeNavigatorCell.swift in Sources */,
 				76620BE01FFCC96500414D4D /* GoodsViewModel.swift in Sources */,
 				76824FC41FFB6EDC00FAEB2C /* JDHomeGoodsCategoryCell.swift in Sources */,

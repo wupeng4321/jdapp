@@ -9,6 +9,7 @@ def fundation
     pod 'Alamofire', '~>4.5.0'    #AFNetworking
     pod 'ReactiveCocoa', '~> 7.0' #handle events
     pod 'SnapKit', '~> 4.0.0'     #layout
+    pod 'SwiftyJSON', '~> 4.0.0'  #MJExtension
 end
 
 target 'jdapp' do
