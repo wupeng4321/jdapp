@@ -30,6 +30,7 @@ let kColorDimGray           = ColorFromRGB(0x999999) // text notes
 let kColorLightGray         = ColorFromRGB(0xd1d1d1) // text place holder
 let kColorForSeparatorLine  = ColorFromRGB(0xeaeaea)
 let themeColor              = kColorWhite
+let kColorBackground        = ColorFromRGB(0xf3f5f7) // text background color
 
 //==========================================================================
 //MARK - size

@@ -10,24 +10,35 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class JDShopCarViewController: AllocDellocViewController {
+class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     let url = "http://api.m.jd.com/client.action?functionId=cart"
+    let jdShopCarGoodsCell = "JDShopCarGoodsCell"
+    let headerId = "headerId"
+    let footerId = "footerId"
+    var json: JSON = []
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.setupUI()
         self.navigationItem.title = "购物车"
-        let btn = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
-        btn.backgroundColor = ArcRandomColor()
-        btn.addTarget(self, action: #selector(btnClick(sender:)), for: .touchUpInside)
-        self.view.addSubview(btn)
+        self.loadData()
+//        let btn = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
+//        btn.backgroundColor = ArcRandomColor()
+//        btn.addTarget(self, action: #selector(btnClick(sender:)), for: .touchUpInside)
+//        self.view.addSubview(btn)
     }
     @objc func btnClick(sender: UIButton) -> Void {
         self.loadData()
     }
     
     func setupUI() {
-        
+        self.view.addSubview(self.collectionView)
+        self.collectionView.snp.makeConstraints { (make) -> Void in
+            make.top.equalTo(self.view).offset(kStatusBarAndNavHeight)
+            make.bottom.equalTo(self.view).offset(-kTabBarHeight)
+            make.left.right.equalTo(self.view)
+        }
     }
     
     func loadData() {
@@ -67,22 +78,106 @@ class JDShopCarViewController: AllocDellocViewController {
             switch response.result {
             case .success(let value):
                 print("*****************")
-//                print(value)
                 let json = JSON(value)
+                self.json = json["cartInfo"]
+                self.collectionView.reloadData()
                 print(json["cartInfo"]["vendors"])
-                print(type(of: value))
             case .failure(let error):
                 print(error)
             }
         }
     }
     
+    //MARK: - lazy loading
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
 
         let collectionView: UICollectionView = UICollectionView(frame: CGRect(), collectionViewLayout: layout)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.backgroundColor = kColorBackground
+        collectionView.register(JDShopCarGoodsCell.classForCoder(), forCellWithReuseIdentifier: jdShopCarGoodsCell)
+        
+        collectionView.register(JDShopCarGoodsStoreView.classForCoder(), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId)
+        collectionView.register(UICollectionReusableView.classForCoder(), forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: footerId)
+
         return collectionView
     }()
+    
+    //MARK: - UICollectionViewDelegate & UICollectionViewDataSource
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: jdShopCarGoodsCell, for: indexPath)
+        cell.backgroundColor = UIColor.red
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        if json.count != 0 {
+            let array = json["vendors"]
+            return array.count
+        } else {
+            return 10
+        }
+    
+        
+    }
+    
+    //MARK: - UICollectionViewDelegateFlowLayout
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: kScreenWidth, height: 150)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return CGFloat(10)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return CGFloat(10)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+
+        return CGSize(width: kScreenWidth, height: 44)
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        return CGSize(width: kScreenWidth, height: 10)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        
+        return UIEdgeInsetsMake(0, 0, 0, 0)
+        //        if section == 1 || section == 2 {
+        //        }
+        //        return UIEdgeInsetsMake(0, 5, 0, 5)
+    }
+
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        if kind == UICollectionElementKindSectionHeader {
+            let headerView:JDShopCarGoodsStoreView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath) as! JDShopCarGoodsStoreView
+            let data = self.json["vendors"][indexPath.section]
+            headerView.dic = data
+            print("*******&&&&&&****&&^&***&&*&&**&&&")
+            
+            print(self.json["vendors"][indexPath.section])
+            headerView.backgroundColor = UIColor.gray
+            return headerView
+            
+        }
+        if kind == UICollectionElementKindSectionFooter {
+            let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: footerId, for: indexPath)
+            footerView.backgroundColor = ArcRandomColor()
+            return footerView
+        }
+        
+        
+        
+        return UICollectionReusableView()
+    }
     
 
 

@@ -98,6 +98,30 @@ let ios11 = { () -> Bool in
 //     return Float(versionStr)! > Float(version)
 //}
 
+/// 计算label在确定UIFont下的长度,限label文字一行的情况
+///
+/// - Parameters:
+///   - str: 字符串
+///   - font: label的font
+/// - Returns: 总长度
+func calculateWidth(str: String, font:UIFont) -> CGFloat {
+    let str1 = NSString.init(string: str)
+    return str1.size(withAttributes: [NSAttributedStringKey.font: font]).width
+}
+
+/// 计算label在确定UIfont下的CGSize,不限文字行数
+///
+/// - Parameters:
+///   - text: 传入文本
+///   - font: 传入UIFont
+///   - size: optional CGSize
+/// - Returns: label的CGSize
+func calculateSize(text:String, font: UIFont, size:CGSize?) -> CGRect {
+    let maxSize = (size != nil) ? size! : CGSize(width: kScreenWidth, height: CGFloat.greatestFiniteMagnitude)
+    let attributes = [NSAttributedStringKey.font: font]
+    let rect = NSString.init(string: text).boundingRect(with: maxSize, options: .usesLineFragmentOrigin, attributes: attributes, context: nil)
+    return rect
+}
 
 
 
