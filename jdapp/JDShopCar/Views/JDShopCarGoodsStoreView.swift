@@ -106,19 +106,4 @@ class JDShopCarGoodsStoreView: UICollectionReusableView {
             return _dic!
         }
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 }

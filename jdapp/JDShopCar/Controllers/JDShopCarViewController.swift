@@ -107,7 +107,7 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
     //MARK: - UICollectionViewDelegate & UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: jdShopCarGoodsCell, for: indexPath)
-        cell.backgroundColor = UIColor.red
+        cell.backgroundColor = UIColor.gray
         return cell
     }
     
@@ -128,7 +128,7 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
     
     //MARK: - UICollectionViewDelegateFlowLayout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: kScreenWidth, height: 150)
+        return CGSize(width: kScreenWidth, height: Theme.paddingWithSize(300))
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7618B2D41FE8C1ED000F91F4 /* AllocDellocViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7618B2D31FE8C1ED000F91F4 /* AllocDellocViewController.swift */; };
 		7618B2D71FE90FB0000F91F4 /* JDHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7618B2D61FE90FB0000F91F4 /* JDHomeViewController.swift */; };
+		761AFD7620070B0E00A00BD6 /* UILabel+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761AFD7520070B0E00A00BD6 /* UILabel+Category.swift */; };
+		761AFD7820070B3900A00BD6 /* UIView+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761AFD7720070B3900A00BD6 /* UIView+Category.swift */; };
 		764C64711FE7658E002329AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764C64701FE7658E002329AD /* AppDelegate.swift */; };
 		764C64731FE7658E002329AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764C64721FE7658E002329AD /* ViewController.swift */; };
 		764C64761FE7658E002329AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 764C64741FE7658E002329AD /* Main.storyboard */; };
@@ -71,6 +73,8 @@
 		6332969F15EB458D5B63BA7F /* Pods-jdappUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jdappUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-jdappUITests/Pods-jdappUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7618B2D31FE8C1ED000F91F4 /* AllocDellocViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllocDellocViewController.swift; sourceTree = "<group>"; };
 		7618B2D61FE90FB0000F91F4 /* JDHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDHomeViewController.swift; sourceTree = "<group>"; };
+		761AFD7520070B0E00A00BD6 /* UILabel+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Category.swift"; sourceTree = "<group>"; };
+		761AFD7720070B3900A00BD6 /* UIView+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Category.swift"; sourceTree = "<group>"; };
 		764C646D1FE7658E002329AD /* jdapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jdapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		764C64701FE7658E002329AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		764C64721FE7658E002329AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -196,6 +200,15 @@
 				7661AFB91FEA5E1C00C20389 /* Localizable.strings */,
 			);
 			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		761AFD742007095A00A00BD6 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				761AFD7520070B0E00A00BD6 /* UILabel+Category.swift */,
+				761AFD7720070B3900A00BD6 /* UIView+Category.swift */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		764C64641FE7658E002329AD = {
@@ -380,6 +393,7 @@
 		7661AFAE1FEA49F800C20389 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				761AFD742007095A00A00BD6 /* Category */,
 				76992B3A1FF633380028F677 /* ViewModels */,
 				7660B9EB1FF4D99000082363 /* Views */,
 				7618B2D21FE8C1B4000F91F4 /* BaseViewController */,
@@ -798,6 +812,7 @@
 				7661AFB41FEA5A3300C20389 /* UtilMacro.swift in Sources */,
 				76A0C62120026F2F00A3F500 /* JDShopCarViewModel.swift in Sources */,
 				76992B371FF630F80028F677 /* JDHomeNavigatorCell.swift in Sources */,
+				761AFD7820070B3900A00BD6 /* UIView+Category.swift in Sources */,
 				76721278200313F8008E8D2B /* JDShopCarGoodsCell.swift in Sources */,
 				76620BE01FFCC96500414D4D /* GoodsViewModel.swift in Sources */,
 				76824FC41FFB6EDC00FAEB2C /* JDHomeGoodsCategoryCell.swift in Sources */,
@@ -815,6 +830,7 @@
 				76620BE21FFCDAFE00414D4D /* JDHomeGoodsViewCell.swift in Sources */,
 				7661AFBE1FEA630100C20389 /* Theme.swift in Sources */,
 				76992B311FF627C50028F677 /* NavigatorScrollView.swift in Sources */,
+				761AFD7620070B0E00A00BD6 /* UILabel+Category.swift in Sources */,
 				7661AFAB1FEA491500C20389 /* JDUserViewController.swift in Sources */,
 				7661AF9C1FEA466100C20389 /* JDShopCarViewController.swift in Sources */,
 				76992B3E1FF633900028F677 /* JDHomeGoodCategoryViewModel.swift in Sources */,
