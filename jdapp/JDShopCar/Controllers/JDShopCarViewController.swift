@@ -15,7 +15,7 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
     let jdShopCarGoodsCell = "JDShopCarGoodsCell"
     let headerId = "headerId"
     let footerId = "footerId"
-    var json: JSON = []
+    var json: JSON?
 
 
     override func viewDidLoad() {
@@ -23,6 +23,10 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
         self.setupUI()
         self.navigationItem.title = "购物车"
         self.loadData()
+        var aa: JSON = "123132"
+        var bb: JSON = "ajdsofjapdosjf"
+        var cc = aa.string! + bb.string!
+        print(cc)
 //        let btn = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
 //        btn.backgroundColor = ArcRandomColor()
 //        btn.addTarget(self, action: #selector(btnClick(sender:)), for: .touchUpInside)
@@ -77,11 +81,11 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
         Alamofire.request(url, method: .post, parameters: bodyPara, encoding: URLEncoding.httpBody, headers: header).responseJSON { response in
             switch response.result {
             case .success(let value):
-                print("*****************")
+//                print("*****************")
                 let json = JSON(value)
-                self.json = json["cartInfo"]
+                self.json = JSON(value)
                 self.collectionView.reloadData()
-                print(json["cartInfo"]["vendors"])
+//                print(json["cartInfo"]["vendors"])
             case .failure(let error):
                 print(error)
             }
@@ -106,8 +110,13 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
     
     //MARK: - UICollectionViewDelegate & UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: jdShopCarGoodsCell, for: indexPath)
+        let cell: JDShopCarGoodsCell = collectionView.dequeueReusableCell(withReuseIdentifier: jdShopCarGoodsCell, for: indexPath) as! JDShopCarGoodsCell
         cell.backgroundColor = UIColor.gray
+        if self.json != JSON.null {
+            cell.indexPath = indexPath
+            cell.dic = self.json
+        }
+        print("***********\(indexPath.section)")
         return cell
     }
     
@@ -116,8 +125,11 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        if json.count != 0 {
-            let array = json["vendors"]
+        guard json != nil else {
+            return 0
+        }
+        if json!["cartInfo"].count != 0 {
+            let array = json!["cartInfo"]["vendors"]
             return array.count
         } else {
             return 10
@@ -159,11 +171,10 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         if kind == UICollectionElementKindSectionHeader {
             let headerView:JDShopCarGoodsStoreView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath) as! JDShopCarGoodsStoreView
-            let data = self.json["vendors"][indexPath.section]
+            let data = self.json!["cartInfo"]["vendors"][indexPath.section]
             headerView.dic = data
-            print("*******&&&&&&****&&^&***&&*&&**&&&")
             
-            print(self.json["vendors"][indexPath.section])
+//            print(self.json!["cartInfo"]["vendors"][indexPath.section])
             headerView.backgroundColor = UIColor.gray
             return headerView
             

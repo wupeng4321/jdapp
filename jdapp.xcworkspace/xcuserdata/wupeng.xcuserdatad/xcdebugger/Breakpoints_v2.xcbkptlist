@@ -46,11 +46,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "jdapp/JDShopCar/Controllers/JDShopCarViewController.swift"
-            timestampString = "537356684.918727"
+            timestampString = "537697996.416266"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "loadData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -62,7 +62,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "jdapp/JDShopCar/Views/JDShopCarGoodsStoreView.swift"
-            timestampString = "537356684.919191"
+            timestampString = "537678869.396132"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "103"
@@ -78,45 +78,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "jdapp/JDShopCar/Views/JDShopCarGoodsCell.swift"
-            timestampString = "537356684.919288"
+            timestampString = "537697996.416746"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "setupView1()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "jdapp.JDShopCarGoodsCell.setupView1() -&gt; ()"
-                  moduleName = "jdapp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/wupeng/Desktop/SwiftTest/jdapp/jdapp/JDShopCar/Views/JDShopCarGoodsCell.swift"
-                  timestampString = "537356643.359671"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "59"
-                  endingLineNumber = "59"
-                  offsetFromSymbolStart = "900">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (SnapKit.ConstraintMaker) -&gt; () in jdapp.JDShopCarGoodsCell.setupView1() -&gt; ()"
-                  moduleName = "jdapp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/wupeng/Desktop/SwiftTest/jdapp/jdapp/JDShopCar/Views/JDShopCarGoodsCell.swift"
-                  timestampString = "537356643.363304"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "28">
-               </Location>
-            </Locations>
+            startingLineNumber = "202"
+            endingLineNumber = "202"
+            landmarkName = "dic"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -125,14 +93,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "jdapp/Helper/UtilMacro.swift"
-            timestampString = "537353714.746433"
+            filePath = "jdapp/JDShopCar/Controllers/JDShopCarViewController.swift"
+            timestampString = "537697996.417649"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
-            landmarkName = "calculateWidth(str:font:)"
-            landmarkType = "9">
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

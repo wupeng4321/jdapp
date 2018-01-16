@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SwiftyJSON
+import Kingfisher
 
 /*
  1-2-3为optional,为满减等等商家优惠信息
@@ -33,6 +35,10 @@ import UIKit
  */
 
 class JDShopCarGoodsCell: UICollectionViewCell {
+    
+    var _dic: JSON?
+    var indexPath: IndexPath?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.setupUI()
@@ -191,7 +197,34 @@ class JDShopCarGoodsCell: UICollectionViewCell {
         return view3
     }()
     
+    //MARK: - setter & getter
+    var dic: JSON?{
+        set(dic){
+            guard dic != nil else {
+                return
+            }
+            _dic = dic
+            self.updateUIWith(dic: _dic!)
+        }
+        get {
+            return _dic!
+        }
+    }
     
+    func updateUIWith(dic: JSON) {
+        guard dic != JSON.null else {
+            return
+        }
+          print("*****************")
+        print(indexPath?.section ?? 0)
+//        let a: Int = (indexPath?.section)!
+//        let str1 =
+        guard let str: String = dic["imageDomain"].string! + dic["cartInfo"]["vendors"][0]["sorted"][0]["item"]["items"][0]["item"]["ImgUrl"].string! else {
+            return
+        }
+        let url = URL(string: str)
+        self.imageView.kf.setImage(with: url)
+    }
     
     
     
