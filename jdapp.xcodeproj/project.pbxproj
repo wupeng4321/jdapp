@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7618B2D41FE8C1ED000F91F4 /* AllocDellocViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7618B2D31FE8C1ED000F91F4 /* AllocDellocViewController.swift */; };
 		7618B2D71FE90FB0000F91F4 /* JDHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7618B2D61FE90FB0000F91F4 /* JDHomeViewController.swift */; };
+		761AFD7620070B0E00A00BD6 /* UILabel+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761AFD7520070B0E00A00BD6 /* UILabel+Category.swift */; };
+		761AFD7820070B3900A00BD6 /* UIView+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761AFD7720070B3900A00BD6 /* UIView+Category.swift */; };
 		764C64711FE7658E002329AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764C64701FE7658E002329AD /* AppDelegate.swift */; };
 		764C64731FE7658E002329AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764C64721FE7658E002329AD /* ViewController.swift */; };
 		764C64761FE7658E002329AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 764C64741FE7658E002329AD /* Main.storyboard */; };
@@ -30,6 +32,8 @@
 		76620BDE1FFCC69B00414D4D /* GoodsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76620BDD1FFCC69B00414D4D /* GoodsView.swift */; };
 		76620BE01FFCC96500414D4D /* GoodsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76620BDF1FFCC96500414D4D /* GoodsViewModel.swift */; };
 		76620BE21FFCDAFE00414D4D /* JDHomeGoodsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76620BE11FFCDAFE00414D4D /* JDHomeGoodsViewCell.swift */; };
+		76721278200313F8008E8D2B /* JDShopCarGoodsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76721277200313F8008E8D2B /* JDShopCarGoodsCell.swift */; };
+		7672127A200345E2008E8D2B /* JDShopCarGoodsStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76721279200345E2008E8D2B /* JDShopCarGoodsStoreView.swift */; };
 		76824FC41FFB6EDC00FAEB2C /* JDHomeGoodsCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76824FC31FFB6EDC00FAEB2C /* JDHomeGoodsCategoryCell.swift */; };
 		76992B311FF627C50028F677 /* NavigatorScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76992B301FF627C50028F677 /* NavigatorScrollView.swift */; };
 		76992B331FF62BED0028F677 /* JDHomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76992B321FF62BED0028F677 /* JDHomeViewCell.swift */; };
@@ -69,6 +73,8 @@
 		6332969F15EB458D5B63BA7F /* Pods-jdappUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jdappUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-jdappUITests/Pods-jdappUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7618B2D31FE8C1ED000F91F4 /* AllocDellocViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllocDellocViewController.swift; sourceTree = "<group>"; };
 		7618B2D61FE90FB0000F91F4 /* JDHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDHomeViewController.swift; sourceTree = "<group>"; };
+		761AFD7520070B0E00A00BD6 /* UILabel+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Category.swift"; sourceTree = "<group>"; };
+		761AFD7720070B3900A00BD6 /* UIView+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Category.swift"; sourceTree = "<group>"; };
 		764C646D1FE7658E002329AD /* jdapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jdapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		764C64701FE7658E002329AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		764C64721FE7658E002329AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +109,8 @@
 		76620BDF1FFCC96500414D4D /* GoodsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsViewModel.swift; sourceTree = "<group>"; };
 		76620BE11FFCDAFE00414D4D /* JDHomeGoodsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDHomeGoodsViewCell.swift; sourceTree = "<group>"; };
 		76636F161FFDC53600E76CCA /* ReactiveSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReactiveSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76721277200313F8008E8D2B /* JDShopCarGoodsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDShopCarGoodsCell.swift; sourceTree = "<group>"; };
+		76721279200345E2008E8D2B /* JDShopCarGoodsStoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDShopCarGoodsStoreView.swift; sourceTree = "<group>"; };
 		76824FC31FFB6EDC00FAEB2C /* JDHomeGoodsCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDHomeGoodsCategoryCell.swift; sourceTree = "<group>"; };
 		76992B301FF627C50028F677 /* NavigatorScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorScrollView.swift; sourceTree = "<group>"; };
 		76992B321FF62BED0028F677 /* JDHomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDHomeViewCell.swift; sourceTree = "<group>"; };
@@ -192,6 +200,15 @@
 				7661AFB91FEA5E1C00C20389 /* Localizable.strings */,
 			);
 			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		761AFD742007095A00A00BD6 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				761AFD7520070B0E00A00BD6 /* UILabel+Category.swift */,
+				761AFD7720070B3900A00BD6 /* UIView+Category.swift */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		764C64641FE7658E002329AD = {
@@ -376,6 +393,7 @@
 		7661AFAE1FEA49F800C20389 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				761AFD742007095A00A00BD6 /* Category */,
 				76992B3A1FF633380028F677 /* ViewModels */,
 				7660B9EB1FF4D99000082363 /* Views */,
 				7618B2D21FE8C1B4000F91F4 /* BaseViewController */,
@@ -462,6 +480,8 @@
 		76A0C62220026F5000A3F500 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				76721277200313F8008E8D2B /* JDShopCarGoodsCell.swift */,
+				76721279200345E2008E8D2B /* JDShopCarGoodsStoreView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -677,6 +697,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-jdapp/Pods-jdapp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
@@ -686,6 +707,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
@@ -792,6 +814,8 @@
 				7661AFB41FEA5A3300C20389 /* UtilMacro.swift in Sources */,
 				76A0C62120026F2F00A3F500 /* JDShopCarViewModel.swift in Sources */,
 				76992B371FF630F80028F677 /* JDHomeNavigatorCell.swift in Sources */,
+				761AFD7820070B3900A00BD6 /* UIView+Category.swift in Sources */,
+				76721278200313F8008E8D2B /* JDShopCarGoodsCell.swift in Sources */,
 				76620BE01FFCC96500414D4D /* GoodsViewModel.swift in Sources */,
 				76824FC41FFB6EDC00FAEB2C /* JDHomeGoodsCategoryCell.swift in Sources */,
 				764C64731FE7658E002329AD /* ViewController.swift in Sources */,
@@ -802,11 +826,13 @@
 				7660B9ED1FF4D9D000082363 /* TransparentNavigationBar.swift in Sources */,
 				76620BDE1FFCC69B00414D4D /* GoodsView.swift in Sources */,
 				7661AFA41FEA48C900C20389 /* JDCategoryViewController.swift in Sources */,
+				7672127A200345E2008E8D2B /* JDShopCarGoodsStoreView.swift in Sources */,
 				7618B2D71FE90FB0000F91F4 /* JDHomeViewController.swift in Sources */,
 				76992B351FF630C70028F677 /* JDHomeBannerCell.swift in Sources */,
 				76620BE21FFCDAFE00414D4D /* JDHomeGoodsViewCell.swift in Sources */,
 				7661AFBE1FEA630100C20389 /* Theme.swift in Sources */,
 				76992B311FF627C50028F677 /* NavigatorScrollView.swift in Sources */,
+				761AFD7620070B0E00A00BD6 /* UILabel+Category.swift in Sources */,
 				7661AFAB1FEA491500C20389 /* JDUserViewController.swift in Sources */,
 				7661AF9C1FEA466100C20389 /* JDShopCarViewController.swift in Sources */,
 				76992B3E1FF633900028F677 /* JDHomeGoodCategoryViewModel.swift in Sources */,
