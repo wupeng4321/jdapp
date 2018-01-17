@@ -144,6 +144,9 @@ class JDShopCarGoodsCell: UICollectionViewCell {
     
     lazy var imageView: UIImageView = {
         let imageView: UIImageView = UIImageView()
+        imageView.boundsToCorderRadius(5.0)
+        imageView.layer.borderWidth = 0.5
+        imageView.layer.borderColor = kColorDimGray.cgColor
         imageView.backgroundColor = ArcRandomColor()
         return imageView
     }()

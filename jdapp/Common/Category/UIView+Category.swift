@@ -27,4 +27,8 @@ extension UIView {
             self.addSubview(view)
         }
     }
+    func boundsToCorderRadius(_ radius: CGFloat) {
+        self.clipsToBounds = true
+        self.layer.cornerRadius = radius
+    }
 }
