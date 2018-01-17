@@ -23,17 +23,6 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
         self.setupUI()
         self.navigationItem.title = "购物车"
         self.loadData()
-        var aa: JSON = "123132"
-        var bb: JSON = "ajdsofjapdosjf"
-        var cc = aa.string! + bb.string!
-        print(cc)
-//        let btn = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
-//        btn.backgroundColor = ArcRandomColor()
-//        btn.addTarget(self, action: #selector(btnClick(sender:)), for: .touchUpInside)
-//        self.view.addSubview(btn)
-    }
-    @objc func btnClick(sender: UIButton) -> Void {
-        self.loadData()
     }
     
     func setupUI() {
@@ -81,11 +70,8 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
         Alamofire.request(url, method: .post, parameters: bodyPara, encoding: URLEncoding.httpBody, headers: header).responseJSON { response in
             switch response.result {
             case .success(let value):
-//                print("*****************")
-                let json = JSON(value)
                 self.json = JSON(value)
                 self.collectionView.reloadData()
-//                print(json["cartInfo"]["vendors"])
             case .failure(let error):
                 print(error)
             }
@@ -121,6 +107,12 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        let array = json!["cartInfo"]["vendors"][section]["sorted"]
+        print(array.count)
+        if array.count != 0 {
+            return array.count
+            
+        }
         return 1
     }
     
@@ -144,11 +136,11 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return CGFloat(10)
+        return CGFloat(0)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return CGFloat(10)
+        return CGFloat(0)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
@@ -162,19 +154,13 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         
         return UIEdgeInsetsMake(0, 0, 0, 0)
-        //        if section == 1 || section == 2 {
-        //        }
-        //        return UIEdgeInsetsMake(0, 5, 0, 5)
     }
-
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         if kind == UICollectionElementKindSectionHeader {
             let headerView:JDShopCarGoodsStoreView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath) as! JDShopCarGoodsStoreView
             let data = self.json!["cartInfo"]["vendors"][indexPath.section]
             headerView.dic = data
-            
-//            print(self.json!["cartInfo"]["vendors"][indexPath.section])
             headerView.backgroundColor = UIColor.gray
             return headerView
             
@@ -184,12 +170,6 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
             footerView.backgroundColor = ArcRandomColor()
             return footerView
         }
-        
-        
-        
         return UICollectionReusableView()
     }
-    
-
-
 }

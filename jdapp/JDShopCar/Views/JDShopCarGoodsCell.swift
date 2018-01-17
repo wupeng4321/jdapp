@@ -215,14 +215,25 @@ class JDShopCarGoodsCell: UICollectionViewCell {
         guard dic != JSON.null else {
             return
         }
-          print("*****************")
-        print(indexPath?.section ?? 0)
-//        let a: Int = (indexPath?.section)!
-//        let str1 =
-        guard let str: String = dic["imageDomain"].string! + dic["cartInfo"]["vendors"][0]["sorted"][0]["item"]["items"][0]["item"]["ImgUrl"].string! else {
+        let section: Int = (indexPath?.section)!
+        let row: Int = (indexPath?.row)!
+        let str1 = dic["imageDomain"].string!
+        var str2:String?
+        
+        // 判断有没有items
+        // 有items,goods的具体数据在sorted->[下标]->item->items里面
+        // 没有items,goods的数据在sorted->[下标]->item
+        let items = dic["cartInfo"]["vendors"][section]["sorted"][row]["item"]["items"].array
+        if items != nil {
+            str2 = dic["cartInfo"]["vendors"][section]["sorted"][row]["item"]["items"][0]["item"]["ImgUrl"].string!
+        } else {
+            str2 = dic["cartInfo"]["vendors"][section]["sorted"][row]["item"]["ImgUrl"].string!
+        }
+        let str: String? = str1 + str2!
+        guard str != nil else {
             return
         }
-        let url = URL(string: str)
+        let url = URL(string: str!)
         self.imageView.kf.setImage(with: url)
     }
     
