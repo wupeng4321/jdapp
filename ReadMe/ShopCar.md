@@ -22,7 +22,7 @@ adid=87BCDF77-D843-46E9-B7E5-83F18FA67806&area=12_904_905_50599&body=%7B%22speci
 
 如果一行有两个item用UITableView也可以写,只需要将一个cell写两个item,相应的数据结构改变一下,但是这种做法感觉怪怪的.
 
-如果用UICollectionView写的话,由于没有自带plain的悬停效果,需要自定义flowout.在网上找了一篇文章[UicollectionView的Header悬停效果](https://github.com/HebeTienCoder/XLPlainFlowLayout)
+如果用UICollectionView写的话,由于没有自带plain的悬停效果,需要自定义flowout.在网上找了一篇文章[UicollectionView的Header悬停效果](https://github.com/HebeTienCoder/XLPlainFlowLayout)  ,[在Stack Overflow上有类似的问题](https://stackoverflow.com/questions/13511733/how-to-make-supplementary-view-float-in-uicollectionview-as-section-headers-do-i%3C/p%3E)
 
 ### 页面三部分结构
 

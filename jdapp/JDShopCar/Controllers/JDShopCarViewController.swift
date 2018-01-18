@@ -24,6 +24,10 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
         self.navigationItem.title = "购物车"
         self.loadData()
     }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.collectionView.verticalIndicatorToFront()
+    }
     
     func setupUI() {
         self.view.addSubview(self.collectionView)
@@ -80,9 +84,10 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
     
     //MARK: - lazy loading
     lazy var collectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
+        let layout = UICollectionViewPlainFlowLayout()
 
-        let collectionView: UICollectionView = UICollectionView(frame: CGRect(), collectionViewLayout: layout)
+        let collectionView: UICollectionView = UICollectionView(frame: CGRect(x:0, y:0, width:kScreenWidth, height: kScreenHeight), collectionViewLayout: layout)
+        collectionView.showsVerticalScrollIndicator = true
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.backgroundColor = kColorBackground
@@ -90,7 +95,7 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
         
         collectionView.register(JDShopCarGoodsStoreView.classForCoder(), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId)
         collectionView.register(UICollectionReusableView.classForCoder(), forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: footerId)
-
+        
         return collectionView
     }()
     
@@ -105,7 +110,7 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
         print("***********\(indexPath.section)")
         return cell
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         let array = json!["cartInfo"]["vendors"][section]["sorted"]
         print(array.count)
@@ -130,9 +135,11 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
         
     }
     
+
+    
     //MARK: - UICollectionViewDelegateFlowLayout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: kScreenWidth, height: Theme.paddingWithSize(300))
+        return CGSize(width: kScreenWidth, height: Theme.paddingWithSize(250))
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -161,7 +168,8 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
             let headerView:JDShopCarGoodsStoreView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath) as! JDShopCarGoodsStoreView
             let data = self.json!["cartInfo"]["vendors"][indexPath.section]
             headerView.dic = data
-            headerView.backgroundColor = UIColor.gray
+            headerView.backgroundColor = UIColor.red
+            headerView.layer.zPosition = 0
             return headerView
             
         }

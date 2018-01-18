@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 
 extension UILabel {
-    func boundLabel(_ radius:CGFloat, _ borderWidth: CGFloat, _ borderColor: UIColor?) {
+    // 将label添加边框
+    func boundLabel(_ radius:CGFloat = 0.5, _ borderWidth: CGFloat, _ borderColor: UIColor?) {
         self.clipsToBounds = true
         self.layer.cornerRadius = radius
         self.layer.borderWidth = borderWidth

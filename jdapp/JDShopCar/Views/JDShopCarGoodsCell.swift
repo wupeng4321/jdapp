@@ -55,6 +55,7 @@ class JDShopCarGoodsCell: UICollectionViewCell {
     }
     
     let normalFont = Theme.fontWithSize(20)
+    let defaultFont = Theme.fontWithSize(26)
     
     func setupView1() {
         self.view1.snp.makeConstraints { (make) in
@@ -86,7 +87,8 @@ class JDShopCarGoodsCell: UICollectionViewCell {
             make.left.right.equalTo(self.contentView)
             make.bottom.equalTo(self.contentView)
         }
-        self.view2.addSubview(selectedBtn, imageView)
+        self.view2.addSubview(selectedBtn, imageView, goodsInfoLabel, goodsColorLabel)
+        self.view2.addSubview(cutPricrLabel, priceLabel)
         self.selectedBtn.snp.makeConstraints { (make) in
             make.left.equalTo(self.view2).offset(Theme.paddingWithSize(20))
             make.centerY.equalTo(self.view2)
@@ -95,8 +97,29 @@ class JDShopCarGoodsCell: UICollectionViewCell {
         self.imageView.snp.makeConstraints({ (make) in
             make.top.bottom.equalTo(self.view2)
             make.left.equalTo(self.view2).offset(Theme.paddingWithSize(82))
-            make.width.equalTo(Theme.paddingWithSize(220))
+            make.width.equalTo(Theme.paddingWithSize(170))
         })
+        self.goodsInfoLabel.snp.makeConstraints { (make) in
+            make.left.equalTo(self.imageView.snp.right).offset(Theme.paddingWithSize(20))
+            make.right.equalTo(self.view2.snp.right).offset(-Theme.paddingWithSize(80))
+            make.top.equalTo(self.imageView)
+            make.height.equalTo(self.goodsInfoLabel.font.lineHeight * 2)
+        }
+        self.goodsColorLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(self.goodsInfoLabel.snp.bottom)
+            make.left.right.equalTo(self.goodsInfoLabel)
+            make.height.equalTo(self.goodsColorLabel.font.lineHeight)
+        }
+        self.cutPricrLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(self.goodsColorLabel.snp.bottom).offset(Theme.paddingWithSize(6))
+            make.left.equalTo(self.goodsColorLabel)
+            make.height.equalTo(self.cutPricrLabel.font.lineHeight)
+        }
+        self.priceLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(self.cutPricrLabel.snp.bottom).offset(Theme.paddingWithSize(10))
+            make.left.equalTo(self.cutPricrLabel)
+            make.bottom.equalTo(self.imageView)
+        }
     }
     
     //MARK: - lazy loading
@@ -155,18 +178,26 @@ class JDShopCarGoodsCell: UICollectionViewCell {
         let goodsInfoLabel: UILabel = UILabel()
         goodsInfoLabel.textColor = UIColor.black
         goodsInfoLabel.numberOfLines = 2
-        goodsInfoLabel.font = normalFont
+        goodsInfoLabel.font = defaultFont
         return goodsInfoLabel
     }()
     
     lazy var goodsColorLabel: UILabel = {
         let goodsColorLabel: UILabel = UILabel()
+        goodsColorLabel.font = normalFont
         return goodsColorLabel
     }()
     
     lazy var goodsServicesLabel: UILabel = {
         let goodsServicesLabel: UILabel = UILabel()
         return goodsServicesLabel
+    }()
+    
+    lazy var cutPricrLabel: UILabel = {
+        let cutPricrLabel = UILabel()
+        cutPricrLabel.font = normalFont
+        cutPricrLabel.boundLabel(0.5, 0.5, UIColor.red)
+        return cutPricrLabel
     }()
     
     lazy var paymentLabel: UILabel = {
@@ -223,21 +254,51 @@ class JDShopCarGoodsCell: UICollectionViewCell {
         let str1 = dic["imageDomain"].string!
         var str2:String?
         
+        var goodInfoStr: String?
+        var goodColorStr: String = ""
+        var cutPriceStr: String = ""
+        var priceStr: String = ""
+        
         // 判断有没有items
         // 有items,goods的具体数据在sorted->[下标]->item->items里面
         // 没有items,goods的数据在sorted->[下标]->item
         let items = dic["cartInfo"]["vendors"][section]["sorted"][row]["item"]["items"].array
+        let Items: JSON?
         if items != nil {
-            str2 = dic["cartInfo"]["vendors"][section]["sorted"][row]["item"]["items"][0]["item"]["ImgUrl"].string!
+            Items = dic["cartInfo"]["vendors"][section]["sorted"][row]["item"]["items"][0]["item"]
         } else {
-            str2 = dic["cartInfo"]["vendors"][section]["sorted"][row]["item"]["ImgUrl"].string!
+            Items = dic["cartInfo"]["vendors"][section]["sorted"][row]["item"]
+        }
+        str2 = Items!["ImgUrl"].string!
+        goodInfoStr = Items!["Name"].string!
+        for (_, value) in Items!["propertyTags"].dictionaryValue {
+            goodColorStr += value.string!
         }
         let str: String? = str1 + str2!
         guard str != nil else {
             return
         }
         let url = URL(string: str!)
+        
+        
+        if Items!["cutPriceT"].string != nil {
+            cutPriceStr = Items!["cutPriceT"].string!
+            
+        }
+        
+        priceStr = Items!["PriceShow"].string!
+        
+        
+        
         self.imageView.kf.setImage(with: url)
+        
+        self.goodsInfoLabel.text = goodInfoStr
+        
+        self.goodsColorLabel.text = goodColorStr
+        
+        self.cutPricrLabel.text = cutPriceStr
+        
+        self.priceLabel.text = priceStr
     }
     
     

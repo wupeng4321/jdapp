@@ -42,6 +42,9 @@
 		76992B3C1FF633570028F677 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76992B3B1FF633570028F677 /* BaseViewModel.swift */; };
 		76992B3E1FF633900028F677 /* JDHomeGoodCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76992B3D1FF633900028F677 /* JDHomeGoodCategoryViewModel.swift */; };
 		76A0C62120026F2F00A3F500 /* JDShopCarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A0C62020026F2F00A3F500 /* JDShopCarViewModel.swift */; };
+		76C90E57201041A900307B62 /* UICollectionViewPlainFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C90E56201041A900307B62 /* UICollectionViewPlainFlowLayout.swift */; };
+		76C90E592010495400307B62 /* UIScrollView+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C90E582010495400307B62 /* UIScrollView+Category.swift */; };
+		76C90E5B20108E1600307B62 /* String+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C90E5A20108E1600307B62 /* String+Category.swift */; };
 		AC31B07CBD8FAC5864A5CFBF /* Pods_jdappTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E5807BEFD1D3DC3355FF96 /* Pods_jdappTests.framework */; };
 		E33F46BE90054E7E4FBC0DB1 /* Pods_jdapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51C0D1454BDBC95A220975F5 /* Pods_jdapp.framework */; };
 		FB798A20B420FB8B44180CB9 /* Pods_jdappUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5183592F079C84E6CFE728B3 /* Pods_jdappUITests.framework */; };
@@ -120,6 +123,9 @@
 		76992B3D1FF633900028F677 /* JDHomeGoodCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDHomeGoodCategoryViewModel.swift; sourceTree = "<group>"; };
 		76A0C62020026F2F00A3F500 /* JDShopCarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JDShopCarViewModel.swift; path = jdapp/JDShopCar/ViewModels/JDShopCarViewModel.swift; sourceTree = SOURCE_ROOT; };
 		76C286342000E6C9006B1AA5 /* ShopCar.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ShopCar.md; sourceTree = "<group>"; };
+		76C90E56201041A900307B62 /* UICollectionViewPlainFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewPlainFlowLayout.swift; sourceTree = "<group>"; };
+		76C90E582010495400307B62 /* UIScrollView+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Category.swift"; sourceTree = "<group>"; };
+		76C90E5A20108E1600307B62 /* String+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Category.swift"; sourceTree = "<group>"; };
 		A697D9B77D083E9AC853E4A8 /* Pods-jdapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jdapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-jdapp/Pods-jdapp.debug.xcconfig"; sourceTree = "<group>"; };
 		D799D89983D0B28CDCCB4974 /* Pods-jdappTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jdappTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-jdappTests/Pods-jdappTests.release.xcconfig"; sourceTree = "<group>"; };
 		F2B0D6871C46360AE6BF9BD7 /* Pods-jdappTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jdappTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-jdappTests/Pods-jdappTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -207,6 +213,8 @@
 			children = (
 				761AFD7520070B0E00A00BD6 /* UILabel+Category.swift */,
 				761AFD7720070B3900A00BD6 /* UIView+Category.swift */,
+				76C90E582010495400307B62 /* UIScrollView+Category.swift */,
+				76C90E5A20108E1600307B62 /* String+Category.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -284,6 +292,7 @@
 				7660B9EC1FF4D9D000082363 /* TransparentNavigationBar.swift */,
 				76992B301FF627C50028F677 /* NavigatorScrollView.swift */,
 				76620BDD1FFCC69B00414D4D /* GoodsView.swift */,
+				76C90E56201041A900307B62 /* UICollectionViewPlainFlowLayout.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -815,6 +824,7 @@
 				76A0C62120026F2F00A3F500 /* JDShopCarViewModel.swift in Sources */,
 				76992B371FF630F80028F677 /* JDHomeNavigatorCell.swift in Sources */,
 				761AFD7820070B3900A00BD6 /* UIView+Category.swift in Sources */,
+				76C90E592010495400307B62 /* UIScrollView+Category.swift in Sources */,
 				76721278200313F8008E8D2B /* JDShopCarGoodsCell.swift in Sources */,
 				76620BE01FFCC96500414D4D /* GoodsViewModel.swift in Sources */,
 				76824FC41FFB6EDC00FAEB2C /* JDHomeGoodsCategoryCell.swift in Sources */,
@@ -822,8 +832,10 @@
 				7618B2D41FE8C1ED000F91F4 /* AllocDellocViewController.swift in Sources */,
 				7661AFB01FEA4A5B00C20389 /* JDNavigationController.swift in Sources */,
 				764C64711FE7658E002329AD /* AppDelegate.swift in Sources */,
+				76C90E5B20108E1600307B62 /* String+Category.swift in Sources */,
 				7661AFA61FEA48E000C20389 /* JDFinderViewController.swift in Sources */,
 				7660B9ED1FF4D9D000082363 /* TransparentNavigationBar.swift in Sources */,
+				76C90E57201041A900307B62 /* UICollectionViewPlainFlowLayout.swift in Sources */,
 				76620BDE1FFCC69B00414D4D /* GoodsView.swift in Sources */,
 				7661AFA41FEA48C900C20389 /* JDCategoryViewController.swift in Sources */,
 				7672127A200345E2008E8D2B /* JDShopCarGoodsStoreView.swift in Sources */,
@@ -1021,7 +1033,7 @@
 				GCC_PREFIX_HEADER = jdapp/Helper/UtilMacro.swift;
 				INFOPLIST_FILE = "$(SRCROOT)/jdapp/SupportFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = test.wupeng.jdapp;
+				PRODUCT_BUNDLE_IDENTIFIER = test.wupeng.jdapp123;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1039,7 +1051,7 @@
 				GCC_PREFIX_HEADER = jdapp/Helper/UtilMacro.swift;
 				INFOPLIST_FILE = "$(SRCROOT)/jdapp/SupportFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = test.wupeng.jdapp;
+				PRODUCT_BUNDLE_IDENTIFIER = test.wupeng.jdapp123;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

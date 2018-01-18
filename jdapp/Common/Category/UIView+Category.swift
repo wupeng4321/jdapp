@@ -21,12 +21,13 @@ extension UIView {
         }
         return next as! UIViewController
     }
-    
+    // 一次性添加subview
     func addSubview(_ views: UIView ...) {
         for view in views {
             self.addSubview(view)
         }
     }
+    // 直接传入radius,and make view clipToBounds
     func boundsToCorderRadius(_ radius: CGFloat) {
         self.clipsToBounds = true
         self.layer.cornerRadius = radius
