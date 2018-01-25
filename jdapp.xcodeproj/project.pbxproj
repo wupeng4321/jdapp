@@ -34,6 +34,7 @@
 		76620BE21FFCDAFE00414D4D /* JDHomeGoodsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76620BE11FFCDAFE00414D4D /* JDHomeGoodsViewCell.swift */; };
 		76721278200313F8008E8D2B /* JDShopCarGoodsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76721277200313F8008E8D2B /* JDShopCarGoodsCell.swift */; };
 		7672127A200345E2008E8D2B /* JDShopCarGoodsStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76721279200345E2008E8D2B /* JDShopCarGoodsStoreView.swift */; };
+		767AA6B620198247004A15F3 /* NSRange+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767AA6B520198247004A15F3 /* NSRange+Category.swift */; };
 		76824FC41FFB6EDC00FAEB2C /* JDHomeGoodsCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76824FC31FFB6EDC00FAEB2C /* JDHomeGoodsCategoryCell.swift */; };
 		76992B311FF627C50028F677 /* NavigatorScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76992B301FF627C50028F677 /* NavigatorScrollView.swift */; };
 		76992B331FF62BED0028F677 /* JDHomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76992B321FF62BED0028F677 /* JDHomeViewCell.swift */; };
@@ -114,6 +115,7 @@
 		76636F161FFDC53600E76CCA /* ReactiveSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReactiveSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76721277200313F8008E8D2B /* JDShopCarGoodsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDShopCarGoodsCell.swift; sourceTree = "<group>"; };
 		76721279200345E2008E8D2B /* JDShopCarGoodsStoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDShopCarGoodsStoreView.swift; sourceTree = "<group>"; };
+		767AA6B520198247004A15F3 /* NSRange+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSRange+Category.swift"; sourceTree = "<group>"; };
 		76824FC31FFB6EDC00FAEB2C /* JDHomeGoodsCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDHomeGoodsCategoryCell.swift; sourceTree = "<group>"; };
 		76992B301FF627C50028F677 /* NavigatorScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorScrollView.swift; sourceTree = "<group>"; };
 		76992B321FF62BED0028F677 /* JDHomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDHomeViewCell.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				761AFD7720070B3900A00BD6 /* UIView+Category.swift */,
 				76C90E582010495400307B62 /* UIScrollView+Category.swift */,
 				76C90E5A20108E1600307B62 /* String+Category.swift */,
+				767AA6B520198247004A15F3 /* NSRange+Category.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -830,6 +833,7 @@
 				76824FC41FFB6EDC00FAEB2C /* JDHomeGoodsCategoryCell.swift in Sources */,
 				764C64731FE7658E002329AD /* ViewController.swift in Sources */,
 				7618B2D41FE8C1ED000F91F4 /* AllocDellocViewController.swift in Sources */,
+				767AA6B620198247004A15F3 /* NSRange+Category.swift in Sources */,
 				7661AFB01FEA4A5B00C20389 /* JDNavigationController.swift in Sources */,
 				764C64711FE7658E002329AD /* AppDelegate.swift in Sources */,
 				76C90E5B20108E1600307B62 /* String+Category.swift in Sources */,

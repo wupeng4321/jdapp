@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+let toleft = -100
+let toright =  100
 
 extension UIView {
     // 查找UIView及其子类的根父视图控制器
@@ -31,5 +33,46 @@ extension UIView {
     func boundsToCorderRadius(_ radius: CGFloat) {
         self.clipsToBounds = true
         self.layer.cornerRadius = radius
+    }
+    
+    
+    ///////////////////////////////////////////////////////
+    func left() {
+        self.frame.origin.x -= Theme.paddingWithSize(80)
+    }
+    func right() {
+        self.frame.origin.x += Theme.paddingWithSize(80)
+    }
+    
+    func top() {
+        self.frame.origin.y -= Theme.paddingWithSize(80)
+    }
+    
+    func bottom() {
+        self.frame.origin.y += Theme.paddingWithSize(80)
+    }
+    
+    func bottomRight2() {
+        self.bottom()
+        self.right()
+        self.right()
+    }
+    
+    func bottomLeft2() {
+        self.bottom()
+        self.left()
+        self.left()
+    }
+    
+    func topLeft2() {
+        self.top()
+        self.left()
+        self.left()
+    }
+    
+    func topRight2() {
+        self.top()
+        self.right()
+        self.right()
     }
 }

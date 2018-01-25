@@ -47,7 +47,7 @@ class JDHomeGoodsCategoryCell: UICollectionViewCell {
             make.bottom.right.equalTo(self.contentView)
             make.width.height.equalTo(0)
         }
-        subLittleImageView.snp.makeConstraints { (make) -> Void in
+         subLittleImageView.snp.makeConstraints { (make) -> Void in
             make.bottom.right.equalTo(self.contentView)
             make.width.height.equalTo(0)
         }
