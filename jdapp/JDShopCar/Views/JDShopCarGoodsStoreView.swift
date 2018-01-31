@@ -62,8 +62,9 @@ class JDShopCarGoodsStoreView: UICollectionReusableView {
             return
         }
         
-        let str:String = dic["shopName"].string!
+        let str:String = dic["shopName"].string! + " >"
         self.storeBtn.setTitle(str, for: .normal)
+        self.storeBtn.titleLabel?.font = Theme.fontWithSize(24)
         self.storeBtn.snp.updateConstraints { (make) -> Void in
             make.width.equalTo(calculateWidth(str: str, font: (self.storeBtn.titleLabel?.font)!) + Theme.paddingWithSize(40))
         }
@@ -79,6 +80,7 @@ class JDShopCarGoodsStoreView: UICollectionReusableView {
         let storeBtn: UIButton = UIButton()
         storeBtn.setTitle("", for: .normal)
         storeBtn.setTitleColor(UIColor.black, for: .normal)
+        storeBtn.titleLabel?.textAlignment = .left
         return storeBtn
     }()
     let goView: UIView = {

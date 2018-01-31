@@ -298,7 +298,7 @@ class JDShopCarGoodsCell: UICollectionViewCell {
         
         self.cutPricrLabel.text = cutPriceStr
         
-        self.priceLabel.text = priceStr
+        self.priceLabel.attributedText = priceStr.toPriceString()
     }
     
     

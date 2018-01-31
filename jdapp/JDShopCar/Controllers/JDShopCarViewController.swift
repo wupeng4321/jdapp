@@ -102,7 +102,7 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
     //MARK: - UICollectionViewDelegate & UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: JDShopCarGoodsCell = collectionView.dequeueReusableCell(withReuseIdentifier: jdShopCarGoodsCell, for: indexPath) as! JDShopCarGoodsCell
-        cell.backgroundColor = UIColor.gray
+        cell.backgroundColor = UIColor.white
         if self.json != JSON.null {
             cell.indexPath = indexPath
             cell.dic = self.json
