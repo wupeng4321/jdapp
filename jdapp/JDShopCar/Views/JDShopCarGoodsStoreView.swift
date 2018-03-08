@@ -68,6 +68,10 @@ class JDShopCarGoodsStoreView: UICollectionReusableView {
         self.storeBtn.snp.updateConstraints { (make) -> Void in
             make.width.equalTo(calculateWidth(str: str, font: (self.storeBtn.titleLabel?.font)!) + Theme.paddingWithSize(40))
         }
+        self.storeBtn.titleLabel?.snp.updateConstraints({ (make) in
+            make.right.equalToSuperview()
+        })
+        self.storeBtn.titleLabel?.textAlignment = .left
     }
     
     //MARK: - lazy loading

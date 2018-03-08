@@ -124,6 +124,15 @@ func calculateSize(text:String, font: UIFont, size:CGSize?) -> CGRect {
 }
 
 
+/// 计算label的宽度
+///
+/// - Parameter label: 传入label,label的文字和font需要已经设定
+/// - Returns: label根据传入的的文字计算的宽度
+func calculateLabelWidth(_ label:UILabel) -> CGFloat {
+    return calculateWidth(str: label.text! + " ", font: label.font!)
+}
+
+
 
 
 

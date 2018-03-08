@@ -139,11 +139,15 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
     
     //MARK: - UICollectionViewDelegateFlowLayout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        if (self.json!["cartInfo"]["vendors"][indexPath.section]["sorted"][indexPath.row]["item"]["items"].array == nil) {
+            return CGSize(width: kScreenWidth, height: Theme.paddingWithSize(250 - 70))
+        }
         return CGSize(width: kScreenWidth, height: Theme.paddingWithSize(250))
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return CGFloat(0)
+        return CGFloat(10)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {

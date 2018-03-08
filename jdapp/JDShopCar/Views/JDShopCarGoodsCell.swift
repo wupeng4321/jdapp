@@ -60,7 +60,7 @@ class JDShopCarGoodsCell: UICollectionViewCell {
     func setupView1() {
         self.view1.snp.makeConstraints { (make) in
             make.top.left.right.equalTo(self.contentView)
-            make.height.equalTo(Theme.paddingWithSize(80))
+            make.height.equalTo(Theme.paddingWithSize(70))
         }
         self.view1.addSubview(boundLabel, infoLabel, addGoodsBtn)
         let a = calculateWidth(str: String(describing: self.boundLabel.text), font: self.boundLabel.font)
@@ -153,7 +153,7 @@ class JDShopCarGoodsCell: UICollectionViewCell {
         return addGoodsBtn
     }()
     
-    //goods info:view1 contains 4-11
+    //goods info:view2 contains 4-11
     lazy var view2: UIView = {
         let view: UIView = UIView()
         return view
@@ -226,10 +226,15 @@ class JDShopCarGoodsCell: UICollectionViewCell {
     }()
     
     //赠品info:view3 contains 12
+    //包含canSelectPromotions:促销信息 如果大于两种可以修改,但是只显示一条
+    //gifts:赠品信息 依次展示 有链接可以展示具体领取信息
+    //beanScore:赠京豆
     lazy var view3: UIView = {
         let view3: UIView = UIView()
         return view3
     }()
+    
+    
     
     //MARK: - setter & getter
     var dic: JSON?{
@@ -261,13 +266,47 @@ class JDShopCarGoodsCell: UICollectionViewCell {
         
         // 判断有没有items
         // 有items,goods的具体数据在sorted->[下标]->item->items里面
+        // 这种情况是外部有一些优惠信息
         // 没有items,goods的数据在sorted->[下标]->item
-        let items = dic["cartInfo"]["vendors"][section]["sorted"][row]["item"]["items"].array
+        let item = dic["cartInfo"]["vendors"][section]["sorted"][row]["item"]
+        let items = item["items"].array
         let Items: JSON?
         if items != nil {
-            Items = dic["cartInfo"]["vendors"][section]["sorted"][row]["item"]["items"][0]["item"]
+            Items = item["items"][0]["item"]
+            JDLog(item["STip"].string)
+            if (item["suitLabel"].string != nil) {
+                self.boundLabel.isHidden = false
+                self.infoLabel.isHidden  = false
+                self.addGoodsBtn.isHidden = false
+                self.view1.snp.updateConstraints({ (make) in
+                    make.height.equalTo(Theme.paddingWithSize(70))
+                })
+          
+
+                self.boundLabel.text = item["suitLabel"].string
+                self.infoLabel.text = item["STip"].string
+                self.addGoodsBtn .setTitle(item["entryLabel"].string, for: .normal)
+                self.boundLabel.snp.updateConstraints({ (make) in
+                    make.width.equalTo(calculateLabelWidth(self.boundLabel))
+                })
+            } else {
+//                self.view1.isHidden = true
+//                self.view2.snp.updateConstraints({ (make) in
+//                    make.top.equalTo(self.contentView.snp.top)
+//                })
+            }
         } else {
-            Items = dic["cartInfo"]["vendors"][section]["sorted"][row]["item"]
+            Items = item
+            self.view1.snp.updateConstraints({ (make) in
+                make.height.equalTo(0)
+            })
+            self.boundLabel.isHidden = true
+            self.infoLabel.isHidden  = true
+            self.addGoodsBtn.isHidden = true
+//            self.view2.snp.updateConstraints({ (make) in
+//                make.top.equalTo(self.contentView.snp.top)
+//                make.left.right.bottom.equalTo(self.contentView)
+//            })
         }
         str2 = Items!["ImgUrl"].string!
         goodInfoStr = Items!["Name"].string!
@@ -299,6 +338,8 @@ class JDShopCarGoodsCell: UICollectionViewCell {
         self.cutPricrLabel.text = cutPriceStr
         
         self.priceLabel.attributedText = priceStr.toPriceString()
+        
+       
     }
     
     
