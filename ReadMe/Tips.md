@@ -34,4 +34,9 @@ extension UIScrollView {
     }
 }
 ```
+## 5. 利用反射机制加载类
+```
+let cls = NSClassFromString(clsName) as? UIViewController.Type
+let vc = cls()
+```
 
