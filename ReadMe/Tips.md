@@ -36,6 +36,8 @@ extension UIScrollView {
 ```
 ## 5. 利用反射机制加载类
 ```
+//需要添加命名空间,默认为项目名称
+let clsName = "jdapp.BaseViewController"
 let cls = NSClassFromString(clsName) as? UIViewController.Type
 let vc = cls()
 ```
