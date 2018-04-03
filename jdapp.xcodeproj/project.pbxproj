@@ -46,6 +46,32 @@
 		76C90E57201041A900307B62 /* UICollectionViewPlainFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C90E56201041A900307B62 /* UICollectionViewPlainFlowLayout.swift */; };
 		76C90E592010495400307B62 /* UIScrollView+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C90E582010495400307B62 /* UIScrollView+Category.swift */; };
 		76C90E5B20108E1600307B62 /* String+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C90E5A20108E1600307B62 /* String+Category.swift */; };
+		76DF5A03207384B600B31B51 /* iosGrayscale.chls in Resources */ = {isa = PBXBuildFile; fileRef = 76DF59E9207384B200B31B51 /* iosGrayscale.chls */; };
+		76DF5A04207384B600B31B51 /* getCacheTime.chls in Resources */ = {isa = PBXBuildFile; fileRef = 76DF59EA207384B200B31B51 /* getCacheTime.chls */; };
+		76DF5A05207384B600B31B51 /* serverConfig.chls in Resources */ = {isa = PBXBuildFile; fileRef = 76DF59EB207384B200B31B51 /* serverConfig.chls */; };
+		76DF5A06207384B600B31B51 /* msgConfig.chls in Resources */ = {isa = PBXBuildFile; fileRef = 76DF59EC207384B300B31B51 /* msgConfig.chls */; };
+		76DF5A07207384B600B31B51 /* policy.chls in Resources */ = {isa = PBXBuildFile; fileRef = 76DF59ED207384B300B31B51 /* policy.chls */; };
+		76DF5A08207384B600B31B51 /* adapter.chls in Resources */ = {isa = PBXBuildFile; fileRef = 76DF59EE207384B300B31B51 /* adapter.chls */; };
+		76DF5A09207384B600B31B51 /* getMetaData.chls in Resources */ = {isa = PBXBuildFile; fileRef = 76DF59EF207384B300B31B51 /* getMetaData.chls */; };
+		76DF5A0A207384B600B31B51 /* abTestBackFunctionId.chls in Resources */ = {isa = PBXBuildFile; fileRef = 76DF59F0207384B300B31B51 /* abTestBackFunctionId.chls */; };
+		76DF5A0B207384B600B31B51 /* navigaton.chls in Resources */ = {isa = PBXBuildFile; fileRef = 76DF59F1207384B400B31B51 /* navigaton.chls */; };
+		76DF5A0C207384B600B31B51 /* welcomeHome.chls in Resources */ = {isa = PBXBuildFile; fileRef = 76DF59F2207384B400B31B51 /* welcomeHome.chls */; };
+		76DF5A0D207384B600B31B51 /* jdDiscoveryRedPoint.chls in Resources */ = {isa = PBXBuildFile; fileRef = 76DF59F3207384B400B31B51 /* jdDiscoveryRedPoint.chls */; };
+		76DF5A0E207384B600B31B51 /* appCenterCartoon.chls in Resources */ = {isa = PBXBuildFile; fileRef = 76DF59F4207384B400B31B51 /* appCenterCartoon.chls */; };
+		76DF5A0F207384B600B31B51 /* version.chls in Resources */ = {isa = PBXBuildFile; fileRef = 76DF59F5207384B400B31B51 /* version.chls */; };
+		76DF5A10207384B600B31B51 /* getReactNativeVersion.chls in Resources */ = {isa = PBXBuildFile; fileRef = 76DF59F6207384B400B31B51 /* getReactNativeVersion.chls */; };
+		76DF5A11207384B600B31B51 /* log-sdk.chls in Resources */ = {isa = PBXBuildFile; fileRef = 76DF59F7207384B500B31B51 /* log-sdk.chls */; };
+		76DF5A12207384B600B31B51 /* checkChange.chls in Resources */ = {isa = PBXBuildFile; fileRef = 76DF59F8207384B500B31B51 /* checkChange.chls */; };
+		76DF5A13207384B600B31B51 /* report.chls in Resources */ = {isa = PBXBuildFile; fileRef = 76DF59F9207384B500B31B51 /* report.chls */; };
+		76DF5A14207384B600B31B51 /* start.chls in Resources */ = {isa = PBXBuildFile; fileRef = 76DF59FA207384B500B31B51 /* start.chls */; };
+		76DF5A15207384B600B31B51 /* searchBoxWord.chls in Resources */ = {isa = PBXBuildFile; fileRef = 76DF59FB207384B500B31B51 /* searchBoxWord.chls */; };
+		76DF5A16207384B600B31B51 /* lbs.chls in Resources */ = {isa = PBXBuildFile; fileRef = 76DF59FC207384B500B31B51 /* lbs.chls */; };
+		76DF5A17207384B600B31B51 /* login_report.chls in Resources */ = {isa = PBXBuildFile; fileRef = 76DF59FD207384B500B31B51 /* login_report.chls */; };
+		76DF5A18207384B600B31B51 /* changeNotify.chls in Resources */ = {isa = PBXBuildFile; fileRef = 76DF59FE207384B600B31B51 /* changeNotify.chls */; };
+		76DF5A19207384B600B31B51 /* loginconfig.chls in Resources */ = {isa = PBXBuildFile; fileRef = 76DF59FF207384B600B31B51 /* loginconfig.chls */; };
+		76DF5A1A207384B600B31B51 /* newUserInfo.chls in Resources */ = {isa = PBXBuildFile; fileRef = 76DF5A00207384B600B31B51 /* newUserInfo.chls */; };
+		76DF5A1B207384B600B31B51 /* msgEntranceWithDD.chls in Resources */ = {isa = PBXBuildFile; fileRef = 76DF5A01207384B600B31B51 /* msgEntranceWithDD.chls */; };
+		76DF5A1C207384B600B31B51 /* switchQuery.chls in Resources */ = {isa = PBXBuildFile; fileRef = 76DF5A02207384B600B31B51 /* switchQuery.chls */; };
 		AC31B07CBD8FAC5864A5CFBF /* Pods_jdappTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E5807BEFD1D3DC3355FF96 /* Pods_jdappTests.framework */; };
 		E33F46BE90054E7E4FBC0DB1 /* Pods_jdapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51C0D1454BDBC95A220975F5 /* Pods_jdapp.framework */; };
 		FB798A20B420FB8B44180CB9 /* Pods_jdappUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5183592F079C84E6CFE728B3 /* Pods_jdappUITests.framework */; };
@@ -128,6 +154,33 @@
 		76C90E56201041A900307B62 /* UICollectionViewPlainFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewPlainFlowLayout.swift; sourceTree = "<group>"; };
 		76C90E582010495400307B62 /* UIScrollView+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Category.swift"; sourceTree = "<group>"; };
 		76C90E5A20108E1600307B62 /* String+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Category.swift"; sourceTree = "<group>"; };
+		76DF59E9207384B200B31B51 /* iosGrayscale.chls */ = {isa = PBXFileReference; lastKnownFileType = file; path = iosGrayscale.chls; sourceTree = "<group>"; };
+		76DF59EA207384B200B31B51 /* getCacheTime.chls */ = {isa = PBXFileReference; lastKnownFileType = file; path = getCacheTime.chls; sourceTree = "<group>"; };
+		76DF59EB207384B200B31B51 /* serverConfig.chls */ = {isa = PBXFileReference; lastKnownFileType = file; path = serverConfig.chls; sourceTree = "<group>"; };
+		76DF59EC207384B300B31B51 /* msgConfig.chls */ = {isa = PBXFileReference; lastKnownFileType = file; path = msgConfig.chls; sourceTree = "<group>"; };
+		76DF59ED207384B300B31B51 /* policy.chls */ = {isa = PBXFileReference; lastKnownFileType = file; path = policy.chls; sourceTree = "<group>"; };
+		76DF59EE207384B300B31B51 /* adapter.chls */ = {isa = PBXFileReference; lastKnownFileType = file; path = adapter.chls; sourceTree = "<group>"; };
+		76DF59EF207384B300B31B51 /* getMetaData.chls */ = {isa = PBXFileReference; lastKnownFileType = file; path = getMetaData.chls; sourceTree = "<group>"; };
+		76DF59F0207384B300B31B51 /* abTestBackFunctionId.chls */ = {isa = PBXFileReference; lastKnownFileType = file; path = abTestBackFunctionId.chls; sourceTree = "<group>"; };
+		76DF59F1207384B400B31B51 /* navigaton.chls */ = {isa = PBXFileReference; lastKnownFileType = file; path = navigaton.chls; sourceTree = "<group>"; };
+		76DF59F2207384B400B31B51 /* welcomeHome.chls */ = {isa = PBXFileReference; lastKnownFileType = file; path = welcomeHome.chls; sourceTree = "<group>"; };
+		76DF59F3207384B400B31B51 /* jdDiscoveryRedPoint.chls */ = {isa = PBXFileReference; lastKnownFileType = file; path = jdDiscoveryRedPoint.chls; sourceTree = "<group>"; };
+		76DF59F4207384B400B31B51 /* appCenterCartoon.chls */ = {isa = PBXFileReference; lastKnownFileType = file; path = appCenterCartoon.chls; sourceTree = "<group>"; };
+		76DF59F5207384B400B31B51 /* version.chls */ = {isa = PBXFileReference; lastKnownFileType = file; path = version.chls; sourceTree = "<group>"; };
+		76DF59F6207384B400B31B51 /* getReactNativeVersion.chls */ = {isa = PBXFileReference; lastKnownFileType = file; path = getReactNativeVersion.chls; sourceTree = "<group>"; };
+		76DF59F7207384B500B31B51 /* log-sdk.chls */ = {isa = PBXFileReference; lastKnownFileType = file; path = "log-sdk.chls"; sourceTree = "<group>"; };
+		76DF59F8207384B500B31B51 /* checkChange.chls */ = {isa = PBXFileReference; lastKnownFileType = file; path = checkChange.chls; sourceTree = "<group>"; };
+		76DF59F9207384B500B31B51 /* report.chls */ = {isa = PBXFileReference; lastKnownFileType = file; path = report.chls; sourceTree = "<group>"; };
+		76DF59FA207384B500B31B51 /* start.chls */ = {isa = PBXFileReference; lastKnownFileType = file; path = start.chls; sourceTree = "<group>"; };
+		76DF59FB207384B500B31B51 /* searchBoxWord.chls */ = {isa = PBXFileReference; lastKnownFileType = file; path = searchBoxWord.chls; sourceTree = "<group>"; };
+		76DF59FC207384B500B31B51 /* lbs.chls */ = {isa = PBXFileReference; lastKnownFileType = file; path = lbs.chls; sourceTree = "<group>"; };
+		76DF59FD207384B500B31B51 /* login_report.chls */ = {isa = PBXFileReference; lastKnownFileType = file; path = login_report.chls; sourceTree = "<group>"; };
+		76DF59FE207384B600B31B51 /* changeNotify.chls */ = {isa = PBXFileReference; lastKnownFileType = file; path = changeNotify.chls; sourceTree = "<group>"; };
+		76DF59FF207384B600B31B51 /* loginconfig.chls */ = {isa = PBXFileReference; lastKnownFileType = file; path = loginconfig.chls; sourceTree = "<group>"; };
+		76DF5A00207384B600B31B51 /* newUserInfo.chls */ = {isa = PBXFileReference; lastKnownFileType = file; path = newUserInfo.chls; sourceTree = "<group>"; };
+		76DF5A01207384B600B31B51 /* msgEntranceWithDD.chls */ = {isa = PBXFileReference; lastKnownFileType = file; path = msgEntranceWithDD.chls; sourceTree = "<group>"; };
+		76DF5A02207384B600B31B51 /* switchQuery.chls */ = {isa = PBXFileReference; lastKnownFileType = file; path = switchQuery.chls; sourceTree = "<group>"; };
+		76F7B3CB207377300094A4BD /* Home.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Home.md; sourceTree = "<group>"; };
 		A697D9B77D083E9AC853E4A8 /* Pods-jdapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jdapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-jdapp/Pods-jdapp.debug.xcconfig"; sourceTree = "<group>"; };
 		D799D89983D0B28CDCCB4974 /* Pods-jdappTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jdappTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-jdappTests/Pods-jdappTests.release.xcconfig"; sourceTree = "<group>"; };
 		F2B0D6871C46360AE6BF9BD7 /* Pods-jdappTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jdappTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-jdappTests/Pods-jdappTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -281,10 +334,9 @@
 		7660B9E91FF4A56F00082363 /* ReadMe */ = {
 			isa = PBXGroup;
 			children = (
-				7660B9E81FF4A1B500082363 /* README.md */,
-				7660B9EA1FF4C2CF00082363 /* 京东首页导航栏.md */,
-				76620BDC1FFC7D4800414D4D /* Tips.md */,
-				76C286342000E6C9006B1AA5 /* ShopCar.md */,
+				76DF59E82073845300B31B51 /* Learnning */,
+				76DF59E72073843F00B31B51 /* Views */,
+				76DF59E120737F6600B31B51 /* Data */,
 			);
 			path = ReadMe;
 			sourceTree = "<group>";
@@ -506,6 +558,98 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		76DF59E120737F6600B31B51 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				76DF59E620737F9300B31B51 /* My */,
+				76DF59E520737F8900B31B51 /* ShopCar */,
+				76DF59E420737F8100B31B51 /* Finder */,
+				76DF59E320737F7800B31B51 /* Category */,
+				76DF59E220737F7000B31B51 /* Home */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		76DF59E220737F7000B31B51 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				76DF59F0207384B300B31B51 /* abTestBackFunctionId.chls */,
+				76DF59EE207384B300B31B51 /* adapter.chls */,
+				76DF59F4207384B400B31B51 /* appCenterCartoon.chls */,
+				76DF59FE207384B600B31B51 /* changeNotify.chls */,
+				76DF59F8207384B500B31B51 /* checkChange.chls */,
+				76DF59EA207384B200B31B51 /* getCacheTime.chls */,
+				76DF59EF207384B300B31B51 /* getMetaData.chls */,
+				76DF59F6207384B400B31B51 /* getReactNativeVersion.chls */,
+				76DF59E9207384B200B31B51 /* iosGrayscale.chls */,
+				76DF59F3207384B400B31B51 /* jdDiscoveryRedPoint.chls */,
+				76DF59FC207384B500B31B51 /* lbs.chls */,
+				76DF59F7207384B500B31B51 /* log-sdk.chls */,
+				76DF59FD207384B500B31B51 /* login_report.chls */,
+				76DF59FF207384B600B31B51 /* loginconfig.chls */,
+				76DF59EC207384B300B31B51 /* msgConfig.chls */,
+				76DF5A01207384B600B31B51 /* msgEntranceWithDD.chls */,
+				76DF59F1207384B400B31B51 /* navigaton.chls */,
+				76DF5A00207384B600B31B51 /* newUserInfo.chls */,
+				76DF59ED207384B300B31B51 /* policy.chls */,
+				76DF59F9207384B500B31B51 /* report.chls */,
+				76DF59FB207384B500B31B51 /* searchBoxWord.chls */,
+				76DF59EB207384B200B31B51 /* serverConfig.chls */,
+				76DF59FA207384B500B31B51 /* start.chls */,
+				76DF5A02207384B600B31B51 /* switchQuery.chls */,
+				76DF59F5207384B400B31B51 /* version.chls */,
+				76DF59F2207384B400B31B51 /* welcomeHome.chls */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		76DF59E320737F7800B31B51 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		76DF59E420737F8100B31B51 /* Finder */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Finder;
+			sourceTree = "<group>";
+		};
+		76DF59E520737F8900B31B51 /* ShopCar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ShopCar;
+			sourceTree = "<group>";
+		};
+		76DF59E620737F9300B31B51 /* My */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = My;
+			sourceTree = "<group>";
+		};
+		76DF59E72073843F00B31B51 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7660B9E81FF4A1B500082363 /* README.md */,
+				7660B9EA1FF4C2CF00082363 /* 京东首页导航栏.md */,
+				76C286342000E6C9006B1AA5 /* ShopCar.md */,
+				76F7B3CB207377300094A4BD /* Home.md */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		76DF59E82073845300B31B51 /* Learnning */ = {
+			isa = PBXGroup;
+			children = (
+				76620BDC1FFC7D4800414D4D /* Tips.md */,
+			);
+			path = Learnning;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -623,9 +767,35 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76DF5A18207384B600B31B51 /* changeNotify.chls in Resources */,
+				76DF5A1B207384B600B31B51 /* msgEntranceWithDD.chls in Resources */,
+				76DF5A0B207384B600B31B51 /* navigaton.chls in Resources */,
+				76DF5A16207384B600B31B51 /* lbs.chls in Resources */,
+				76DF5A19207384B600B31B51 /* loginconfig.chls in Resources */,
+				76DF5A05207384B600B31B51 /* serverConfig.chls in Resources */,
 				7661AFB71FEA5E1C00C20389 /* Localizable.strings in Resources */,
+				76DF5A15207384B600B31B51 /* searchBoxWord.chls in Resources */,
+				76DF5A0C207384B600B31B51 /* welcomeHome.chls in Resources */,
+				76DF5A12207384B600B31B51 /* checkChange.chls in Resources */,
+				76DF5A1C207384B600B31B51 /* switchQuery.chls in Resources */,
 				764C647B1FE7658E002329AD /* LaunchScreen.storyboard in Resources */,
+				76DF5A0E207384B600B31B51 /* appCenterCartoon.chls in Resources */,
+				76DF5A08207384B600B31B51 /* adapter.chls in Resources */,
+				76DF5A0A207384B600B31B51 /* abTestBackFunctionId.chls in Resources */,
+				76DF5A06207384B600B31B51 /* msgConfig.chls in Resources */,
+				76DF5A13207384B600B31B51 /* report.chls in Resources */,
+				76DF5A04207384B600B31B51 /* getCacheTime.chls in Resources */,
+				76DF5A10207384B600B31B51 /* getReactNativeVersion.chls in Resources */,
 				764C64781FE7658E002329AD /* Assets.xcassets in Resources */,
+				76DF5A14207384B600B31B51 /* start.chls in Resources */,
+				76DF5A11207384B600B31B51 /* log-sdk.chls in Resources */,
+				76DF5A17207384B600B31B51 /* login_report.chls in Resources */,
+				76DF5A0D207384B600B31B51 /* jdDiscoveryRedPoint.chls in Resources */,
+				76DF5A03207384B600B31B51 /* iosGrayscale.chls in Resources */,
+				76DF5A09207384B600B31B51 /* getMetaData.chls in Resources */,
+				76DF5A07207384B600B31B51 /* policy.chls in Resources */,
+				76DF5A1A207384B600B31B51 /* newUserInfo.chls in Resources */,
+				76DF5A0F207384B600B31B51 /* version.chls in Resources */,
 				764C64761FE7658E002329AD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
