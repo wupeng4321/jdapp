@@ -69,9 +69,10 @@
 		76DF5A17207384B600B31B51 /* login_report.chls in Resources */ = {isa = PBXBuildFile; fileRef = 76DF59FD207384B500B31B51 /* login_report.chls */; };
 		76DF5A18207384B600B31B51 /* changeNotify.chls in Resources */ = {isa = PBXBuildFile; fileRef = 76DF59FE207384B600B31B51 /* changeNotify.chls */; };
 		76DF5A19207384B600B31B51 /* loginconfig.chls in Resources */ = {isa = PBXBuildFile; fileRef = 76DF59FF207384B600B31B51 /* loginconfig.chls */; };
-		76DF5A1A207384B600B31B51 /* newUserInfo.chls in Resources */ = {isa = PBXBuildFile; fileRef = 76DF5A00207384B600B31B51 /* newUserInfo.chls */; };
-		76DF5A1B207384B600B31B51 /* msgEntranceWithDD.chls in Resources */ = {isa = PBXBuildFile; fileRef = 76DF5A01207384B600B31B51 /* msgEntranceWithDD.chls */; };
-		76DF5A1C207384B600B31B51 /* switchQuery.chls in Resources */ = {isa = PBXBuildFile; fileRef = 76DF5A02207384B600B31B51 /* switchQuery.chls */; };
+		76F724A02073CDAC009419FA /* cart.chls in Resources */ = {isa = PBXBuildFile; fileRef = 76F7249D2073CDAC009419FA /* cart.chls */; };
+		76F724A12073CDAC009419FA /* uniformRecommend.chls in Resources */ = {isa = PBXBuildFile; fileRef = 76F7249E2073CDAC009419FA /* uniformRecommend.chls */; };
+		76F724A22073CDAC009419FA /* cartYB.chls in Resources */ = {isa = PBXBuildFile; fileRef = 76F7249F2073CDAC009419FA /* cartYB.chls */; };
+		76F724A42073DA04009419FA /* RequestParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F724A32073DA04009419FA /* RequestParameter.swift */; };
 		AC31B07CBD8FAC5864A5CFBF /* Pods_jdappTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E5807BEFD1D3DC3355FF96 /* Pods_jdappTests.framework */; };
 		E33F46BE90054E7E4FBC0DB1 /* Pods_jdapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51C0D1454BDBC95A220975F5 /* Pods_jdapp.framework */; };
 		FB798A20B420FB8B44180CB9 /* Pods_jdappUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5183592F079C84E6CFE728B3 /* Pods_jdappUITests.framework */; };
@@ -177,9 +178,10 @@
 		76DF59FD207384B500B31B51 /* login_report.chls */ = {isa = PBXFileReference; lastKnownFileType = file; path = login_report.chls; sourceTree = "<group>"; };
 		76DF59FE207384B600B31B51 /* changeNotify.chls */ = {isa = PBXFileReference; lastKnownFileType = file; path = changeNotify.chls; sourceTree = "<group>"; };
 		76DF59FF207384B600B31B51 /* loginconfig.chls */ = {isa = PBXFileReference; lastKnownFileType = file; path = loginconfig.chls; sourceTree = "<group>"; };
-		76DF5A00207384B600B31B51 /* newUserInfo.chls */ = {isa = PBXFileReference; lastKnownFileType = file; path = newUserInfo.chls; sourceTree = "<group>"; };
-		76DF5A01207384B600B31B51 /* msgEntranceWithDD.chls */ = {isa = PBXFileReference; lastKnownFileType = file; path = msgEntranceWithDD.chls; sourceTree = "<group>"; };
-		76DF5A02207384B600B31B51 /* switchQuery.chls */ = {isa = PBXFileReference; lastKnownFileType = file; path = switchQuery.chls; sourceTree = "<group>"; };
+		76F7249D2073CDAC009419FA /* cart.chls */ = {isa = PBXFileReference; lastKnownFileType = file; path = cart.chls; sourceTree = "<group>"; };
+		76F7249E2073CDAC009419FA /* uniformRecommend.chls */ = {isa = PBXFileReference; lastKnownFileType = file; path = uniformRecommend.chls; sourceTree = "<group>"; };
+		76F7249F2073CDAC009419FA /* cartYB.chls */ = {isa = PBXFileReference; lastKnownFileType = file; path = cartYB.chls; sourceTree = "<group>"; };
+		76F724A32073DA04009419FA /* RequestParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestParameter.swift; sourceTree = "<group>"; };
 		76F7B3CB207377300094A4BD /* Home.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Home.md; sourceTree = "<group>"; };
 		A697D9B77D083E9AC853E4A8 /* Pods-jdapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jdapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-jdapp/Pods-jdapp.debug.xcconfig"; sourceTree = "<group>"; };
 		D799D89983D0B28CDCCB4974 /* Pods-jdappTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jdappTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-jdappTests/Pods-jdappTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -528,6 +530,7 @@
 				76824FC21FFB27C000FAEB2C /* Category */,
 				7661AFB31FEA5A3300C20389 /* UtilMacro.swift */,
 				7661AFBD1FEA630100C20389 /* Theme.swift */,
+				76F724A32073DA04009419FA /* RequestParameter.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -588,15 +591,12 @@
 				76DF59FD207384B500B31B51 /* login_report.chls */,
 				76DF59FF207384B600B31B51 /* loginconfig.chls */,
 				76DF59EC207384B300B31B51 /* msgConfig.chls */,
-				76DF5A01207384B600B31B51 /* msgEntranceWithDD.chls */,
 				76DF59F1207384B400B31B51 /* navigaton.chls */,
-				76DF5A00207384B600B31B51 /* newUserInfo.chls */,
 				76DF59ED207384B300B31B51 /* policy.chls */,
 				76DF59F9207384B500B31B51 /* report.chls */,
 				76DF59FB207384B500B31B51 /* searchBoxWord.chls */,
 				76DF59EB207384B200B31B51 /* serverConfig.chls */,
 				76DF59FA207384B500B31B51 /* start.chls */,
-				76DF5A02207384B600B31B51 /* switchQuery.chls */,
 				76DF59F5207384B400B31B51 /* version.chls */,
 				76DF59F2207384B400B31B51 /* welcomeHome.chls */,
 			);
@@ -620,6 +620,9 @@
 		76DF59E520737F8900B31B51 /* ShopCar */ = {
 			isa = PBXGroup;
 			children = (
+				76F7249D2073CDAC009419FA /* cart.chls */,
+				76F7249F2073CDAC009419FA /* cartYB.chls */,
+				76F7249E2073CDAC009419FA /* uniformRecommend.chls */,
 			);
 			path = ShopCar;
 			sourceTree = "<group>";
@@ -768,7 +771,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				76DF5A18207384B600B31B51 /* changeNotify.chls in Resources */,
-				76DF5A1B207384B600B31B51 /* msgEntranceWithDD.chls in Resources */,
 				76DF5A0B207384B600B31B51 /* navigaton.chls in Resources */,
 				76DF5A16207384B600B31B51 /* lbs.chls in Resources */,
 				76DF5A19207384B600B31B51 /* loginconfig.chls in Resources */,
@@ -777,24 +779,25 @@
 				76DF5A15207384B600B31B51 /* searchBoxWord.chls in Resources */,
 				76DF5A0C207384B600B31B51 /* welcomeHome.chls in Resources */,
 				76DF5A12207384B600B31B51 /* checkChange.chls in Resources */,
-				76DF5A1C207384B600B31B51 /* switchQuery.chls in Resources */,
 				764C647B1FE7658E002329AD /* LaunchScreen.storyboard in Resources */,
 				76DF5A0E207384B600B31B51 /* appCenterCartoon.chls in Resources */,
 				76DF5A08207384B600B31B51 /* adapter.chls in Resources */,
 				76DF5A0A207384B600B31B51 /* abTestBackFunctionId.chls in Resources */,
 				76DF5A06207384B600B31B51 /* msgConfig.chls in Resources */,
+				76F724A22073CDAC009419FA /* cartYB.chls in Resources */,
+				76F724A12073CDAC009419FA /* uniformRecommend.chls in Resources */,
 				76DF5A13207384B600B31B51 /* report.chls in Resources */,
 				76DF5A04207384B600B31B51 /* getCacheTime.chls in Resources */,
 				76DF5A10207384B600B31B51 /* getReactNativeVersion.chls in Resources */,
 				764C64781FE7658E002329AD /* Assets.xcassets in Resources */,
 				76DF5A14207384B600B31B51 /* start.chls in Resources */,
+				76F724A02073CDAC009419FA /* cart.chls in Resources */,
 				76DF5A11207384B600B31B51 /* log-sdk.chls in Resources */,
 				76DF5A17207384B600B31B51 /* login_report.chls in Resources */,
 				76DF5A0D207384B600B31B51 /* jdDiscoveryRedPoint.chls in Resources */,
 				76DF5A03207384B600B31B51 /* iosGrayscale.chls in Resources */,
 				76DF5A09207384B600B31B51 /* getMetaData.chls in Resources */,
 				76DF5A07207384B600B31B51 /* policy.chls in Resources */,
-				76DF5A1A207384B600B31B51 /* newUserInfo.chls in Resources */,
 				76DF5A0F207384B600B31B51 /* version.chls in Resources */,
 				764C64761FE7658E002329AD /* Main.storyboard in Resources */,
 			);
@@ -996,6 +999,7 @@
 				7661AFB41FEA5A3300C20389 /* UtilMacro.swift in Sources */,
 				76A0C62120026F2F00A3F500 /* JDShopCarViewModel.swift in Sources */,
 				76992B371FF630F80028F677 /* JDHomeNavigatorCell.swift in Sources */,
+				76F724A42073DA04009419FA /* RequestParameter.swift in Sources */,
 				761AFD7820070B3900A00BD6 /* UIView+Category.swift in Sources */,
 				76C90E592010495400307B62 /* UIScrollView+Category.swift in Sources */,
 				76721278200313F8008E8D2B /* JDShopCarGoodsCell.swift in Sources */,
