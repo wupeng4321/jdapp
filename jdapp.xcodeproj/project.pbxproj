@@ -19,6 +19,7 @@
 		764C64861FE7658E002329AD /* jdappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764C64851FE7658E002329AD /* jdappTests.swift */; };
 		764C64911FE7658E002329AD /* jdappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764C64901FE7658E002329AD /* jdappUITests.swift */; };
 		764ED589207A4E790059D68E /* Dictionary+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764ED588207A4E790059D68E /* Dictionary+Category.swift */; };
+		764ED58B207A83D40059D68E /* JDShopCarGoodsCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764ED58A207A83D40059D68E /* JDShopCarGoodsCardCell.swift */; };
 		7660B9ED1FF4D9D000082363 /* TransparentNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7660B9EC1FF4D9D000082363 /* TransparentNavigationBar.swift */; };
 		7661AF9A1FEA460C00C20389 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7661AF991FEA460C00C20389 /* BaseViewController.swift */; };
 		7661AF9C1FEA466100C20389 /* JDShopCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7661AF9B1FEA466100C20389 /* JDShopCarViewController.swift */; };
@@ -121,6 +122,7 @@
 		764C64901FE7658E002329AD /* jdappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jdappUITests.swift; sourceTree = "<group>"; };
 		764C64921FE7658E002329AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		764ED588207A4E790059D68E /* Dictionary+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Category.swift"; sourceTree = "<group>"; };
+		764ED58A207A83D40059D68E /* JDShopCarGoodsCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDShopCarGoodsCardCell.swift; sourceTree = "<group>"; };
 		7660B9E81FF4A1B500082363 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7660B9EA1FF4C2CF00082363 /* 京东首页导航栏.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "京东首页导航栏.md"; sourceTree = "<group>"; };
 		7660B9EC1FF4D9D000082363 /* TransparentNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentNavigationBar.swift; sourceTree = "<group>"; };
@@ -552,6 +554,7 @@
 			children = (
 				76721277200313F8008E8D2B /* JDShopCarGoodsCell.swift */,
 				76721279200345E2008E8D2B /* JDShopCarGoodsStoreView.swift */,
+				764ED58A207A83D40059D68E /* JDShopCarGoodsCardCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1010,6 +1013,7 @@
 				76824FC41FFB6EDC00FAEB2C /* JDHomeGoodsCategoryCell.swift in Sources */,
 				764C64731FE7658E002329AD /* ViewController.swift in Sources */,
 				7618B2D41FE8C1ED000F91F4 /* AllocDellocViewController.swift in Sources */,
+				764ED58B207A83D40059D68E /* JDShopCarGoodsCardCell.swift in Sources */,
 				767AA6B620198247004A15F3 /* NSRange+Category.swift in Sources */,
 				7661AFB01FEA4A5B00C20389 /* JDNavigationController.swift in Sources */,
 				764C64711FE7658E002329AD /* AppDelegate.swift in Sources */,

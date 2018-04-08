@@ -71,7 +71,7 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
             switch response.result {
             case .success(let value):
                 self.recommendJson = JSON(value)
-                self.collectionView.reloadData()
+//                self.collectionView.reloadData()
             case .failure(let error):
                 print(error)
             }
