@@ -16,6 +16,7 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
     let headerId = "headerId"
     let footerId = "footerId"
     var json: JSON?
+    var recommendJson: JSON?
 
 
     override func viewDidLoad() {
@@ -23,6 +24,7 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
         self.setupUI()
         self.navigationItem.title = "购物车"
         self.loadData()
+        
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -40,9 +42,11 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
     
     func loadData() {
         //购物车
-        let bodyPara = getBody(body:"%7B%22specialId%22%3A%221%22%2C%22noResponse%22%3Afalse%2C%22cartuuid%22%3A%22coW0lj7vbXVin6h7ON%2BtMNFQqYBqMahr%22%2C%22carttype%22%3A%221%22%2C%22syntype%22%3A%221%22%2C%22adid%22%3A%2287BCDF77-D843-46E9-B7E5-83F18FA67806%22%2C%22openudid%22%3A%2274d33ae25b8353446044bf7100a174275196c178%22%7D" as AnyObject)
-
-        Alamofire.request(url, method: .post, parameters: bodyPara, encoding: URLEncoding.httpBody, headers: header).responseJSON { response in
+        
+        let shopCarPara = ["body": "{\"specialId\":\"1\",\"noResponse\":false,\"cartuuid\":\"coW0lj7vbXVin6h7ON+tMNFQqYBqMahr\",\"carttype\":\"1\",\"syntype\":\"1\",\"adid\":\"87BCDF77-D843-46E9-B7E5-83F18FA67806\",\"openudid\":\"c3cd74aebcea78dd6c069efe59f2500f99223e90\"}", "sv":"102","sign":"ede350ec4bd7ff7969fdbfe74055b76a", "st":"1523198986952"]
+        let shopCarBodyPara = getBody(body:shopCarPara as AnyObject)
+        
+        Alamofire.request(url, method: .post, parameters: shopCarBodyPara, encoding: URLEncoding.httpBody, headers: header).responseJSON { response in
             switch response.result {
             case .success(let value):
                 self.json = JSON(value)
@@ -52,25 +56,26 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
             }
         }
         
-        //为你推荐
+        //为你推荐        
+        let recommendPara = ["body":"{\"filteredPages\":\"0\",\"skus\":[\"1484557353\",\"1484557355\",\"5140143\",\"3491609\",\"5415001\",\"526144\",\"24861455807\",\"13196472078\",\"18963654321\",\"11102581523\",\"12987411424\",\"10236121296\",\"1235355770\",\"17980959752\",\"18727331198\",\"17020961280\",\"19030688803\",\"10555123104\",\"12222359397\",\"1981297429\",\"12858430734\",\"1988770736\"],\"source\":6,\"pageSize\":10,\"eventId\":\"Shopcart_UnEmpty_auto\",\"page\":1}"
+, "sv":"121", "sign":"3a24b917217890120451dd90ce1a3438","st":"1523203458310"]
         
-        let a = ["filteredPages":"0","skus":["5140143","3491609","5415001","526144","24861455807","1484557355","13196472078","18963654321","11102581523","12987411424","10236121296","1235355770","17980959752","18727331198","17020961280","19030688803","10555123104","12222359397","1981297429","12858430734","1988770736"],"source":6,"pageSize":10,"eventId":"Shopcart_Promotion_Auto","page":1] as [String : Any]
-        let recommendBodyPara = getBody(body: a as AnyObject)
-        
-        let recommendUrl = "http://api.m.jd.com/client.action?functionId=uniformRecommend"
-        Alamofire.request(recommendUrl, method: .post, parameters: recommendBodyPara, encoding: URLEncoding.httpBody, headers: header).responseJSON { response in
-//            switch response.result {
-//            case .success(let value):
-//                self.json = JSON(value)
-//                self.collectionView.reloadData()
-//            case .failure(let error):
-//                print(error)
-//            }
+        var recommendBodyPara = getBody(body: recommendPara as AnyObject)
+        for (key, value) in recommendBodyPara {
+            
+            recommendBodyPara[key] = (value as AnyObject).removingPercentEncoding ?? ""
         }
 
-        
-//        let bodyRecommend = getBody(body: {"filteredPages":"0","skus":["5140143","3491609","5415001","526144","24861455807","1484557355","13196472078","18963654321","11102581523","12987411424","10236121296","1235355770","17980959752","18727331198","17020961280","19030688803","10555123104","12222359397","1981297429","12858430734","1988770736"],"source":6,"pageSize":10,"eventId":"Shopcart_Promotion_Auto","page":1})
-        
+        let recommendUrl = "http://api.m.jd.com/client.action?functionId=uniformRecommend"
+        Alamofire.request(recommendUrl, method: .post, parameters: recommendBodyPara, encoding: URLEncoding.httpBody, headers: header).responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                self.recommendJson = JSON(value)
+                self.collectionView.reloadData()
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
     
     //MARK: - lazy loading
@@ -122,11 +127,7 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
         } else {
             return 10
         }
-    
-        
     }
-    
-
     
     //MARK: - UICollectionViewDelegateFlowLayout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
