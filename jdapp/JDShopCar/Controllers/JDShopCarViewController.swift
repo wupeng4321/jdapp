@@ -13,6 +13,7 @@ import SwiftyJSON
 class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     let url = "http://api.m.jd.com/client.action?functionId=cart"
     let jdShopCarGoodsCell = "JDShopCarGoodsCell"
+    let jdShopCarGoodsCardCell = "jsShopCarGoodsCardCell"
     let headerId = "headerId"
     let footerId = "footerId"
     var json: JSON?
@@ -24,7 +25,6 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
         self.setupUI()
         self.navigationItem.title = "购物车"
         self.loadData()
-        
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -71,7 +71,7 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
             switch response.result {
             case .success(let value):
                 self.recommendJson = JSON(value)
-//                self.collectionView.reloadData()
+                self.collectionView.reloadData()
             case .failure(let error):
                 print(error)
             }
@@ -88,6 +88,7 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
         collectionView.dataSource = self
         collectionView.backgroundColor = kColorBackground
         collectionView.register(JDShopCarGoodsCell.classForCoder(), forCellWithReuseIdentifier: jdShopCarGoodsCell)
+        collectionView.register(JDShopCarGoodsCardCell.classForCoder(), forCellWithReuseIdentifier: jdShopCarGoodsCardCell)
         
         collectionView.register(JDShopCarGoodsStoreView.classForCoder(), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId)
         collectionView.register(UICollectionReusableView.classForCoder(), forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: footerId)
@@ -97,22 +98,36 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
     
     //MARK: - UICollectionViewDelegate & UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: JDShopCarGoodsCell = collectionView.dequeueReusableCell(withReuseIdentifier: jdShopCarGoodsCell, for: indexPath) as! JDShopCarGoodsCell
-        cell.backgroundColor = UIColor.white
-        if self.json != JSON.null {
-            cell.indexPath = indexPath
-            cell.dic = self.json
+        if indexPath.section < json!["cartInfo"]["vendors"].count {
+            let cell: JDShopCarGoodsCell = collectionView.dequeueReusableCell(withReuseIdentifier: jdShopCarGoodsCell, for: indexPath) as! JDShopCarGoodsCell
+            cell.backgroundColor = UIColor.white
+            if self.json != JSON.null {
+                cell.indexPath = indexPath
+                cell.dic = self.json
+            }
+            return cell
+        } else {
+            let cell: JDShopCarGoodsCardCell  = collectionView.dequeueReusableCell(withReuseIdentifier: jdShopCarGoodsCardCell, for: indexPath) as! JDShopCarGoodsCardCell
+            cell.backgroundColor = ArcRandomColor()
+            if self.recommendJson != JSON.null {
+                cell.indexPath = indexPath
+                cell.dic = self.recommendJson
+            }
+            return cell
         }
-        print("***********\(indexPath.section)")
-        return cell
+        return UICollectionViewCell()
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let array = json!["cartInfo"]["vendors"][section]["sorted"]
-        print(array.count)
-        if array.count != 0 {
-            return array.count
-            
+        
+        if section < json!["cartInfo"]["vendors"].count {
+            let array = json!["cartInfo"]["vendors"][section]["sorted"]
+            if array.count != 0 {
+                return array.count
+            }
+        } else {
+            let recommendCounts = recommendJson!["wareInfoList"].count
+            return recommendCounts > 0 ? recommendCounts : 0
         }
         return 1
     }
@@ -123,7 +138,15 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
         }
         if json!["cartInfo"].count != 0 {
             let array = json!["cartInfo"]["vendors"]
-            return array.count
+            
+            
+            guard recommendJson != nil else {
+                return array.count
+            }
+            let recommendArray = recommendJson!["wareInfoList"].array
+            let count = (recommendArray!.count) > 0 ? 1 : 0
+            return array.count + count
+   
         } else {
             return 10
         }
@@ -131,9 +154,12 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
     
     //MARK: - UICollectionViewDelegateFlowLayout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        if (self.json!["cartInfo"]["vendors"][indexPath.section]["sorted"][indexPath.row]["item"]["items"].array == nil) {
-            return CGSize(width: kScreenWidth, height: Theme.paddingWithSize(250 - 70))
+        if indexPath.section < json!["cartInfo"]["vendors"].count {
+            if (self.json!["cartInfo"]["vendors"][indexPath.section]["sorted"][indexPath.row]["item"]["items"].array == nil) {
+                return CGSize(width: kScreenWidth, height: Theme.paddingWithSize(250 - 70))
+            }
+        } else {
+            return CGSize(width: (kScreenWidth - Theme.paddingWithSize(10)) / 2, height: Theme.paddingWithSize(500))
         }
         return CGSize(width: kScreenWidth, height: Theme.paddingWithSize(250))
     }
@@ -143,6 +169,9 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        if section == json!["cartInfo"]["vendors"].count {
+            return CGFloat(Theme.paddingWithSize(8))
+        }
         return CGFloat(0)
     }
     
