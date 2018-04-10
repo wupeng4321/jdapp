@@ -14,6 +14,7 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
     let url = "http://api.m.jd.com/client.action?functionId=cart"
     let jdShopCarGoodsCell = "JDShopCarGoodsCell"
     let jdShopCarGoodsCardCell = "jsShopCarGoodsCardCell"
+    let jdRecommendCell = "jdRecommendCell"
     let headerId = "headerId"
     let footerId = "footerId"
     var json: JSON?
@@ -62,7 +63,6 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
         
         var recommendBodyPara = getBody(body: recommendPara as AnyObject)
         for (key, value) in recommendBodyPara {
-            
             recommendBodyPara[key] = (value as AnyObject).removingPercentEncoding ?? ""
         }
 
@@ -89,6 +89,7 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
         collectionView.backgroundColor = kColorBackground
         collectionView.register(JDShopCarGoodsCell.classForCoder(), forCellWithReuseIdentifier: jdShopCarGoodsCell)
         collectionView.register(JDShopCarGoodsCardCell.classForCoder(), forCellWithReuseIdentifier: jdShopCarGoodsCardCell)
+        collectionView.register(JDRecommendHeaderCell.classForCoder(), forCellWithReuseIdentifier: jdRecommendCell)
         
         collectionView.register(JDShopCarGoodsStoreView.classForCoder(), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId)
         collectionView.register(UICollectionReusableView.classForCoder(), forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: footerId)
@@ -107,19 +108,23 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
             }
             return cell
         } else {
-            let cell: JDShopCarGoodsCardCell  = collectionView.dequeueReusableCell(withReuseIdentifier: jdShopCarGoodsCardCell, for: indexPath) as! JDShopCarGoodsCardCell
-            cell.backgroundColor = ArcRandomColor()
-            if self.recommendJson != JSON.null {
-                cell.indexPath = indexPath
-                cell.dic = self.recommendJson
+            if indexPath.row == 0 {
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: jdRecommendCell, for: indexPath)
+                return cell
+            } else {
+                let cell: JDShopCarGoodsCardCell  = collectionView.dequeueReusableCell(withReuseIdentifier: jdShopCarGoodsCardCell, for: indexPath) as! JDShopCarGoodsCardCell
+                cell.backgroundColor = ArcRandomColor()
+                if self.recommendJson != JSON.null {
+                    cell.indexPath = indexPath
+                    cell.dic = self.recommendJson
+                }
+                return cell
             }
-            return cell
         }
         return UICollectionViewCell()
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         if section < json!["cartInfo"]["vendors"].count {
             let array = json!["cartInfo"]["vendors"][section]["sorted"]
             if array.count != 0 {
@@ -127,7 +132,8 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
             }
         } else {
             let recommendCounts = recommendJson!["wareInfoList"].count
-            return recommendCounts > 0 ? recommendCounts : 0
+            //添加的有一个item为,为你推荐,推荐测评部分,避免放到header部分有悬停效果
+            return recommendCounts > 0 ? recommendCounts + 1 : 0
         }
         return 1
     }
@@ -138,8 +144,6 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
         }
         if json!["cartInfo"].count != 0 {
             let array = json!["cartInfo"]["vendors"]
-            
-            
             guard recommendJson != nil else {
                 return array.count
             }
@@ -159,6 +163,9 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
                 return CGSize(width: kScreenWidth, height: Theme.paddingWithSize(250 - 70))
             }
         } else {
+            if indexPath.row == 0 {
+                return CGSize(width: kScreenWidth, height: Theme.paddingWithSize(100))
+            }
             return CGSize(width: (kScreenWidth - Theme.paddingWithSize(10)) / 2, height: Theme.paddingWithSize(500))
         }
         return CGSize(width: kScreenWidth, height: Theme.paddingWithSize(250))
@@ -176,7 +183,9 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-
+        if section == self.json!["cartInfo"]["vendors"].count {
+            return CGSize(width: 0, height: 0)
+        }
         return CGSize(width: kScreenWidth, height: 44)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
@@ -196,7 +205,6 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
             headerView.backgroundColor = UIColor.red
             headerView.layer.zPosition = 0
             return headerView
-            
         }
         if kind == UICollectionElementKindSectionFooter {
             let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: footerId, for: indexPath)

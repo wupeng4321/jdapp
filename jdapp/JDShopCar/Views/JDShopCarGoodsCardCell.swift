@@ -18,10 +18,6 @@ class JDShopCarGoodsCardCell: UICollectionViewCell {
     var _dic: JSON?
     var indexPath: IndexPath?
 
-//    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-//        super.init(style: style, reuseIdentifier: reuseIdentifier)
-//        self.createUI()
-//    }
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.createUI()
@@ -32,6 +28,7 @@ class JDShopCarGoodsCardCell: UICollectionViewCell {
     }
     
     func createUI() {
+        self.contentView.addSubview(view1)
         self.contentView.addSubview(iconImageView, deleteImageView, titlesLable, subtitleLable)
         self.contentView.addSubview(priceLable, countLable, realPriceLable, plusImageView)
         self.setupView()
@@ -41,6 +38,10 @@ class JDShopCarGoodsCardCell: UICollectionViewCell {
         self.iconImageView.snp.makeConstraints { (make) in
             make.top.left.right.equalTo((weakSelf?.contentView)!)
             make.bottom.equalTo((weakSelf?.contentView.snp.bottom)!).offset(-Theme.paddingWithSize(100))
+        }
+        self.view1.snp.makeConstraints { (make) in
+            make.left.right.bottom.equalTo((weakSelf?.contentView)!)
+            make.top.equalTo((weakSelf?.iconImageView.snp.bottom)!)
         }
     }
     
@@ -81,6 +82,17 @@ class JDShopCarGoodsCardCell: UICollectionViewCell {
         plusImageView.isUserInteractionEnabled = true
         return plusImageView
     }()
+    
+    lazy var view1: UITextView = {
+        let view1 = UITextView()
+        view1.indicatorStyle = .default
+        view1.textContainer.maximumNumberOfLines = 2
+        view1.textContainer.lineBreakMode = .byTruncatingTail
+        view1.isEditable = false
+        view1.isSelectable = false
+        view1.backgroundColor = ArcRandomColor()
+        return view1
+    }()
 
     
     //MARK: - setter & getter
@@ -98,8 +110,35 @@ class JDShopCarGoodsCardCell: UICollectionViewCell {
     }
     
     func updateUIWith(dic: JSON) {
-        let urlStr = dic["wareInfoList"][(indexPath?.row)!]["imageurl"].string!
+        
+        var source = dic["wareInfoList"][((indexPath?.row)! - 1)]
+        let urlStr = source["imageurl"].string!
         let url = URL(string: urlStr)
         self.iconImageView.kf.setImage(with: url)
+        
+        let title = source["wname"].string!
+        let markUrl:URL?
+//        self.view1.insertText(title)
+//        self.view1.insertPicture(UIImage(named: "icon")!, mode: .fitTextLine)
+        self.view1.text = nil;
+        //https://m.360buyimg.com/mobilecms/jfs/t3802/184/2262265095/4363/20cc83a/584675ccNb39899f9.png
+        guard source["markImageUrl"].string == nil else {
+            markUrl = URL(string: source["markImageUrl"].string!)
+            let downLoader = ImageDownloader.default
+            weak var weakSelf = self
+            downLoader.downloadImage(with: markUrl!, retrieveImageTask: nil, options: nil, progressBlock: nil) { (image, error, imageUrl, data) in
+                weakSelf?.view1.insertPicture(image!, mode: .fitTextLine)
+                weakSelf?.view1.insertText(title)
+            }
+            return
+        }
+        self.view1.insertText(title)
+        
+
+        
+        
+        
+
+        
     }
 }

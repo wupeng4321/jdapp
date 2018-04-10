@@ -20,6 +20,8 @@
 		764C64911FE7658E002329AD /* jdappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764C64901FE7658E002329AD /* jdappUITests.swift */; };
 		764ED589207A4E790059D68E /* Dictionary+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764ED588207A4E790059D68E /* Dictionary+Category.swift */; };
 		764ED58B207A83D40059D68E /* JDShopCarGoodsCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764ED58A207A83D40059D68E /* JDShopCarGoodsCardCell.swift */; };
+		764ED58F207CEB570059D68E /* JDRecommendHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764ED58E207CEB570059D68E /* JDRecommendHeaderCell.swift */; };
+		764ED591207CEFB90059D68E /* UITextView+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764ED590207CEFB90059D68E /* UITextView+Category.swift */; };
 		7660B9ED1FF4D9D000082363 /* TransparentNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7660B9EC1FF4D9D000082363 /* TransparentNavigationBar.swift */; };
 		7661AF9A1FEA460C00C20389 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7661AF991FEA460C00C20389 /* BaseViewController.swift */; };
 		7661AF9C1FEA466100C20389 /* JDShopCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7661AF9B1FEA466100C20389 /* JDShopCarViewController.swift */; };
@@ -123,6 +125,8 @@
 		764C64921FE7658E002329AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		764ED588207A4E790059D68E /* Dictionary+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Category.swift"; sourceTree = "<group>"; };
 		764ED58A207A83D40059D68E /* JDShopCarGoodsCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDShopCarGoodsCardCell.swift; sourceTree = "<group>"; };
+		764ED58E207CEB570059D68E /* JDRecommendHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDRecommendHeaderCell.swift; sourceTree = "<group>"; };
+		764ED590207CEFB90059D68E /* UITextView+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Category.swift"; sourceTree = "<group>"; };
 		7660B9E81FF4A1B500082363 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7660B9EA1FF4C2CF00082363 /* 京东首页导航栏.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "京东首页导航栏.md"; sourceTree = "<group>"; };
 		7660B9EC1FF4D9D000082363 /* TransparentNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentNavigationBar.swift; sourceTree = "<group>"; };
@@ -278,6 +282,7 @@
 				76C90E5A20108E1600307B62 /* String+Category.swift */,
 				767AA6B520198247004A15F3 /* NSRange+Category.swift */,
 				764ED588207A4E790059D68E /* Dictionary+Category.swift */,
+				764ED590207CEFB90059D68E /* UITextView+Category.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -555,6 +560,7 @@
 				76721277200313F8008E8D2B /* JDShopCarGoodsCell.swift */,
 				76721279200345E2008E8D2B /* JDShopCarGoodsStoreView.swift */,
 				764ED58A207A83D40059D68E /* JDShopCarGoodsCardCell.swift */,
+				764ED58E207CEB570059D68E /* JDRecommendHeaderCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1007,6 +1013,7 @@
 				76992B371FF630F80028F677 /* JDHomeNavigatorCell.swift in Sources */,
 				76F724A42073DA04009419FA /* RequestParameter.swift in Sources */,
 				761AFD7820070B3900A00BD6 /* UIView+Category.swift in Sources */,
+				764ED58F207CEB570059D68E /* JDRecommendHeaderCell.swift in Sources */,
 				76C90E592010495400307B62 /* UIScrollView+Category.swift in Sources */,
 				76721278200313F8008E8D2B /* JDShopCarGoodsCell.swift in Sources */,
 				76620BE01FFCC96500414D4D /* GoodsViewModel.swift in Sources */,
@@ -1018,6 +1025,7 @@
 				7661AFB01FEA4A5B00C20389 /* JDNavigationController.swift in Sources */,
 				764C64711FE7658E002329AD /* AppDelegate.swift in Sources */,
 				76C90E5B20108E1600307B62 /* String+Category.swift in Sources */,
+				764ED591207CEFB90059D68E /* UITextView+Category.swift in Sources */,
 				7661AFA61FEA48E000C20389 /* JDFinderViewController.swift in Sources */,
 				7660B9ED1FF4D9D000082363 /* TransparentNavigationBar.swift in Sources */,
 				76C90E57201041A900307B62 /* UICollectionViewPlainFlowLayout.swift in Sources */,
