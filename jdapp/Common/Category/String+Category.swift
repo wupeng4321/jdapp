@@ -11,7 +11,8 @@ import UIKit
 
 extension String {
     
-    func toPriceString() -> NSMutableAttributedString {
+    mutating func toPriceString() -> NSMutableAttributedString {
+        self.checkPrice()
         let showPriceStr = NSMutableAttributedString(string: self)
         let moneyRange = self.range(of: "￥")
         let range = self.range(of: ".")
@@ -20,6 +21,31 @@ extension String {
         showPriceStr.setAttributes([NSAttributedStringKey.foregroundColor: ArcRandomColor(), NSAttributedStringKey.font: Theme.fontWithSize(24)], range: NSRangeFromRange(range!))
         showPriceStr.setAttributes([NSAttributedStringKey.foregroundColor: ArcRandomColor(), NSAttributedStringKey.font: Theme.fontWithSize(24)], range: NSMakeRange(NSRangeFromRange(range!).location + 1, 2))
         return showPriceStr
+    }
+    //1.如果不包含"¥",则插入"¥".如36.00会变为¥36.00
+    //2.如果不包含小数点".",则补全.如¥36会变为¥36.00
+    //3.如果包含小数点且小数点后只有一位,则补全,如¥36.8则变为¥36.80
+    //4.考虑到健壮性,应该考虑以上几点
+    mutating func checkPrice() {
+        if !self.hasPrefix("￥") {
+            self = "￥" + self
+        }
+        if !self.contains(".") {
+            self = self + ".00"
+        } else {
+            let arr = self.components(separatedBy: ".")
+            if arr.count == 2 {
+                if arr.last?.count == 2 {
+                    return
+                } else if arr.last?.count == 1 {
+                    self = self + "0"
+                } else {
+                    self = self + "00"
+                }
+            } else {
+                    JDLog("price error")
+            }
+        }
     }
     
     func NSRangeFromRange(_ range:Range<String.Index>) -> NSRange {

@@ -17,8 +17,23 @@ enum ImageAttachmentMode {
 }
 
 extension UITextView {
+    func insertAttributedString(_ text: NSMutableAttributedString) {
+
+        let mutableStr = NSMutableAttributedString(attributedString: self.attributedText)
+        
+        let selectedRange = self.selectedRange
+        
+        mutableStr.insert(text, at: selectedRange.location)
+
+        let newSelectedRange = NSMakeRange(selectedRange.location + text.length, 0)
+        
+        self.attributedText = mutableStr
+        //恢复光标的位置（上面一句代码执行之后，光标会移到最后面）
+        self.selectedRange = newSelectedRange
+    }
+    
     //插入文字
-    func insertString(_ text:String) {
+    func insertString(_ text:String, _ font: UIFont = Theme.fontWithSize(24)) {
         //获取textView的所有文本，转成可变的文本
         let mutableStr = NSMutableAttributedString(attributedString: self.attributedText)
         //获得目前光标的位置
@@ -28,7 +43,7 @@ extension UITextView {
         mutableStr.insert(attStr, at: selectedRange.location)
         
         //设置可变文本的字体属性
-        mutableStr.addAttribute(NSAttributedStringKey.font, value: Theme.fontWithSize(20),
+        mutableStr.addAttribute(NSAttributedStringKey.font, value: font,
                                 range: NSMakeRange(0,mutableStr.length))
         //再次记住新的光标的位置
         let newSelectedRange = NSMakeRange(selectedRange.location + attStr.length, 0)
@@ -40,7 +55,7 @@ extension UITextView {
     }
     
     //插入图片
-    func insertPicture(_ image:UIImage, mode:ImageAttachmentMode = .default){
+    func insertPicture(_ image:UIImage, mode:ImageAttachmentMode = .default, font: UIFont = Theme.fontWithSize(24)){
         //获取textView的所有文本，转成可变的文本
         let mutableStr = NSMutableAttributedString(attributedString: self.attributedText)
         
@@ -53,8 +68,8 @@ extension UITextView {
         if mode == .fitTextLine {
             //与文字一样大小
             let scale = image.size.width / image.size.height
-            imgAttachment.bounds = CGRect(x: 0, y: -2, width: Theme.fontWithSize(20).lineHeight * scale,
-                                          height: Theme.fontWithSize(20).lineHeight)
+            imgAttachment.bounds = CGRect(x: 0, y: -2, width: font.lineHeight * scale,
+                                          height: font.lineHeight)
         } else if mode == .fitTextView {
             //撑满一行
             let imageWidth = self.frame.width - 10
@@ -69,7 +84,7 @@ extension UITextView {
         //插入文字
         mutableStr.insert(imgAttachmentString, at: selectedRange.location)
         //设置可变文本的字体属性
-        mutableStr.addAttribute(NSAttributedStringKey.font, value: Theme.fontWithSize(20),
+        mutableStr.addAttribute(NSAttributedStringKey.font, value: font,
                                 range: NSMakeRange(0,mutableStr.length))
         //再次记住新的光标的位置
         let newSelectedRange = NSMakeRange(selectedRange.location+1, 0)
@@ -81,8 +96,4 @@ extension UITextView {
         //移动滚动条（确保光标在可视区域内）
         self.scrollRangeToVisible(newSelectedRange)
     }
-    
-//    func numberOfLines(_ lines:NSInteger) {
-//        if self.text.
-//    }
 }

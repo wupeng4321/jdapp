@@ -28,7 +28,7 @@ class JDShopCarGoodsCardCell: UICollectionViewCell {
     }
     
     func createUI() {
-        self.contentView.addSubview(view1)
+        self.contentView.addSubview(view1, view2)
         self.contentView.addSubview(iconImageView, deleteImageView, titlesLable, subtitleLable)
         self.contentView.addSubview(priceLable, countLable, realPriceLable, plusImageView)
         self.setupView()
@@ -37,11 +37,26 @@ class JDShopCarGoodsCardCell: UICollectionViewCell {
         weak var weakSelf = self
         self.iconImageView.snp.makeConstraints { (make) in
             make.top.left.right.equalTo((weakSelf?.contentView)!)
-            make.bottom.equalTo((weakSelf?.contentView.snp.bottom)!).offset(-Theme.paddingWithSize(100))
+            make.bottom.equalTo((weakSelf?.contentView.snp.bottom)!).offset(-Theme.paddingWithSize(160))
         }
         self.view1.snp.makeConstraints { (make) in
-            make.left.right.bottom.equalTo((weakSelf?.contentView)!)
+            make.left.right.equalTo((weakSelf?.contentView)!)
             make.top.equalTo((weakSelf?.iconImageView.snp.bottom)!)
+            make.bottom.equalTo((weakSelf?.contentView)!).offset(-Theme.paddingWithSize(70))
+        }
+        self.deleteImageView.snp.makeConstraints { (make) in
+            make.right.top.equalTo((weakSelf?.iconImageView)!)
+            make.width.height.equalTo(Theme.paddingWithSize(20))
+        }
+//        self.priceLable.snp.makeConstraints { (make) in
+//            make.left.equalTo((weakSelf?.iconImageView)!);
+//            make.top.equalTo((weakSelf?.view1.snp.bottom)!)
+//            make.bottom.equalTo((weakSelf?.contentView)!)
+//        }
+        self.view2.snp.makeConstraints { (make) in
+            make.left.right.equalTo((weakSelf?.view1)!)
+            make.top.equalTo((weakSelf?.view1.snp.bottom)!)
+            make.bottom.equalTo((weakSelf?.contentView)!)
         }
     }
     
@@ -54,6 +69,7 @@ class JDShopCarGoodsCardCell: UICollectionViewCell {
     lazy var deleteImageView: UIImageView = {
         let deleteImageView = UIImageView()
         deleteImageView.isUserInteractionEnabled = true
+        deleteImageView.backgroundColor = ArcRandomColor()
         return deleteImageView
     }()
     
@@ -86,14 +102,35 @@ class JDShopCarGoodsCardCell: UICollectionViewCell {
     lazy var view1: UITextView = {
         let view1 = UITextView()
         view1.indicatorStyle = .default
-        view1.textContainer.maximumNumberOfLines = 2
+//        view1.textContainer.maximumNumberOfLines = 3
         view1.textContainer.lineBreakMode = .byTruncatingTail
         view1.isEditable = false
         view1.isSelectable = false
+        view1.isScrollEnabled = false
+        view1.contentInset = UIEdgeInsetsMake(Theme.paddingWithSize(-8), 0, 0, 0)
+        let attributes = [NSAttributedStringKey.paragraphStyle : self.textViewStyle()];
+        view1.attributedText = NSAttributedString(string: view1.text, attributes: attributes)
         view1.backgroundColor = ArcRandomColor()
         return view1
     }()
-
+    
+    lazy var view2: UITextView = {
+        let view2 = UITextView()
+        view2.indicatorStyle = .default
+        view2.textContainer.maximumNumberOfLines = 2
+        view2.textContainer.lineBreakMode = .byTruncatingTail
+        view2.isEditable = false
+        view2.isSelectable = false
+        view2.isScrollEnabled = false
+        view2.backgroundColor = ArcRandomColor()
+        return view2
+    }()
+    
+    func textViewStyle() -> NSMutableParagraphStyle {
+        let style = NSMutableParagraphStyle()
+        style.lineSpacing = Theme.paddingWithSize(2)
+        return style
+    }
     
     //MARK: - setter & getter
     var dic: JSON?{
@@ -110,7 +147,9 @@ class JDShopCarGoodsCardCell: UICollectionViewCell {
     }
     
     func updateUIWith(dic: JSON) {
-        
+        //清空某些数据
+        self.reset()
+        JDLog((indexPath?.row)! - 1)
         var source = dic["wareInfoList"][((indexPath?.row)! - 1)]
         let urlStr = source["imageurl"].string!
         let url = URL(string: urlStr)
@@ -118,11 +157,8 @@ class JDShopCarGoodsCardCell: UICollectionViewCell {
         
         let title = source["wname"].string!
         let markUrl:URL?
-//        self.view1.insertText(title)
-//        self.view1.insertPicture(UIImage(named: "icon")!, mode: .fitTextLine)
         self.view1.text = nil;
-        //https://m.360buyimg.com/mobilecms/jfs/t3802/184/2262265095/4363/20cc83a/584675ccNb39899f9.png
-        guard source["markImageUrl"].string == nil else {
+        if source["markImageUrl"].string != nil {
             markUrl = URL(string: source["markImageUrl"].string!)
             let downLoader = ImageDownloader.default
             weak var weakSelf = self
@@ -130,15 +166,17 @@ class JDShopCarGoodsCardCell: UICollectionViewCell {
                 weakSelf?.view1.insertPicture(image!, mode: .fitTextLine)
                 weakSelf?.view1.insertText(title)
             }
-            return
         }
+        
         self.view1.insertText(title)
-        
-
-        
-        
-        
-
-        
+        var price = source["jdPrice"].string!
+        let attributePrice = price.toPriceString()
+        self.view2.insertAttributedString(attributePrice)
     }
+    
+    func reset() {
+        self.view1.attributedText = nil
+        self.view2.attributedText = nil
+    }
+
 }

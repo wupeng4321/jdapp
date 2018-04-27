@@ -166,18 +166,18 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
             if indexPath.row == 0 {
                 return CGSize(width: kScreenWidth, height: Theme.paddingWithSize(100))
             }
-            return CGSize(width: (kScreenWidth - Theme.paddingWithSize(10)) / 2, height: Theme.paddingWithSize(500))
+            return CGSize(width: (kScreenWidth - Theme.paddingWithSize(6)) / 2, height: Theme.paddingWithSize(580))
         }
         return CGSize(width: kScreenWidth, height: Theme.paddingWithSize(250))
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return CGFloat(10)
+        return CGFloat(Theme.paddingWithSize(8))
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         if section == json!["cartInfo"]["vendors"].count {
-            return CGFloat(Theme.paddingWithSize(8))
+            return CGFloat(Theme.paddingWithSize(6))
         }
         return CGFloat(0)
     }

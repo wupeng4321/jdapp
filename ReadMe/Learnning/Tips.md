@@ -42,3 +42,13 @@ let cls = NSClassFromString(clsName) as? UIViewController.Type
 let vc = cls()
 ```
 
+## 通过给函数设定默认值,在调用的时候,如果指定使用指定值,如果不指定,使用默认值
+```
+func sum(_ x: Int = 1, _ y: Int = 2) -> Int {
+    return x + y
+}
+
+sum(3) = 3 + 2 = 5
+sum(3, 4) = 3 + 4 = 7
+```
+
