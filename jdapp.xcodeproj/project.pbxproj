@@ -11,6 +11,7 @@
 		7618B2D71FE90FB0000F91F4 /* JDHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7618B2D61FE90FB0000F91F4 /* JDHomeViewController.swift */; };
 		761AFD7620070B0E00A00BD6 /* UILabel+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761AFD7520070B0E00A00BD6 /* UILabel+Category.swift */; };
 		761AFD7820070B3900A00BD6 /* UIView+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761AFD7720070B3900A00BD6 /* UIView+Category.swift */; };
+		7636E506209A9F62000624B5 /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7636E505209A9F62000624B5 /* Bundle+Extensions.swift */; };
 		764C64711FE7658E002329AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764C64701FE7658E002329AD /* AppDelegate.swift */; };
 		764C64731FE7658E002329AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764C64721FE7658E002329AD /* ViewController.swift */; };
 		764C64761FE7658E002329AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 764C64741FE7658E002329AD /* Main.storyboard */; };
@@ -110,6 +111,7 @@
 		7618B2D61FE90FB0000F91F4 /* JDHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDHomeViewController.swift; sourceTree = "<group>"; };
 		761AFD7520070B0E00A00BD6 /* UILabel+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Category.swift"; sourceTree = "<group>"; };
 		761AFD7720070B3900A00BD6 /* UIView+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Category.swift"; sourceTree = "<group>"; };
+		7636E505209A9F62000624B5 /* Bundle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
 		764C646D1FE7658E002329AD /* jdapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jdapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		764C64701FE7658E002329AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		764C64721FE7658E002329AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 				767AA6B520198247004A15F3 /* NSRange+Category.swift */,
 				764ED588207A4E790059D68E /* Dictionary+Category.swift */,
 				764ED590207CEFB90059D68E /* UITextView+Category.swift */,
+				7636E505209A9F62000624B5 /* Bundle+Extensions.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1007,6 +1010,7 @@
 				7661AFAD1FEA497600C20389 /* JDTabBarController.swift in Sources */,
 				76992B3C1FF633570028F677 /* BaseViewModel.swift in Sources */,
 				76992B331FF62BED0028F677 /* JDHomeViewCell.swift in Sources */,
+				7636E506209A9F62000624B5 /* Bundle+Extensions.swift in Sources */,
 				7661AF9A1FEA460C00C20389 /* BaseViewController.swift in Sources */,
 				7661AFB41FEA5A3300C20389 /* UtilMacro.swift in Sources */,
 				76A0C62120026F2F00A3F500 /* JDShopCarViewModel.swift in Sources */,

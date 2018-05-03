@@ -39,7 +39,7 @@ extension UIScrollView {
 //需要添加命名空间,默认为项目名称
 let clsName = "jdapp.BaseViewController"
 let cls = NSClassFromString(clsName) as? UIViewController.Type
-let vc = cls()
+let vc = cls.init()
 ```
 
 ## 通过给函数设定默认值,在调用的时候,如果指定使用指定值,如果不指定,使用默认值

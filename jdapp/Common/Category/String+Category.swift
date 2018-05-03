@@ -57,4 +57,11 @@ extension String {
             [self.NSRangeFromRange(range)]
             }!
     }
+    
+    var viewController: UIViewController {
+        let cls = NSClassFromString(Bundle.main.nameSpace + "." + self)! as! UIViewController.Type
+        return cls.init()
+        
+    }
+    
 }
