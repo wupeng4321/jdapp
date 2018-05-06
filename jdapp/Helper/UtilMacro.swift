@@ -61,7 +61,7 @@ func ColorFromRGBA(_ hexColor:Int, _ alpha:CGFloat) -> UIColor {
     let red   = CGFloat((hexColor & 0xff0000) >> 16)
     let green = CGFloat((hexColor & 0xff00) >> 8)
     let blue  = CGFloat(hexColor & 0xff)
-    return ColorA(red, green, blue, alpha)
+    return ColorA(red / 255.0, green / 255.0, blue / 255.0, alpha)
 }
 
 //==========================================================================

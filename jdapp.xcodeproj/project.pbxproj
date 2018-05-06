@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		760FAE66209F531B00C3B268 /* category.png in Resources */ = {isa = PBXBuildFile; fileRef = 760FAE65209F531B00C3B268 /* category.png */; };
+		760FAE6E209F6A7C00C3B268 /* JDCategoryTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760FAE6D209F6A7C00C3B268 /* JDCategoryTableView.swift */; };
 		7618B2D41FE8C1ED000F91F4 /* AllocDellocViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7618B2D31FE8C1ED000F91F4 /* AllocDellocViewController.swift */; };
 		7618B2D71FE90FB0000F91F4 /* JDHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7618B2D61FE90FB0000F91F4 /* JDHomeViewController.swift */; };
 		761AFD7620070B0E00A00BD6 /* UILabel+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761AFD7520070B0E00A00BD6 /* UILabel+Category.swift */; };
@@ -115,6 +116,10 @@
 		760FAE64209F531400C3B268 /* categoryDetail.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = categoryDetail.jpeg; sourceTree = "<group>"; };
 		760FAE65209F531B00C3B268 /* category.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = category.png; sourceTree = "<group>"; };
 		760FAE67209F53D500C3B268 /* shopCar.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shopCar.jpeg; sourceTree = "<group>"; };
+		760FAE69209F682200C3B268 /* categoryCatalogs.chls */ = {isa = PBXFileReference; lastKnownFileType = file; path = categoryCatalogs.chls; sourceTree = "<group>"; };
+		760FAE6A209F682200C3B268 /* categoryHeader.chls */ = {isa = PBXFileReference; lastKnownFileType = file; path = categoryHeader.chls; sourceTree = "<group>"; };
+		760FAE6B209F682200C3B268 /* category.chls */ = {isa = PBXFileReference; lastKnownFileType = file; path = category.chls; sourceTree = "<group>"; };
+		760FAE6D209F6A7C00C3B268 /* JDCategoryTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDCategoryTableView.swift; sourceTree = "<group>"; };
 		7618B2D31FE8C1ED000F91F4 /* AllocDellocViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllocDellocViewController.swift; sourceTree = "<group>"; };
 		7618B2D61FE90FB0000F91F4 /* JDHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDHomeViewController.swift; sourceTree = "<group>"; };
 		761AFD7520070B0E00A00BD6 /* UILabel+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Category.swift"; sourceTree = "<group>"; };
@@ -312,6 +317,24 @@
 			path = My;
 			sourceTree = "<group>";
 		};
+		760FAE68209F679A00C3B268 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				760FAE6B209F682200C3B268 /* category.chls */,
+				760FAE69209F682200C3B268 /* categoryCatalogs.chls */,
+				760FAE6A209F682200C3B268 /* categoryHeader.chls */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		760FAE6C209F6A4000C3B268 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				760FAE6D209F6A7C00C3B268 /* JDCategoryTableView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		7618B2D21FE8C1B4000F91F4 /* BaseViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -475,13 +498,6 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		7661AF9E1FEA486600C20389 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		7661AF9F1FEA486E00C20389 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -564,8 +580,8 @@
 		76936F621FE8B63E0009AB2F /* JDCategory */ = {
 			isa = PBXGroup;
 			children = (
+				760FAE6C209F6A4000C3B268 /* Views */,
 				7661AF9F1FEA486E00C20389 /* ViewModels */,
-				7661AF9E1FEA486600C20389 /* Views */,
 				7661AF9D1FEA485700C20389 /* Controllers */,
 			);
 			path = JDCategory;
@@ -643,10 +659,10 @@
 		76DF59E120737F6600B31B51 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				760FAE68209F679A00C3B268 /* Category */,
 				76DF59E620737F9300B31B51 /* My */,
 				76DF59E520737F8900B31B51 /* ShopCar */,
 				76DF59E420737F8100B31B51 /* Finder */,
-				76DF59E320737F7800B31B51 /* Category */,
 				76DF59E220737F7000B31B51 /* Home */,
 			);
 			path = Data;
@@ -680,13 +696,6 @@
 				76DF59F2207384B400B31B51 /* welcomeHome.chls */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		76DF59E320737F7800B31B51 /* Category */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Category;
 			sourceTree = "<group>";
 		};
 		76DF59E420737F8100B31B51 /* Finder */ = {
@@ -1082,6 +1091,7 @@
 				7661AFB41FEA5A3300C20389 /* UtilMacro.swift in Sources */,
 				76A0C62120026F2F00A3F500 /* JDShopCarViewModel.swift in Sources */,
 				76992B371FF630F80028F677 /* JDHomeNavigatorCell.swift in Sources */,
+				760FAE6E209F6A7C00C3B268 /* JDCategoryTableView.swift in Sources */,
 				76F724A42073DA04009419FA /* RequestParameter.swift in Sources */,
 				761AFD7820070B3900A00BD6 /* UIView+Category.swift in Sources */,
 				764ED58F207CEB570059D68E /* JDRecommendHeaderCell.swift in Sources */,

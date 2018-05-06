@@ -31,6 +31,7 @@ let kColorLightGray         = ColorFromRGB(0xd1d1d1) // text place holder
 let kColorForSeparatorLine  = ColorFromRGB(0xeaeaea)
 let themeColor              = kColorWhite
 let kColorBackground        = ColorFromRGB(0xf3f5f7) // text background color
+let kColorTextField         = ColorFromRGB(0xf0f2f5) // textfield background color
 
 //==========================================================================
 //MARK - size
