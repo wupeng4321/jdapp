@@ -103,7 +103,7 @@ class JDShopCarGoodsCell: UICollectionViewCell {
             make.left.equalTo(self.imageView.snp.right).offset(Theme.paddingWithSize(20))
             make.right.equalTo(self.view2.snp.right).offset(-Theme.paddingWithSize(80))
             make.top.equalTo(self.imageView)
-            make.height.equalTo(self.goodsInfoLabel.font.lineHeight * 2)
+            make.height.equalTo(self.goodsInfoLabel.font.lineHeight * 2.5)
         }
         self.goodsColorLabel.snp.makeConstraints { (make) in
             make.top.equalTo(self.goodsInfoLabel.snp.bottom)
@@ -168,7 +168,7 @@ class JDShopCarGoodsCell: UICollectionViewCell {
     lazy var imageView: UIImageView = {
         let imageView: UIImageView = UIImageView()
         imageView.boundsToCorderRadius(5.0)
-        imageView.layer.borderWidth = 0.5
+        imageView.layer.borderWidth = padding(2)
         imageView.layer.borderColor = kColorDimGray.cgColor
         imageView.backgroundColor = ArcRandomColor()
         return imageView
@@ -341,7 +341,6 @@ class JDShopCarGoodsCell: UICollectionViewCell {
         
        
     }
-    
     
     
     

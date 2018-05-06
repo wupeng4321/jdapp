@@ -12,6 +12,8 @@
 		761AFD7620070B0E00A00BD6 /* UILabel+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761AFD7520070B0E00A00BD6 /* UILabel+Category.swift */; };
 		761AFD7820070B3900A00BD6 /* UIView+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761AFD7720070B3900A00BD6 /* UIView+Category.swift */; };
 		7636E506209A9F62000624B5 /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7636E505209A9F62000624B5 /* Bundle+Extensions.swift */; };
+		76347BBE2096D45D00E3C8B9 /* goodsDetail.chls in Resources */ = {isa = PBXBuildFile; fileRef = 76347BBD2096D45D00E3C8B9 /* goodsDetail.chls */; };
+		76347BC02096D7CE00E3C8B9 /* JDGoodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76347BBF2096D7CE00E3C8B9 /* JDGoodsViewController.swift */; };
 		764C64711FE7658E002329AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764C64701FE7658E002329AD /* AppDelegate.swift */; };
 		764C64731FE7658E002329AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764C64721FE7658E002329AD /* ViewController.swift */; };
 		764C64761FE7658E002329AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 764C64741FE7658E002329AD /* Main.storyboard */; };
@@ -112,6 +114,8 @@
 		761AFD7520070B0E00A00BD6 /* UILabel+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Category.swift"; sourceTree = "<group>"; };
 		761AFD7720070B3900A00BD6 /* UIView+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Category.swift"; sourceTree = "<group>"; };
 		7636E505209A9F62000624B5 /* Bundle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
+		76347BBD2096D45D00E3C8B9 /* goodsDetail.chls */ = {isa = PBXFileReference; lastKnownFileType = file; path = goodsDetail.chls; sourceTree = "<group>"; };
+		76347BBF2096D7CE00E3C8B9 /* JDGoodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDGoodsViewController.swift; sourceTree = "<group>"; };
 		764C646D1FE7658E002329AD /* jdapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jdapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		764C64701FE7658E002329AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		764C64721FE7658E002329AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -399,6 +403,7 @@
 			isa = PBXGroup;
 			children = (
 				7661AF9B1FEA466100C20389 /* JDShopCarViewController.swift */,
+				76347BBF2096D7CE00E3C8B9 /* JDGoodsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -635,6 +640,7 @@
 		76DF59E520737F8900B31B51 /* ShopCar */ = {
 			isa = PBXGroup;
 			children = (
+				76347BBD2096D45D00E3C8B9 /* goodsDetail.chls */,
 				76F7249D2073CDAC009419FA /* cart.chls */,
 				76F7249F2073CDAC009419FA /* cartYB.chls */,
 				76F7249E2073CDAC009419FA /* uniformRecommend.chls */,
@@ -788,6 +794,7 @@
 				76DF5A18207384B600B31B51 /* changeNotify.chls in Resources */,
 				76DF5A0B207384B600B31B51 /* navigaton.chls in Resources */,
 				76DF5A16207384B600B31B51 /* lbs.chls in Resources */,
+				76347BBE2096D45D00E3C8B9 /* goodsDetail.chls in Resources */,
 				76DF5A19207384B600B31B51 /* loginconfig.chls in Resources */,
 				76DF5A05207384B600B31B51 /* serverConfig.chls in Resources */,
 				7661AFB71FEA5E1C00C20389 /* Localizable.strings in Resources */,
@@ -1038,6 +1045,7 @@
 				7672127A200345E2008E8D2B /* JDShopCarGoodsStoreView.swift in Sources */,
 				764ED589207A4E790059D68E /* Dictionary+Category.swift in Sources */,
 				7618B2D71FE90FB0000F91F4 /* JDHomeViewController.swift in Sources */,
+				76347BC02096D7CE00E3C8B9 /* JDGoodsViewController.swift in Sources */,
 				76992B351FF630C70028F677 /* JDHomeBannerCell.swift in Sources */,
 				76620BE21FFCDAFE00414D4D /* JDHomeGoodsViewCell.swift in Sources */,
 				7661AFBE1FEA630100C20389 /* Theme.swift in Sources */,

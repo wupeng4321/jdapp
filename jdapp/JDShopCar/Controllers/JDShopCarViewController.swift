@@ -44,7 +44,7 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
     func loadData() {
         //购物车
         
-        let shopCarPara = ["body": "{\"specialId\":\"1\",\"noResponse\":false,\"cartuuid\":\"coW0lj7vbXVin6h7ON+tMNFQqYBqMahr\",\"carttype\":\"1\",\"syntype\":\"1\",\"adid\":\"87BCDF77-D843-46E9-B7E5-83F18FA67806\",\"openudid\":\"c3cd74aebcea78dd6c069efe59f2500f99223e90\"}", "sv":"102","sign":"ede350ec4bd7ff7969fdbfe74055b76a", "st":"1523198986952"]
+        let shopCarPara = ["body": "{\"specialId\":\"1\",\"noResponse\":false,\"cartuuid\":\"coW0lj7vbXVin6h7ON+tMNFQqYBqMahr\",\"carttype\":\"1\",\"syntype\":\"1\",\"adid\":\"87BCDF77-D843-46E9-B7E5-83F18FA67806\",\"openudid\":\"c3cd74aebcea78dd6c069efe59f2500f99223e90\"}", "sv":"102","sign":"ede350ec4bd7ff7969fdbfe74055b76a", "st":"1523198986952", "build":"164649", "clientVersion":"6.6.6", "openudid":"c3cd74aebcea78dd6c069efe59f2500f99223e90"]
         let shopCarBodyPara = getBody(body:shopCarPara as AnyObject)
         
         Alamofire.request(url, method: .post, parameters: shopCarBodyPara, encoding: URLEncoding.httpBody, headers: header).responseJSON { response in
@@ -59,7 +59,7 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
         
         //为你推荐        
         let recommendPara = ["body":"{\"filteredPages\":\"0\",\"skus\":[\"1484557353\",\"1484557355\",\"5140143\",\"3491609\",\"5415001\",\"526144\",\"24861455807\",\"13196472078\",\"18963654321\",\"11102581523\",\"12987411424\",\"10236121296\",\"1235355770\",\"17980959752\",\"18727331198\",\"17020961280\",\"19030688803\",\"10555123104\",\"12222359397\",\"1981297429\",\"12858430734\",\"1988770736\"],\"source\":6,\"pageSize\":10,\"eventId\":\"Shopcart_UnEmpty_auto\",\"page\":1}"
-, "sv":"121", "sign":"3a24b917217890120451dd90ce1a3438","st":"1523203458310"]
+, "sv":"121", "sign":"3a24b917217890120451dd90ce1a3438","st":"1523203458310", "build":"164649", "clientVersion":"6.6.6", "openudid":"c3cd74aebcea78dd6c069efe59f2500f99223e90"]
         
         var recommendBodyPara = getBody(body: recommendPara as AnyObject)
         for (key, value) in recommendBodyPara {
@@ -212,5 +212,9 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
             return footerView
         }
         return UICollectionReusableView()
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = JDGoodsViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

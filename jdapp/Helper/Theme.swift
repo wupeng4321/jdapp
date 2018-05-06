@@ -43,6 +43,10 @@ let kStatusBarAndNavHeight  = iphoneX ? 88 : 64
 let kScale                  = kScreenWidth / 375
 let kBannerHeight           = 180
 let kPadding                = Theme.paddingWithSize(28) //left padding and right padding
+func padding(_ size: CGFloat) -> CGFloat {
+    return Theme.paddingWithSize(size)
+}
+
 
 //==========================================================================
 //MARK - font

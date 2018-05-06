@@ -35,6 +35,14 @@ extension UIView {
         self.layer.cornerRadius = radius
     }
     
+    func toBounds() {
+        let maskPath = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: .allCorners, cornerRadii: self.bounds.size)
+        let maskLayer = CAShapeLayer()
+        maskLayer.frame = self.frame
+        maskLayer.path = maskPath.cgPath
+        self.layer.mask = maskLayer
+    }
+    
     
     ///////////////////////////////////////////////////////
     func left() {

@@ -73,7 +73,7 @@ class JDCategoryViewController: BaseViewController, UITableViewDelegate, UITable
         cell?.textLabel?.font = Theme.fontWithSize(30)
         cell?.textLabel?.textAlignment = .center
         cell?.textLabel?.text = category[indexPath.row]
-        cell?.textLabel?.textColor = Color(0.6, 0.6, 0.6)
+        cell?.textLabel?.textColor = UIColor.black
         return cell!
     }
     
