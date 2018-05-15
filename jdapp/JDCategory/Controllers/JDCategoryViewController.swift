@@ -6,18 +6,19 @@
 //  Copyright © 2017年 wupeng. All rights reserved.
 //
 import UIKit
+import SwiftyJSON
+import Alamofire
 
-class JDCategoryViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class JDCategoryViewController: BaseViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     let tableViewWidth = CGFloat(180)
     let middleWidth = CGFloat(20)
-    
-    let category = ["推荐分类", "京东超市", "国际名牌", "奢侈品", "全球购", "男装", "女装", "男鞋", "女鞋", "内衣配饰", "箱包手袋", "美妆个护", "钟表珠宝", "手机数码", "电脑办公", "家用电器", "食品生鲜", "酒水饮料", "母婴童装", "玩具乐器", "医药保健", "计生情趣", "运动户外", "汽车用品", "家居厨具", "家具家装", "礼品鲜花", "宠物生活", "生活旅行", "图书音像", "邮币", "农资绿植", "特产馆", "京东金融", "拍卖", "房产", "二手商品"]
+    var headerJson: JSON?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = ColorFromRGB(0xf3f5f7)
         self.setupUI()
-        let a = JDCategoryTableView()
+        self.loadHeader()
     }
     
     func setupUI() {
@@ -35,9 +36,25 @@ class JDCategoryViewController: BaseViewController, UITableViewDelegate, UITable
             make.top.bottom.equalTo(tableView)
             make.right.equalTo(self.view)
         }
-        
     }
     
+    func loadHeader() {
+        let goodsPara = ["body" : "{\"level\":\"1\",\"catelogyID\":\"-1\"}", "st" : "1525624668734", "sv" : "100", "sign" : "2675d5083794ecd4988bd56444f2a3b0", "build":"164665", "clientVersion":"6.6.9", "openudid":"aa1a67822b9ad4bc538aee736673baba2198ecf3"]
+        let url = "http://api.m.jd.com/client.action?functionId=getCmsPromotionsListByCatelogyID"
+        
+        let goodsBodyPara = getBody(body:goodsPara as AnyObject)
+        
+        Alamofire.request(url, method: .post, parameters: goodsBodyPara, encoding: URLEncoding.httpBody, headers: header).responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                self.headerJson = JSON(value)
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
+
+    }
     
     
     //MARK: - lazy loading
@@ -52,10 +69,10 @@ class JDCategoryViewController: BaseViewController, UITableViewDelegate, UITable
         return headerView
     }()
     
-    lazy var tableView: UITableView = {
-        let tableView: UITableView = UITableView()
-        tableView.delegate = self
-        tableView.dataSource = self
+    lazy var tableView: JDCategoryTableView = {
+        let tableView: JDCategoryTableView = JDCategoryTableView()
+//        tableView.delegate = self
+//        tableView.dataSource = self
         tableView.backgroundColor = kColorBackground
         tableView.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: "cellId")
         return tableView
@@ -71,32 +88,21 @@ class JDCategoryViewController: BaseViewController, UITableViewDelegate, UITable
             collectionView.contentInsetAdjustmentBehavior = .never
         }
         collectionView.register(UICollectionViewCell.classForCoder(), forCellWithReuseIdentifier: "cellId")
+        collectionView.register(UICollectionReusableView.classForCoder(), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headerId")
+        collectionView.register(UICollectionReusableView.classForCoder(), forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: "footerId")
         return collectionView
     }()
     
-    //MARK: - tableview delegate & datasource
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellId")
-        cell?.backgroundColor = kColorWhite
-        cell?.textLabel?.font = Theme.fontWithSize(30)
-        cell?.textLabel?.textAlignment = .center
-        cell?.textLabel?.text = category[indexPath.row]
-        cell?.textLabel?.textColor = UIColor.black
-        cell?.backgroundColor = kColorWhite
-        cell?.selectedBackgroundView = UIView(frame: (cell?.bounds)!)
-        cell?.selectedBackgroundView?.backgroundColor = self.view.backgroundColor
-        return cell!
-    }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return category.count
-    }
     
     //MARK: - collectionView delegate & datasource
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 4
+        return 5
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if section == 0 {
+            return 1
+        }
         return 9
     }
     
@@ -105,18 +111,49 @@ class JDCategoryViewController: BaseViewController, UITableViewDelegate, UITable
         cell.backgroundColor = ArcRandomColor()
         return cell
     }
+    //line space
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
+    //interitem space
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
-    //    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-    //
-    //    }
-    //MARK: - UICollectionViewFlowLayout
+    //header size
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        if section == 0 {
+            return CGSize(width: 0, height: 0)
+        }
+        return CGSize(width: kScreenWidth - Theme.paddingWithSize(tableViewWidth + middleWidth * 2), height: 44)
+    }
+    //footer size
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        if section == 0 {
+            return CGSize(width: 0, height: 0)
+        }
+        return CGSize(width: kScreenWidth - Theme.paddingWithSize(tableViewWidth + middleWidth * 2), height: 0)
+    }
+    //item size
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (kScreenWidth - Theme.paddingWithSize(tableViewWidth + middleWidth * 2)) / 3
+        let totalWidth = kScreenWidth - Theme.paddingWithSize(tableViewWidth + middleWidth * 2)
+        let width = totalWidth / 3
+        if indexPath.section == 0 {
+            return CGSize(width: totalWidth, height: 100)
+        }
         return CGSize(width: width, height: 100)
+    }
+    //header view & footer view
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        if kind == UICollectionElementKindSectionHeader {
+            let headerView: UICollectionReusableView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "headerId", for: indexPath)
+            
+            return headerView
+        }
+        if kind == UICollectionElementKindSectionFooter {
+            let headerView: UICollectionReusableView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "footerId", for: indexPath)
+            
+            return headerView
+        }
+        return UICollectionReusableView()
     }
 }

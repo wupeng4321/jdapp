@@ -10,12 +10,17 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class JDCategoryTableView: UITableView {
+class JDCategoryTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
 //    let url = "http://api.m.jd.com/client.action?functionId=getCmsPromotionsListByCatelogyID"
     let url = "http://api.m.jd.com/client.action?functionId=entranceCatalog"
     var json : JSON?
+    var indexPath : IndexPath?
     override init(frame: CGRect, style: UITableViewStyle) {
         super.init(frame: frame, style: style)
+        self.delegate = self
+        self.dataSource = self
+        self.indexPath = IndexPath(row: 0, section: 0)
+        self.separatorInset = UIEdgeInsets(top: frame.size.height - 1, left: 0, bottom: 0, right: 0)
         self.loadData()
     }
     
@@ -35,10 +40,42 @@ class JDCategoryTableView: UITableView {
             switch response.result {
             case .success(let value):
                 self.json = JSON(value)
-            //                self.collectionView.reloadData()
+                self.reloadData()
             case .failure(let error):
                 print(error)
             }
         }
+    }
+    
+    //MARK: - tableview delegate & datasource
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellId")
+        cell?.backgroundColor = kColorWhite
+        cell?.textLabel?.font = Theme.fontWithSize(28)
+        cell?.textLabel?.textAlignment = .center
+        cell?.textLabel?.textColor = UIColor.black
+        cell?.backgroundColor = kColorWhite
+        cell?.selectedBackgroundView = UIView(frame: (cell?.bounds)!)
+        cell?.selectedBackgroundView?.backgroundColor = ColorFromRGB(0xf3f5f7)
+        if self.json != JSON.null {
+            cell?.textLabel?.text = self.json!["catelogyList"][indexPath.row]["name"].string!
+        }
+        if self.indexPath == indexPath {
+            cell?.backgroundColor = ColorFromRGB(0xf3f5f7)
+            cell?.textLabel?.textColor = ColorFromRGBA(0xf01119, 1)
+        }
+        return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard self.json != nil else {
+            return 0
+        }
+        return self.json!["catelogyList"].count
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.indexPath = indexPath
+        self.reloadData()
     }
 }
