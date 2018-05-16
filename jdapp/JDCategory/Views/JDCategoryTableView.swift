@@ -57,8 +57,13 @@ class JDCategoryTableView: UITableView, UITableViewDelegate, UITableViewDataSour
         cell?.backgroundColor = kColorWhite
         cell?.selectedBackgroundView = UIView(frame: (cell?.bounds)!)
         cell?.selectedBackgroundView?.backgroundColor = ColorFromRGB(0xf3f5f7)
-        if self.json != JSON.null {
-            cell?.textLabel?.text = self.json!["catelogyList"][indexPath.row]["name"].string!
+        if indexPath.row == 0 {
+            cell?.textLabel?.text = "推荐分类"
+        } else {
+            
+            if self.json != JSON.null {
+                cell?.textLabel?.text = self.json!["catelogyList"][indexPath.row - 1]["name"].string!
+            }
         }
         if self.indexPath == indexPath {
             cell?.backgroundColor = ColorFromRGB(0xf3f5f7)
@@ -71,7 +76,7 @@ class JDCategoryTableView: UITableView, UITableViewDelegate, UITableViewDataSour
         guard self.json != nil else {
             return 0
         }
-        return self.json!["catelogyList"].count
+        return self.json!["catelogyList"].count + 1
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

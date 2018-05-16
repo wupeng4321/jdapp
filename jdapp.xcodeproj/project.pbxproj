@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		760FAE66209F531B00C3B268 /* category.png in Resources */ = {isa = PBXBuildFile; fileRef = 760FAE65209F531B00C3B268 /* category.png */; };
 		760FAE6E209F6A7C00C3B268 /* JDCategoryTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760FAE6D209F6A7C00C3B268 /* JDCategoryTableView.swift */; };
+		7613AD6320AC83D400E82DDF /* JDCategoryDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7613AD6220AC83D400E82DDF /* JDCategoryDetailCell.swift */; };
 		7618B2D41FE8C1ED000F91F4 /* AllocDellocViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7618B2D31FE8C1ED000F91F4 /* AllocDellocViewController.swift */; };
 		7618B2D71FE90FB0000F91F4 /* JDHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7618B2D61FE90FB0000F91F4 /* JDHomeViewController.swift */; };
 		761AFD7620070B0E00A00BD6 /* UILabel+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761AFD7520070B0E00A00BD6 /* UILabel+Category.swift */; };
@@ -120,6 +121,7 @@
 		760FAE6A209F682200C3B268 /* categoryHeader.chls */ = {isa = PBXFileReference; lastKnownFileType = file; path = categoryHeader.chls; sourceTree = "<group>"; };
 		760FAE6B209F682200C3B268 /* category.chls */ = {isa = PBXFileReference; lastKnownFileType = file; path = category.chls; sourceTree = "<group>"; };
 		760FAE6D209F6A7C00C3B268 /* JDCategoryTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDCategoryTableView.swift; sourceTree = "<group>"; };
+		7613AD6220AC83D400E82DDF /* JDCategoryDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDCategoryDetailCell.swift; sourceTree = "<group>"; };
 		7618B2D31FE8C1ED000F91F4 /* AllocDellocViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllocDellocViewController.swift; sourceTree = "<group>"; };
 		7618B2D61FE90FB0000F91F4 /* JDHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDHomeViewController.swift; sourceTree = "<group>"; };
 		761AFD7520070B0E00A00BD6 /* UILabel+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Category.swift"; sourceTree = "<group>"; };
@@ -331,6 +333,7 @@
 			isa = PBXGroup;
 			children = (
 				760FAE6D209F6A7C00C3B268 /* JDCategoryTableView.swift */,
+				7613AD6220AC83D400E82DDF /* JDCategoryDetailCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -754,7 +757,6 @@
 				764C646A1FE7658E002329AD /* Frameworks */,
 				764C646B1FE7658E002329AD /* Resources */,
 				3300ADBDDE88323144C26EBF /* [CP] Embed Pods Frameworks */,
-				6532F0A2F3B392985E818284 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -773,8 +775,6 @@
 				764C647D1FE7658E002329AD /* Sources */,
 				764C647E1FE7658E002329AD /* Frameworks */,
 				764C647F1FE7658E002329AD /* Resources */,
-				95FBEBD28B01A43B66DA8AD7 /* [CP] Embed Pods Frameworks */,
-				8417489A59B16880AEEE9B43 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -794,8 +794,6 @@
 				764C64881FE7658E002329AD /* Sources */,
 				764C64891FE7658E002329AD /* Frameworks */,
 				764C648A1FE7658E002329AD /* Resources */,
-				1F6A27ADD32B1D439979E24C /* [CP] Embed Pods Frameworks */,
-				390D2FBC1FAA7F27A30F14EB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -911,24 +909,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1F6A27ADD32B1D439979E24C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-jdappUITests/Pods-jdappUITests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-jdappUITests/Pods-jdappUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		259526F2C0D991C2A3F4F056 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -995,69 +975,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-jdapp/Pods-jdapp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		390D2FBC1FAA7F27A30F14EB /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-jdappUITests/Pods-jdappUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6532F0A2F3B392985E818284 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-jdapp/Pods-jdapp-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8417489A59B16880AEEE9B43 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-jdappTests/Pods-jdappTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		95FBEBD28B01A43B66DA8AD7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-jdappTests/Pods-jdappTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-jdappTests/Pods-jdappTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		C1012E0A05042058349E7EB1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1103,6 +1020,7 @@
 				7618B2D41FE8C1ED000F91F4 /* AllocDellocViewController.swift in Sources */,
 				764ED58B207A83D40059D68E /* JDShopCarGoodsCardCell.swift in Sources */,
 				767AA6B620198247004A15F3 /* NSRange+Category.swift in Sources */,
+				7613AD6320AC83D400E82DDF /* JDCategoryDetailCell.swift in Sources */,
 				7661AFB01FEA4A5B00C20389 /* JDNavigationController.swift in Sources */,
 				764C64711FE7658E002329AD /* AppDelegate.swift in Sources */,
 				76C90E5B20108E1600307B62 /* String+Category.swift in Sources */,

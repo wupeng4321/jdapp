@@ -11,6 +11,7 @@ def fundation
     pod 'SnapKit', '~> 4.0.0'     #layout
     pod 'SwiftyJSON', '~> 4.0.0'  #MJExtension
     pod 'Kingfisher', '~> 4.5.0'  #SDWebImage
+#    pod 'SDCycleScrollView','~> 1.75'
 end
 
 target 'jdapp' do

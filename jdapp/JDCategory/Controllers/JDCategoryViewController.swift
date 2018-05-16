@@ -13,12 +13,14 @@ class JDCategoryViewController: BaseViewController, UICollectionViewDelegate, UI
     let tableViewWidth = CGFloat(180)
     let middleWidth = CGFloat(20)
     var headerJson: JSON?
+    var detailJson: JSON?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = ColorFromRGB(0xf3f5f7)
         self.setupUI()
         self.loadHeader()
+        self.loadDetail()
     }
     
     func setupUI() {
@@ -53,7 +55,23 @@ class JDCategoryViewController: BaseViewController, UICollectionViewDelegate, UI
                 print(error)
             }
         }
-
+    }
+    
+    func loadDetail() {
+        let goodsPara = ["body" : "{\"clear\":0,\"method\":\"bp.category\",\"uid\":\"v\\/+ZmXYnNWArQiwAjC8arw==\",\"token\":\"d9702ba2e4526b667c0f403974cf3ed2\",\"guid\":\"aa1a67822b9ad4bc538aee736673baba2198ecf3\"}", "st" : "1526481733027", "sv" : "120", "sign" : "d448da1c11065a6c370af8b789ed7537", "build":"164665", "clientVersion":"6.6.9", "openudid":"aa1a67822b9ad4bc538aee736673baba2198ecf3"]
+        let url = "http://api.m.jd.com/client.action?functionId=commonCatalogs"
+        
+        let goodsBodyPara = getBody(body:goodsPara as AnyObject)
+        
+        Alamofire.request(url, method: .post, parameters: goodsBodyPara, encoding: URLEncoding.httpBody, headers: header).responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                self.detailJson = JSON(value)
+                self.collectionView.reloadData()
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
     
     
@@ -87,7 +105,7 @@ class JDCategoryViewController: BaseViewController, UICollectionViewDelegate, UI
         if ios11 {
             collectionView.contentInsetAdjustmentBehavior = .never
         }
-        collectionView.register(UICollectionViewCell.classForCoder(), forCellWithReuseIdentifier: "cellId")
+        collectionView.register(JDCategoryDetailCell.classForCoder(), forCellWithReuseIdentifier: "cellId")
         collectionView.register(UICollectionReusableView.classForCoder(), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headerId")
         collectionView.register(UICollectionReusableView.classForCoder(), forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: "footerId")
         return collectionView
@@ -107,8 +125,10 @@ class JDCategoryViewController: BaseViewController, UICollectionViewDelegate, UI
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath)
+        let cell:JDCategoryDetailCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! JDCategoryDetailCell
         cell.backgroundColor = ArcRandomColor()
+        cell.indexPath = indexPath
+        cell.dic = self.detailJson
         return cell
     }
     //line space
@@ -140,7 +160,7 @@ class JDCategoryViewController: BaseViewController, UICollectionViewDelegate, UI
         if indexPath.section == 0 {
             return CGSize(width: totalWidth, height: 100)
         }
-        return CGSize(width: width, height: 100)
+        return CGSize(width: width, height: padding(280))
     }
     //header view & footer view
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
