@@ -115,20 +115,29 @@ class JDCategoryViewController: BaseViewController, UICollectionViewDelegate, UI
     
     //MARK: - collectionView delegate & datasource
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 5
+        if self.detailJson != nil {
+            return self.detailJson!["data"].array!.count + 1
+        }
+        return 1
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 0 {
             return 1
         }
-        return 9
+        let a = self.detailJson!["data"]
+        if a != JSON.null {
+            return (a[section - 1]["catelogyList"].array?.count)!
+        }
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell:JDCategoryDetailCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! JDCategoryDetailCell
         cell.backgroundColor = ArcRandomColor()
-        cell.indexPath = indexPath
-        cell.dic = self.detailJson
+        if self.detailJson != nil && indexPath.section > 0 {
+//            cell.indexPath = indexPath
+            cell.dic = self.detailJson!["data"][indexPath.section - 1]["catelogyList"][indexPath.row]
+        }
         return cell
     }
     //line space

@@ -10,6 +10,8 @@
 		760FAE66209F531B00C3B268 /* category.png in Resources */ = {isa = PBXBuildFile; fileRef = 760FAE65209F531B00C3B268 /* category.png */; };
 		760FAE6E209F6A7C00C3B268 /* JDCategoryTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760FAE6D209F6A7C00C3B268 /* JDCategoryTableView.swift */; };
 		7613AD6320AC83D400E82DDF /* JDCategoryDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7613AD6220AC83D400E82DDF /* JDCategoryDetailCell.swift */; };
+		7618451320B1C88D002C8C84 /* JDCategoryCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7618451220B1C88D002C8C84 /* JDCategoryCollectionView.swift */; };
+		7618451520B1C91D002C8C84 /* JDCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7618451420B1C91D002C8C84 /* JDCategoryView.swift */; };
 		7618B2D41FE8C1ED000F91F4 /* AllocDellocViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7618B2D31FE8C1ED000F91F4 /* AllocDellocViewController.swift */; };
 		7618B2D71FE90FB0000F91F4 /* JDHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7618B2D61FE90FB0000F91F4 /* JDHomeViewController.swift */; };
 		761AFD7620070B0E00A00BD6 /* UILabel+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761AFD7520070B0E00A00BD6 /* UILabel+Category.swift */; };
@@ -122,6 +124,8 @@
 		760FAE6B209F682200C3B268 /* category.chls */ = {isa = PBXFileReference; lastKnownFileType = file; path = category.chls; sourceTree = "<group>"; };
 		760FAE6D209F6A7C00C3B268 /* JDCategoryTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDCategoryTableView.swift; sourceTree = "<group>"; };
 		7613AD6220AC83D400E82DDF /* JDCategoryDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDCategoryDetailCell.swift; sourceTree = "<group>"; };
+		7618451220B1C88D002C8C84 /* JDCategoryCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDCategoryCollectionView.swift; sourceTree = "<group>"; };
+		7618451420B1C91D002C8C84 /* JDCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDCategoryView.swift; sourceTree = "<group>"; };
 		7618B2D31FE8C1ED000F91F4 /* AllocDellocViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllocDellocViewController.swift; sourceTree = "<group>"; };
 		7618B2D61FE90FB0000F91F4 /* JDHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDHomeViewController.swift; sourceTree = "<group>"; };
 		761AFD7520070B0E00A00BD6 /* UILabel+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Category.swift"; sourceTree = "<group>"; };
@@ -334,6 +338,8 @@
 			children = (
 				760FAE6D209F6A7C00C3B268 /* JDCategoryTableView.swift */,
 				7613AD6220AC83D400E82DDF /* JDCategoryDetailCell.swift */,
+				7618451220B1C88D002C8C84 /* JDCategoryCollectionView.swift */,
+				7618451420B1C91D002C8C84 /* JDCategoryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -817,6 +823,7 @@
 				TargetAttributes = {
 					764C646C1FE7658E002329AD = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 					};
 					764C64801FE7658E002329AD = {
@@ -957,6 +964,8 @@
 				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SDCycleScrollView/SDCycleScrollView.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
@@ -967,6 +976,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDCycleScrollView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -1028,6 +1039,7 @@
 				7661AFA61FEA48E000C20389 /* JDFinderViewController.swift in Sources */,
 				7660B9ED1FF4D9D000082363 /* TransparentNavigationBar.swift in Sources */,
 				76C90E57201041A900307B62 /* UICollectionViewPlainFlowLayout.swift in Sources */,
+				7618451320B1C88D002C8C84 /* JDCategoryCollectionView.swift in Sources */,
 				76620BDE1FFCC69B00414D4D /* GoodsView.swift in Sources */,
 				7661AFA41FEA48C900C20389 /* JDCategoryViewController.swift in Sources */,
 				7672127A200345E2008E8D2B /* JDShopCarGoodsStoreView.swift in Sources */,
@@ -1037,6 +1049,7 @@
 				76992B351FF630C70028F677 /* JDHomeBannerCell.swift in Sources */,
 				76620BE21FFCDAFE00414D4D /* JDHomeGoodsViewCell.swift in Sources */,
 				7661AFBE1FEA630100C20389 /* Theme.swift in Sources */,
+				7618451520B1C91D002C8C84 /* JDCategoryView.swift in Sources */,
 				76992B311FF627C50028F677 /* NavigatorScrollView.swift in Sources */,
 				761AFD7620070B0E00A00BD6 /* UILabel+Category.swift in Sources */,
 				7661AFAB1FEA491500C20389 /* JDUserViewController.swift in Sources */,
@@ -1222,13 +1235,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7NQEQBKMMR;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/jdapp/Helper",
+				);
 				GCC_PREFIX_HEADER = jdapp/Helper/UtilMacro.swift;
 				INFOPLIST_FILE = "$(SRCROOT)/jdapp/SupportFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.wupeng.jdapp123;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1240,13 +1260,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7NQEQBKMMR;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/jdapp/Helper",
+				);
 				GCC_PREFIX_HEADER = jdapp/Helper/UtilMacro.swift;
 				INFOPLIST_FILE = "$(SRCROOT)/jdapp/SupportFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.wupeng.jdapp123;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
