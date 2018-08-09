@@ -519,6 +519,556 @@
 		76811617211C9D080094FC06 /* CategoryDecorationViewLayoutAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryDecorationViewLayoutAttributes.h; sourceTree = "<group>"; };
 		76811618211C9D090094FC06 /* ActivityAddressBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityAddressBook.h; sourceTree = "<group>"; };
 		76811619211C9D090094FC06 /* _JDSURLSessionTaskSwizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _JDSURLSessionTaskSwizzling.h; sourceTree = "<group>"; };
+		7681161A211C9DC90094FC06 /* CloseJDAppProtocolHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CloseJDAppProtocolHandler.h; sourceTree = "<group>"; };
+		7681161B211C9DC90094FC06 /* COCheckoutAddressBaseInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutAddressBaseInfoView.h; sourceTree = "<group>"; };
+		7681161C211C9DC90094FC06 /* CCNearByCouponView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCNearByCouponView.h; sourceTree = "<group>"; };
+		7681161D211C9DC90094FC06 /* COCheckoutMainWeakTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutMainWeakTimer.h; sourceTree = "<group>"; };
+		7681161E211C9DCA0094FC06 /* CBPaymentSetupDataController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBPaymentSetupDataController.h; sourceTree = "<group>"; };
+		7681161F211C9DCA0094FC06 /* CouponViewTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CouponViewTableViewCell.h; sourceTree = "<group>"; };
+		76811620211C9DCA0094FC06 /* FinderAttentionResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderAttentionResponse.h; sourceTree = "<group>"; };
+		76811621211C9DCA0094FC06 /* COCheckoutPlaceholderBlankView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutPlaceholderBlankView.h; sourceTree = "<group>"; };
+		76811622211C9DCA0094FC06 /* COCheckoutInvoiceReceivePersonInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutInvoiceReceivePersonInfoView.h; sourceTree = "<group>"; };
+		76811623211C9DCB0094FC06 /* COCheckoutRegionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutRegionModel.h; sourceTree = "<group>"; };
+		76811624211C9DCB0094FC06 /* CCCouponCPlanHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCCouponCPlanHeaderView.h; sourceTree = "<group>"; };
+		76811625211C9DCB0094FC06 /* COCheckoutSiteMapCalloutVM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutSiteMapCalloutVM.h; sourceTree = "<group>"; };
+		76811626211C9DCB0094FC06 /* COCheckoutPKSKU.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutPKSKU.h; sourceTree = "<group>"; };
+		76811627211C9DCB0094FC06 /* FinderArticleDetailSkuCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderArticleDetailSkuCell.h; sourceTree = "<group>"; };
+		76811628211C9DCC0094FC06 /* CCCouponPageBannerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCCouponPageBannerView.h; sourceTree = "<group>"; };
+		76811629211C9DCC0094FC06 /* COCheckoutPickSiteRM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutPickSiteRM.h; sourceTree = "<group>"; };
+		7681162A211C9DCC0094FC06 /* COCheckoutAddressTableViewCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutAddressTableViewCellModel.h; sourceTree = "<group>"; };
+		7681162B211C9DCC0094FC06 /* CommuneCommentContentCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneCommentContentCell.h; sourceTree = "<group>"; };
+		7681162C211C9DCC0094FC06 /* FinderCellFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderCellFactory.h; sourceTree = "<group>"; };
+		7681162D211C9DCD0094FC06 /* DPGDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPGDetailViewController.h; sourceTree = "<group>"; };
+		7681162E211C9DCD0094FC06 /* FinderAttentionBrandWallCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderAttentionBrandWallCell.h; sourceTree = "<group>"; };
+		7681162F211C9DCD0094FC06 /* FeedbackAlbumAssetCellDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FeedbackAlbumAssetCellDelegate-Protocol.h"; sourceTree = "<group>"; };
+		76811630211C9DCD0094FC06 /* COCheckoutPKPaymentCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutPKPaymentCell.h; sourceTree = "<group>"; };
+		76811631211C9DCD0094FC06 /* CommuneRewardInfoDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneRewardInfoDetailModel.h; sourceTree = "<group>"; };
+		76811632211C9DCE0094FC06 /* COCheckoutVenderShipmentConsolidatorShipmentCreator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutVenderShipmentConsolidatorShipmentCreator.h; sourceTree = "<group>"; };
+		76811633211C9DCE0094FC06 /* FinderArticleDetailWebViewLoadgingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderArticleDetailWebViewLoadgingView.h; sourceTree = "<group>"; };
+		76811634211C9DCE0094FC06 /* CommentShareSkuInstallSingleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentShareSkuInstallSingleView.h; sourceTree = "<group>"; };
+		76811635211C9DCE0094FC06 /* CouponCenterSearchHistoryManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CouponCenterSearchHistoryManager.h; sourceTree = "<group>"; };
+		76811636211C9DCE0094FC06 /* COCheckoutItemsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutItemsViewController.h; sourceTree = "<group>"; };
+		76811637211C9DCE0094FC06 /* FinalSearchListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinalSearchListViewController.h; sourceTree = "<group>"; };
+		76811638211C9DCF0094FC06 /* COCheckoutViewImmediatelyBuyAbstractView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutViewImmediatelyBuyAbstractView.h; sourceTree = "<group>"; };
+		76811639211C9DCF0094FC06 /* CDAsynchInitialiser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDAsynchInitialiser.h; sourceTree = "<group>"; };
+		7681163A211C9DCF0094FC06 /* CCCouponMyAssignmentInstructionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCCouponMyAssignmentInstructionView.h; sourceTree = "<group>"; };
+		7681163B211C9DCF0094FC06 /* FinderAttentionTodayRecModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderAttentionTodayRecModel.h; sourceTree = "<group>"; };
+		7681163C211C9DCF0094FC06 /* COCheckoutmainProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutmainProgressView.h; sourceTree = "<group>"; };
+		7681163D211C9DD00094FC06 /* COCheckoutFreightDetail.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutFreightDetail.h; sourceTree = "<group>"; };
+		7681163E211C9DD00094FC06 /* CBPaymentTypeViewControllerDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CBPaymentTypeViewControllerDelegate-Protocol.h"; sourceTree = "<group>"; };
+		7681163F211C9DD00094FC06 /* CommentSuperModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentSuperModel.h; sourceTree = "<group>"; };
+		76811640211C9DD00094FC06 /* CBPaymentPayCaptchaViewParamModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBPaymentPayCaptchaViewParamModel.h; sourceTree = "<group>"; };
+		76811641211C9DD00094FC06 /* COCheckoutGoodsViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutGoodsViewModel.h; sourceTree = "<group>"; };
+		76811642211C9DD10094FC06 /* CommuneCategoryDetailAnswerDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CommuneCategoryDetailAnswerDelegate-Protocol.h"; sourceTree = "<group>"; };
+		76811643211C9DD10094FC06 /* FinderArticleDetailBigSkuModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderArticleDetailBigSkuModel.h; sourceTree = "<group>"; };
+		76811644211C9DD10094FC06 /* FinderAttentionTalentCellHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderAttentionTalentCellHeader.h; sourceTree = "<group>"; };
+		76811645211C9DD10094FC06 /* FinderBaseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderBaseTableViewCell.h; sourceTree = "<group>"; };
+		76811646211C9DD20094FC06 /* COCheckoutCoordinateAddressModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutCoordinateAddressModel.h; sourceTree = "<group>"; };
+		76811647211C9DD20094FC06 /* CommuneSearchSuggestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneSearchSuggestView.h; sourceTree = "<group>"; };
+		76811648211C9DD20094FC06 /* CommentHomeTempateModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentHomeTempateModel.h; sourceTree = "<group>"; };
+		76811649211C9DD20094FC06 /* FinalSearchSubPriceView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinalSearchSubPriceView.h; sourceTree = "<group>"; };
+		7681164A211C9DD20094FC06 /* FinderFollowRecommendView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderFollowRecommendView.h; sourceTree = "<group>"; };
+		7681164B211C9DD30094FC06 /* DJXYHomeShopFloorModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DJXYHomeShopFloorModel.h; sourceTree = "<group>"; };
+		7681164C211C9DD30094FC06 /* CommuneCategoryListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneCategoryListCell.h; sourceTree = "<group>"; };
+		7681164D211C9DD30094FC06 /* COCheckoutMainBillFloorCreator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutMainBillFloorCreator.h; sourceTree = "<group>"; };
+		7681164E211C9DD30094FC06 /* COCheckoutMainImmediatelyBuyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutMainImmediatelyBuyView.h; sourceTree = "<group>"; };
+		7681164F211C9DD40094FC06 /* COCheckoutInvoiceVatDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "COCheckoutInvoiceVatDelegate-Protocol.h"; sourceTree = "<group>"; };
+		76811650211C9DD40094FC06 /* COCheckoutMainSwitchBeanVM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutMainSwitchBeanVM.h; sourceTree = "<group>"; };
+		76811651211C9DD40094FC06 /* COCheckoutMainImmediatelyBuyCountModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutMainImmediatelyBuyCountModel.h; sourceTree = "<group>"; };
+		76811652211C9DD40094FC06 /* CommuneSearchAssetProduct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneSearchAssetProduct.h; sourceTree = "<group>"; };
+		76811653211C9DD40094FC06 /* COCheckoutMainConfigurationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutMainConfigurationView.h; sourceTree = "<group>"; };
+		76811654211C9DD50094FC06 /* CustomTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTextField.h; sourceTree = "<group>"; };
+		76811655211C9DD50094FC06 /* FeedBackRecentOptimizeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedBackRecentOptimizeCell.h; sourceTree = "<group>"; };
+		76811656211C9DD50094FC06 /* CDBufferManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDBufferManager.h; sourceTree = "<group>"; };
+		76811657211C9DD50094FC06 /* FinderFollowRecommendModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderFollowRecommendModel.h; sourceTree = "<group>"; };
+		76811658211C9DD60094FC06 /* COCheckoutDelAddressApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutDelAddressApi.h; sourceTree = "<group>"; };
+		76811659211C9DD60094FC06 /* COCheckoutGetSelfDeliveryStoresAM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutGetSelfDeliveryStoresAM.h; sourceTree = "<group>"; };
+		7681165A211C9DD60094FC06 /* COCheckoutMainShipmentBigSaveInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutMainShipmentBigSaveInfo.h; sourceTree = "<group>"; };
+		7681165B211C9DD60094FC06 /* COCheckoutShippingAddressSimpleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutShippingAddressSimpleView.h; sourceTree = "<group>"; };
+		7681165C211C9DD60094FC06 /* COCheckoutButtonCheckBox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutButtonCheckBox.h; sourceTree = "<group>"; };
+		7681165D211C9DD70094FC06 /* COCheckoutMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutMainViewController.h; sourceTree = "<group>"; };
+		7681165E211C9DD70094FC06 /* COCheckoutOrderWareGroupSubGiftCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutOrderWareGroupSubGiftCell.h; sourceTree = "<group>"; };
+		7681165F211C9DD70094FC06 /* COCheckoutMainApiProtocol-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "COCheckoutMainApiProtocol-Protocol.h"; sourceTree = "<group>"; };
+		76811660211C9DD70094FC06 /* CommuneTableViewDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CommuneTableViewDelegate-Protocol.h"; sourceTree = "<group>"; };
+		76811661211C9DD80094FC06 /* COCheckoutGetSelfDeliveryStoresRM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutGetSelfDeliveryStoresRM.h; sourceTree = "<group>"; };
+		76811662211C9DD80094FC06 /* FinderArticleDetailAddCommentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderArticleDetailAddCommentModel.h; sourceTree = "<group>"; };
+		76811663211C9DD80094FC06 /* COCheckoutCountdownView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutCountdownView.h; sourceTree = "<group>"; };
+		76811664211C9DD80094FC06 /* Common360BuyDate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common360BuyDate.h; sourceTree = "<group>"; };
+		76811665211C9DD80094FC06 /* COCheckoutChooseButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutChooseButton.h; sourceTree = "<group>"; };
+		76811666211C9DD90094FC06 /* COCheckoutDropDownListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutDropDownListView.h; sourceTree = "<group>"; };
+		76811667211C9DD90094FC06 /* CCConvergeListViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCConvergeListViewModel.h; sourceTree = "<group>"; };
+		76811668211C9DD90094FC06 /* COCheckoutOrderInfoCheckoutBarDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "COCheckoutOrderInfoCheckoutBarDelegate-Protocol.h"; sourceTree = "<group>"; };
+		76811669211C9DD90094FC06 /* COCheckoutSiteVMProtocol-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "COCheckoutSiteVMProtocol-Protocol.h"; sourceTree = "<group>"; };
+		7681166A211C9DDA0094FC06 /* CommentShareSkuInstallSingleViewDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CommentShareSkuInstallSingleViewDelegate-Protocol.h"; sourceTree = "<group>"; };
+		7681166B211C9DDA0094FC06 /* CommuneCategoryActivityContentCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneCategoryActivityContentCell.h; sourceTree = "<group>"; };
+		7681166C211C9DDA0094FC06 /* CommuneDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneDetailModel.h; sourceTree = "<group>"; };
+		7681166D211C9DDA0094FC06 /* DJXYInvFloorCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DJXYInvFloorCell.h; sourceTree = "<group>"; };
+		7681166E211C9DDA0094FC06 /* DJXYWaterflowShopFloorCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DJXYWaterflowShopFloorCell.h; sourceTree = "<group>"; };
+		7681166F211C9DDB0094FC06 /* FinderAttentionContentPreView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderAttentionContentPreView.h; sourceTree = "<group>"; };
+		76811670211C9DDB0094FC06 /* FinderHotViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderHotViewModel.h; sourceTree = "<group>"; };
+		76811671211C9DDB0094FC06 /* COCheckoutCardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutCardViewController.h; sourceTree = "<group>"; };
+		76811672211C9DDB0094FC06 /* COCheckoutOrderListWareModelManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutOrderListWareModelManager.h; sourceTree = "<group>"; };
+		76811673211C9DDC0094FC06 /* COCheckoutOrderInfoStatusModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutOrderInfoStatusModel.h; sourceTree = "<group>"; };
+		76811674211C9DDC0094FC06 /* COCheckoutInvoicePersonInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutInvoicePersonInfoView.h; sourceTree = "<group>"; };
+		76811675211C9DDC0094FC06 /* FinderArticleDetailVideoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderArticleDetailVideoCell.h; sourceTree = "<group>"; };
+		76811676211C9DDC0094FC06 /* CommuneCommentCustomTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneCommentCustomTextView.h; sourceTree = "<group>"; };
+		76811677211C9DDC0094FC06 /* CCCViceCouponTrailerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCCViceCouponTrailerView.h; sourceTree = "<group>"; };
+		76811678211C9DDD0094FC06 /* CouponCenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CouponCenterViewController.h; sourceTree = "<group>"; };
+		76811679211C9DDD0094FC06 /* FinderArticleDetailTagSetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderArticleDetailTagSetViewController.h; sourceTree = "<group>"; };
+		7681167A211C9DDD0094FC06 /* CouponCenterSwitchManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CouponCenterSwitchManager.h; sourceTree = "<group>"; };
+		7681167B211C9DDD0094FC06 /* CommentShareLogisticsButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentShareLogisticsButton.h; sourceTree = "<group>"; };
+		7681167C211C9DDD0094FC06 /* CommuneSSPalletSingleViewDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CommuneSSPalletSingleViewDelegate-Protocol.h"; sourceTree = "<group>"; };
+		7681167D211C9DDE0094FC06 /* DJXYPageSegmentViewProtocal-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DJXYPageSegmentViewProtocal-Protocol.h"; sourceTree = "<group>"; };
+		7681167E211C9DDE0094FC06 /* COCheckoutVatInvoiceModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutVatInvoiceModel.h; sourceTree = "<group>"; };
+		7681167F211C9DDE0094FC06 /* CommentDetailProductLineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentDetailProductLineView.h; sourceTree = "<group>"; };
+		76811680211C9DDE0094FC06 /* CCCouponTagView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCCouponTagView.h; sourceTree = "<group>"; };
+		76811681211C9DDF0094FC06 /* COCheckoutCouponNoSupportGoodsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutCouponNoSupportGoodsView.h; sourceTree = "<group>"; };
+		76811682211C9DDF0094FC06 /* CBPValidDataInputBox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBPValidDataInputBox.h; sourceTree = "<group>"; };
+		76811683211C9DDF0094FC06 /* COCheckoutSwitchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutSwitchView.h; sourceTree = "<group>"; };
+		76811684211C9DDF0094FC06 /* FinderAttentionCellMTAModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderAttentionCellMTAModel.h; sourceTree = "<group>"; };
+		76811685211C9DDF0094FC06 /* COCheckoutSiteVM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutSiteVM.h; sourceTree = "<group>"; };
+		76811686211C9DE00094FC06 /* COCheckoutReturnExchangeGoodView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutReturnExchangeGoodView.h; sourceTree = "<group>"; };
+		76811687211C9DE00094FC06 /* DPGDetailJumpModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPGDetailJumpModel.h; sourceTree = "<group>"; };
+		76811688211C9DE00094FC06 /* CloseJDappProtocolScheme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CloseJDappProtocolScheme.h; sourceTree = "<group>"; };
+		76811689211C9DE00094FC06 /* ChooseShipmentDateDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChooseShipmentDateDelegate-Protocol.h"; sourceTree = "<group>"; };
+		7681168A211C9DE10094FC06 /* CommentShareLogisticsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentShareLogisticsView.h; sourceTree = "<group>"; };
+		7681168B211C9DE10094FC06 /* CBPCVV2InputBox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBPCVV2InputBox.h; sourceTree = "<group>"; };
+		7681168C211C9DE10094FC06 /* COCheckoutToastHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutToastHelper.h; sourceTree = "<group>"; };
+		7681168D211C9DE10094FC06 /* CommuneCategoryActivityRecommandProductTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneCategoryActivityRecommandProductTableViewCell.h; sourceTree = "<group>"; };
+		7681168E211C9DE10094FC06 /* CommuneCategoryActivityShareModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneCategoryActivityShareModel.h; sourceTree = "<group>"; };
+		7681168F211C9DE20094FC06 /* DPGDetailViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPGDetailViewModel.h; sourceTree = "<group>"; };
+		76811690211C9DE20094FC06 /* CommuneCategoryActivityGuestsItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneCategoryActivityGuestsItemView.h; sourceTree = "<group>"; };
+		76811691211C9DE20094FC06 /* FinalSearchShopViewDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FinalSearchShopViewDelegate-Protocol.h"; sourceTree = "<group>"; };
+		76811692211C9DE20094FC06 /* DJXYMenuItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DJXYMenuItemModel.h; sourceTree = "<group>"; };
+		76811693211C9DE30094FC06 /* FinderFollowGiftView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderFollowGiftView.h; sourceTree = "<group>"; };
+		76811694211C9DE30094FC06 /* CommuneAnounceDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CommuneAnounceDelegate-Protocol.h"; sourceTree = "<group>"; };
+		76811695211C9DE30094FC06 /* DebugWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DebugWebViewController.h; sourceTree = "<group>"; };
+		76811696211C9DE30094FC06 /* FeedbackImageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedbackImageModel.h; sourceTree = "<group>"; };
+		76811697211C9DE40094FC06 /* CCCouponCenterBaseViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCCouponCenterBaseViewModel.h; sourceTree = "<group>"; };
+		76811698211C9DE40094FC06 /* CommentCenterTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentCenterTableViewCell.h; sourceTree = "<group>"; };
+		76811699211C9DE40094FC06 /* FinderContentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderContentModel.h; sourceTree = "<group>"; };
+		7681169A211C9DE40094FC06 /* FinderHotSmallArticleModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderHotSmallArticleModel.h; sourceTree = "<group>"; };
+		7681169B211C9DE40094FC06 /* CommuneTableViewWrapperDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CommuneTableViewWrapperDelegate-Protocol.h"; sourceTree = "<group>"; };
+		7681169C211C9DE50094FC06 /* FinderInventoryDetailSkuView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderInventoryDetailSkuView.h; sourceTree = "<group>"; };
+		7681169D211C9DE50094FC06 /* CommuneCategoryDetailQuestionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneCategoryDetailQuestionModel.h; sourceTree = "<group>"; };
+		7681169E211C9DE50094FC06 /* FinderHotBannerConfigModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderHotBannerConfigModel.h; sourceTree = "<group>"; };
+		7681169F211C9DE50094FC06 /* FinderArticleDetailParamsData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderArticleDetailParamsData.h; sourceTree = "<group>"; };
+		768116A0211C9DE50094FC06 /* CCCScenarioViewFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCCScenarioViewFlowLayout.h; sourceTree = "<group>"; };
+		768116A1211C9DE50094FC06 /* CCCouponCenterUnityHandle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCCouponCenterUnityHandle.h; sourceTree = "<group>"; };
+		768116A2211C9DE60094FC06 /* COCheckoutNewOrderViewDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "COCheckoutNewOrderViewDelegate-Protocol.h"; sourceTree = "<group>"; };
+		768116A3211C9DE60094FC06 /* CommuneDetailFolderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneDetailFolderView.h; sourceTree = "<group>"; };
+		768116A4211C9DE60094FC06 /* COCheckoutDecorationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutDecorationView.h; sourceTree = "<group>"; };
+		768116A5211C9DE60094FC06 /* COCheckoutRouterHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutRouterHandler.h; sourceTree = "<group>"; };
+		768116A6211C9DE60094FC06 /* CommuneCategoryActivityDetailRecommandShopTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneCategoryActivityDetailRecommandShopTableViewCell.h; sourceTree = "<group>"; };
+		768116A7211C9DE70094FC06 /* CBPaymentPayVerifyViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBPaymentPayVerifyViewModel.h; sourceTree = "<group>"; };
+		768116A8211C9DE70094FC06 /* DJXYBaseCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DJXYBaseCollectionViewCell.h; sourceTree = "<group>"; };
+		768116A9211C9DE70094FC06 /* COCheckoutMainVirtualAssetsFloorCreator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutMainVirtualAssetsFloorCreator.h; sourceTree = "<group>"; };
+		768116AA211C9DE70094FC06 /* CommuneCategoryPublishAnswerSubmitView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneCategoryPublishAnswerSubmitView.h; sourceTree = "<group>"; };
+		768116AB211C9DE70094FC06 /* CCCouponMarketBuyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCCouponMarketBuyView.h; sourceTree = "<group>"; };
+		768116AC211C9DE70094FC06 /* COCheckoutVenderPickShipmentRM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutVenderPickShipmentRM.h; sourceTree = "<group>"; };
+		768116AD211C9DE80094FC06 /* COCheckoutMainGoodsDetailVM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutMainGoodsDetailVM.h; sourceTree = "<group>"; };
+		768116AE211C9DE80094FC06 /* COCheckoutMainVenderConsolidatorShipment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutMainVenderConsolidatorShipment.h; sourceTree = "<group>"; };
+		768116AF211C9DE80094FC06 /* FinderHotMTA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderHotMTA.h; sourceTree = "<group>"; };
+		768116B0211C9DE80094FC06 /* CCCouponCenterListViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCCouponCenterListViewModel.h; sourceTree = "<group>"; };
+		768116B1211C9DE80094FC06 /* FinderArticleFloatSkuBackView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderArticleFloatSkuBackView.h; sourceTree = "<group>"; };
+		768116B2211C9DE90094FC06 /* COCheckoutReceivePersonInfoViewDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "COCheckoutReceivePersonInfoViewDelegate-Protocol.h"; sourceTree = "<group>"; };
+		768116B3211C9DE90094FC06 /* COCheckoutRouterSearchListInfoReq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutRouterSearchListInfoReq.h; sourceTree = "<group>"; };
+		768116B4211C9DE90094FC06 /* CCCNoAssignmentCouponView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCCNoAssignmentCouponView.h; sourceTree = "<group>"; };
+		768116B5211C9DE90094FC06 /* COCheckoutClickMessageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutClickMessageModel.h; sourceTree = "<group>"; };
+		768116B6211C9DEA0094FC06 /* COCheckoutRouterUserManagerHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutRouterUserManagerHandler.h; sourceTree = "<group>"; };
+		768116B7211C9DEA0094FC06 /* CommuneUserCenterDao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneUserCenterDao.h; sourceTree = "<group>"; };
+		768116B8211C9DEA0094FC06 /* FinderDeduplicationExproMTA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderDeduplicationExproMTA.h; sourceTree = "<group>"; };
+		768116B9211C9DEA0094FC06 /* FinderArticleDetailRelevantChannelModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderArticleDetailRelevantChannelModel.h; sourceTree = "<group>"; };
+		768116BA211C9DEA0094FC06 /* CDFloatInterpolator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDFloatInterpolator.h; sourceTree = "<group>"; };
+		768116BB211C9DEA0094FC06 /* CBPaymentCheckPwdParamModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBPaymentCheckPwdParamModel.h; sourceTree = "<group>"; };
+		768116BC211C9DEB0094FC06 /* CCCouponWelfareEnterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCCouponWelfareEnterView.h; sourceTree = "<group>"; };
+		768116BD211C9DEB0094FC06 /* CCCouponWelfareWithBannerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCCouponWelfareWithBannerView.h; sourceTree = "<group>"; };
+		768116BE211C9DEB0094FC06 /* FinderArticleDetailPraiseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderArticleDetailPraiseModel.h; sourceTree = "<group>"; };
+		768116BF211C9DEB0094FC06 /* FilerMenuCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilerMenuCell.h; sourceTree = "<group>"; };
+		768116C0211C9DEB0094FC06 /* CodeTimeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CodeTimeModel.h; sourceTree = "<group>"; };
+		768116C1211C9DEC0094FC06 /* CommuneSearchBarDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CommuneSearchBarDelegate-Protocol.h"; sourceTree = "<group>"; };
+		768116C2211C9DEC0094FC06 /* CommentCenterSegmentViewDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CommentCenterSegmentViewDelegate-Protocol.h"; sourceTree = "<group>"; };
+		768116C3211C9DEC0094FC06 /* COCheckoutKeyboardTitleBarButtonItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutKeyboardTitleBarButtonItem.h; sourceTree = "<group>"; };
+		768116C4211C9DEC0094FC06 /* CCCouponWelfareCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCCouponWelfareCell.h; sourceTree = "<group>"; };
+		768116C5211C9DEC0094FC06 /* DrawCorcer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawCorcer.h; sourceTree = "<group>"; };
+		768116C6211C9DEC0094FC06 /* EmTabNetworkAccess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmTabNetworkAccess.h; sourceTree = "<group>"; };
+		768116C7211C9DED0094FC06 /* COCheckoutGetSelfDeliveryStoresApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutGetSelfDeliveryStoresApi.h; sourceTree = "<group>"; };
+		768116C8211C9DED0094FC06 /* CBPaymentPayVerifyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBPaymentPayVerifyViewController.h; sourceTree = "<group>"; };
+		768116C9211C9DED0094FC06 /* CCCMainCouponView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCCMainCouponView.h; sourceTree = "<group>"; };
+		768116CA211C9DED0094FC06 /* COCheckoutSelectAddressViewResponseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutSelectAddressViewResponseModel.h; sourceTree = "<group>"; };
+		768116CB211C9DED0094FC06 /* COCheckoutOrderWareGroupSuitCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutOrderWareGroupSuitCell.h; sourceTree = "<group>"; };
+		768116CC211C9DED0094FC06 /* COCheckoutTaxFeiDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutTaxFeiDetailModel.h; sourceTree = "<group>"; };
+		768116CD211C9DEE0094FC06 /* CCCMyAssignmentCouponView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCCMyAssignmentCouponView.h; sourceTree = "<group>"; };
+		768116CE211C9DEE0094FC06 /* CCCouponComplexCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCCouponComplexCell.h; sourceTree = "<group>"; };
+		768116CF211C9DEE0094FC06 /* COCheckoutSopVenderPickShipmentVM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutSopVenderPickShipmentVM.h; sourceTree = "<group>"; };
+		768116D0211C9DEE0094FC06 /* CommuneCategoryRecommendViewDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CommuneCategoryRecommendViewDelegate-Protocol.h"; sourceTree = "<group>"; };
+		768116D1211C9DEE0094FC06 /* DPGDetailCellModelProtocol-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DPGDetailCellModelProtocol-Protocol.h"; sourceTree = "<group>"; };
+		768116D2211C9DEE0094FC06 /* COCheckoutMainImmediatelyBuyFloorCreator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutMainImmediatelyBuyFloorCreator.h; sourceTree = "<group>"; };
+		768116D3211C9DEE0094FC06 /* CBPaymentInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBPaymentInfoViewController.h; sourceTree = "<group>"; };
+		768116D4211C9DEF0094FC06 /* CommuneCategoryDetailPageQuestionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneCategoryDetailPageQuestionCell.h; sourceTree = "<group>"; };
+		768116D5211C9DEF0094FC06 /* CustomTextFieldDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CustomTextFieldDelegate-Protocol.h"; sourceTree = "<group>"; };
+		768116D6211C9DEF0094FC06 /* DJXYBuryUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DJXYBuryUtil.h; sourceTree = "<group>"; };
+		768116D7211C9DEF0094FC06 /* CommentCenterSegmentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentCenterSegmentView.h; sourceTree = "<group>"; };
+		768116D8211C9DF00094FC06 /* CommuneCategoryActivityDetailJumpDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CommuneCategoryActivityDetailJumpDelegate-Protocol.h"; sourceTree = "<group>"; };
+		768116D9211C9DF00094FC06 /* CommuneCategoryActivityDetailBaseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneCategoryActivityDetailBaseTableViewCell.h; sourceTree = "<group>"; };
+		768116DA211C9DF00094FC06 /* COCheckoutInvoiceDistributeViewDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "COCheckoutInvoiceDistributeViewDelegate-Protocol.h"; sourceTree = "<group>"; };
+		768116DB211C9DF00094FC06 /* COCheckoutMainPresaleAgreementFloorCreator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutMainPresaleAgreementFloorCreator.h; sourceTree = "<group>"; };
+		768116DC211C9DF00094FC06 /* COCheckoutPaymentTypeApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutPaymentTypeApi.h; sourceTree = "<group>"; };
+		768116DD211C9DF00094FC06 /* COCheckoutEasyBuyDeleteAddressResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutEasyBuyDeleteAddressResult.h; sourceTree = "<group>"; };
+		768116DE211C9DF00094FC06 /* CommuneCategoryAddProductWarePallet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneCategoryAddProductWarePallet.h; sourceTree = "<group>"; };
+		768116DF211C9DF10094FC06 /* CouponCenterUnityJump.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CouponCenterUnityJump.h; sourceTree = "<group>"; };
+		768116E0211C9DF10094FC06 /* DJXYHomeSwFloorModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DJXYHomeSwFloorModel.h; sourceTree = "<group>"; };
+		768116E1211C9DF30094FC06 /* FinderAttentionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderAttentionModel.h; sourceTree = "<group>"; };
+		768116E2211C9DF30094FC06 /* CCCouponSignInEntranceView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCCouponSignInEntranceView.h; sourceTree = "<group>"; };
+		768116E3211C9DF40094FC06 /* FinalSearchTableHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinalSearchTableHeaderView.h; sourceTree = "<group>"; };
+		768116E4211C9DF40094FC06 /* COCheckoutCartModuleCoudanItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutCartModuleCoudanItemModel.h; sourceTree = "<group>"; };
+		768116E5211C9DF50094FC06 /* COCheckoutConsignmentCodeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutConsignmentCodeView.h; sourceTree = "<group>"; };
+		768116E6211C9DF50094FC06 /* COCheckoutChooseButtonColorVM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutChooseButtonColorVM.h; sourceTree = "<group>"; };
+		768116E7211C9DF50094FC06 /* CommentAndShareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentAndShareViewController.h; sourceTree = "<group>"; };
+		768116E8211C9DF60094FC06 /* COCheckoutAddressSearchResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutAddressSearchResult.h; sourceTree = "<group>"; };
+		768116E9211C9DF60094FC06 /* CCCouponGiftCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCCouponGiftCollectionView.h; sourceTree = "<group>"; };
+		768116EA211C9DF60094FC06 /* CDAudioInterruptProtocol-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CDAudioInterruptProtocol-Protocol.h"; sourceTree = "<group>"; };
+		768116EB211C9DF70094FC06 /* DPGDetailTitleRelatedIconModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPGDetailTitleRelatedIconModel.h; sourceTree = "<group>"; };
+		768116EC211C9DF70094FC06 /* CCCouponResPosCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCCouponResPosCell.h; sourceTree = "<group>"; };
+		768116ED211C9DF70094FC06 /* COCheckoutShippingAddressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutShippingAddressView.h; sourceTree = "<group>"; };
+		768116EE211C9DF70094FC06 /* FeedbackCategoryBoxViewDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FeedbackCategoryBoxViewDelegate-Protocol.h"; sourceTree = "<group>"; };
+		768116EF211C9DF80094FC06 /* FinderArticlePublisherHeadModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderArticlePublisherHeadModel.h; sourceTree = "<group>"; };
+		768116F0211C9DF80094FC06 /* FinderFollowGiftInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderFollowGiftInfoModel.h; sourceTree = "<group>"; };
+		768116F1211C9DF80094FC06 /* COCheckoutWarelistView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutWarelistView.h; sourceTree = "<group>"; };
+		768116F2211C9DF80094FC06 /* COCheckoutMainVenderPagingToastVM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutMainVenderPagingToastVM.h; sourceTree = "<group>"; };
+		768116F3211C9DF80094FC06 /* COCheckoutToastPriceChangeVM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutToastPriceChangeVM.h; sourceTree = "<group>"; };
+		768116F4211C9DF80094FC06 /* CCCouponSearchCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCCouponSearchCell.h; sourceTree = "<group>"; };
+		768116F5211C9DF80094FC06 /* COCheckoutVenderShipmentProtocolCreator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutVenderShipmentProtocolCreator.h; sourceTree = "<group>"; };
+		768116F6211C9DF90094FC06 /* COCheckoutButtonDisCheckBox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutButtonDisCheckBox.h; sourceTree = "<group>"; };
+		768116F7211C9DF90094FC06 /* DJXYBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DJXYBaseViewController.h; sourceTree = "<group>"; };
+		768116F8211C9DF90094FC06 /* DJXYPromotionTagsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DJXYPromotionTagsView.h; sourceTree = "<group>"; };
+		768116F9211C9DFA0094FC06 /* CCCouponBeanView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCCouponBeanView.h; sourceTree = "<group>"; };
+		768116FA211C9DFA0094FC06 /* CommuneSearchCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneSearchCell.h; sourceTree = "<group>"; };
+		768116FB211C9DFA0094FC06 /* COCheckoutMainVenderPagingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutMainVenderPagingView.h; sourceTree = "<group>"; };
+		768116FC211C9DFA0094FC06 /* CommuneRecommendQuestionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneRecommendQuestionModel.h; sourceTree = "<group>"; };
+		768116FD211C9DFA0094FC06 /* COCheckoutRouterOrderListHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutRouterOrderListHandler.h; sourceTree = "<group>"; };
+		768116FE211C9DFA0094FC06 /* COCheckoutUseVirtualPropertyToastViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutUseVirtualPropertyToastViewModel.h; sourceTree = "<group>"; };
+		768116FF211C9DFA0094FC06 /* FinalSearchHistoryHotItemsViewDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FinalSearchHistoryHotItemsViewDelegate-Protocol.h"; sourceTree = "<group>"; };
+		76811700211C9DFB0094FC06 /* COCheckoutMainIDCardFloorCreator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutMainIDCardFloorCreator.h; sourceTree = "<group>"; };
+		76811701211C9DFB0094FC06 /* COCheckoutCartItemAttributeResourceModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutCartItemAttributeResourceModel.h; sourceTree = "<group>"; };
+		76811702211C9DFB0094FC06 /* CBPaymentCheckPwdProtocal-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CBPaymentCheckPwdProtocal-Protocol.h"; sourceTree = "<group>"; };
+		76811703211C9DFB0094FC06 /* CCCouponMyAssignMentAndRevocationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCCouponMyAssignMentAndRevocationView.h; sourceTree = "<group>"; };
+		76811704211C9DFB0094FC06 /* COCheckoutContactAddressTagModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutContactAddressTagModel.h; sourceTree = "<group>"; };
+		76811705211C9DFB0094FC06 /* COCheckoutMainCoudanView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutMainCoudanView.h; sourceTree = "<group>"; };
+		76811706211C9DFB0094FC06 /* FinalSearchSortAllCateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinalSearchSortAllCateViewController.h; sourceTree = "<group>"; };
+		76811707211C9DFC0094FC06 /* CommentShareLogisticsViewDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CommentShareLogisticsViewDelegate-Protocol.h"; sourceTree = "<group>"; };
+		76811708211C9DFC0094FC06 /* FinderAttentionMultiPictureView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderAttentionMultiPictureView.h; sourceTree = "<group>"; };
+		76811709211C9DFC0094FC06 /* CommentDetailVideoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentDetailVideoCell.h; sourceTree = "<group>"; };
+		7681170A211C9DFC0094FC06 /* COCheckoutVenderShipmentConsolidatorShipmentVM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutVenderShipmentConsolidatorShipmentVM.h; sourceTree = "<group>"; };
+		7681170B211C9DFC0094FC06 /* FinderHotSmallVideoCellLivingRedView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderHotSmallVideoCellLivingRedView.h; sourceTree = "<group>"; };
+		7681170C211C9DFC0094FC06 /* DJXYHomeSkuFloorModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DJXYHomeSkuFloorModel.h; sourceTree = "<group>"; };
+		7681170D211C9DFD0094FC06 /* CDSoundSourcePanner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDSoundSourcePanner.h; sourceTree = "<group>"; };
+		7681170E211C9DFD0094FC06 /* ConfigurationCenterManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfigurationCenterManager.h; sourceTree = "<group>"; };
+		7681170F211C9DFD0094FC06 /* COCheckoutRouterShareManagerInfoReq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutRouterShareManagerInfoReq.h; sourceTree = "<group>"; };
+		76811710211C9DFD0094FC06 /* CommuneCommentQuestionPraiseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneCommentQuestionPraiseCell.h; sourceTree = "<group>"; };
+		76811711211C9DFD0094FC06 /* DJXYCollectionViewDelegateWaterfallLayout-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DJXYCollectionViewDelegateWaterfallLayout-Protocol.h"; sourceTree = "<group>"; };
+		76811712211C9DFD0094FC06 /* CBPIDCardNumberValidator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBPIDCardNumberValidator.h; sourceTree = "<group>"; };
+		76811713211C9DFE0094FC06 /* FeedbackJumpProtocolHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedbackJumpProtocolHandler.h; sourceTree = "<group>"; };
+		76811714211C9DFE0094FC06 /* COCheckoutKeyboardToolbar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutKeyboardToolbar.h; sourceTree = "<group>"; };
+		76811715211C9DFE0094FC06 /* COCheckoutIDInputViewDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "COCheckoutIDInputViewDelegate-Protocol.h"; sourceTree = "<group>"; };
+		76811716211C9DFF0094FC06 /* COCheckoutInvoicePersonInfoDelagate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "COCheckoutInvoicePersonInfoDelagate-Protocol.h"; sourceTree = "<group>"; };
+		76811717211C9DFF0094FC06 /* CommuneDetailAnswerHeaderButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneDetailAnswerHeaderButton.h; sourceTree = "<group>"; };
+		76811718211C9DFF0094FC06 /* CommuneListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneListModel.h; sourceTree = "<group>"; };
+		76811719211C9E000094FC06 /* CBPaymentPayVerifyViewParamModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBPaymentPayVerifyViewParamModel.h; sourceTree = "<group>"; };
+		7681171A211C9E000094FC06 /* FinderBannerFloorModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderBannerFloorModel.h; sourceTree = "<group>"; };
+		7681171B211C9E000094FC06 /* CommuneUserCenterDataSourceDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CommuneUserCenterDataSourceDelegate-Protocol.h"; sourceTree = "<group>"; };
+		7681171C211C9E000094FC06 /* FinderHotBigVideoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderHotBigVideoModel.h; sourceTree = "<group>"; };
+		7681171D211C9E010094FC06 /* DJXYWordInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DJXYWordInfo.h; sourceTree = "<group>"; };
+		7681171E211C9E010094FC06 /* COCheckoutMainMutableGoodsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutMainMutableGoodsView.h; sourceTree = "<group>"; };
+		7681171F211C9E010094FC06 /* FinderHotCellModelProtocol-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FinderHotCellModelProtocol-Protocol.h"; sourceTree = "<group>"; };
+		76811720211C9E010094FC06 /* CommuneSearchMiddleDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CommuneSearchMiddleDelegate-Protocol.h"; sourceTree = "<group>"; };
+		76811721211C9E020094FC06 /* CBPaymentPayPasswordDataHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBPaymentPayPasswordDataHandler.h; sourceTree = "<group>"; };
+		76811722211C9E020094FC06 /* COCheckoutRouterOrderListInfoReq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutRouterOrderListInfoReq.h; sourceTree = "<group>"; };
+		76811723211C9E020094FC06 /* COCheckoutInvoiceDistributeBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutInvoiceDistributeBaseView.h; sourceTree = "<group>"; };
+		76811724211C9E020094FC06 /* CCMarketResPosDetailView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCMarketResPosDetailView.h; sourceTree = "<group>"; };
+		76811725211C9E030094FC06 /* FeedbackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedbackViewController.h; sourceTree = "<group>"; };
+		76811726211C9E030094FC06 /* CCCPageControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCCPageControl.h; sourceTree = "<group>"; };
+		76811727211C9E030094FC06 /* COCheckoutOrderWareGroupNormalCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutOrderWareGroupNormalCell.h; sourceTree = "<group>"; };
+		76811728211C9E030094FC06 /* FinderAttentionDPGModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderAttentionDPGModel.h; sourceTree = "<group>"; };
+		76811729211C9E040094FC06 /* COCheckoutMainVenderSkuVORM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutMainVenderSkuVORM.h; sourceTree = "<group>"; };
+		7681172A211C9E040094FC06 /* FaceRecognitionConfirmViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaceRecognitionConfirmViewController.h; sourceTree = "<group>"; };
+		7681172B211C9E040094FC06 /* CCCouponEqualSpaceFlowLayoutDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CCCouponEqualSpaceFlowLayoutDelegate-Protocol.h"; sourceTree = "<group>"; };
+		7681172C211C9E040094FC06 /* CommuneSearchMiddleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneSearchMiddleViewController.h; sourceTree = "<group>"; };
+		7681172D211C9E050094FC06 /* CommuneDetailRecommendQuestionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneDetailRecommendQuestionView.h; sourceTree = "<group>"; };
+		7681172E211C9E050094FC06 /* ColorBuyProdctModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorBuyProdctModel.h; sourceTree = "<group>"; };
+		7681172F211C9E050094FC06 /* FinanceCardContentInfoFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinanceCardContentInfoFactory.h; sourceTree = "<group>"; };
+		76811730211C9E050094FC06 /* FinderArticleDetailCellFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderArticleDetailCellFactory.h; sourceTree = "<group>"; };
+		76811731211C9E060094FC06 /* CCCouponWelfareGfitCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCCouponWelfareGfitCell.h; sourceTree = "<group>"; };
+		76811732211C9E060094FC06 /* COCheckoutAbstractApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutAbstractApi.h; sourceTree = "<group>"; };
+		76811733211C9E060094FC06 /* CommuneBeansInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneBeansInfoModel.h; sourceTree = "<group>"; };
+		76811734211C9E060094FC06 /* COCheckoutPriceChangeCellLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutPriceChangeCellLayout.h; sourceTree = "<group>"; };
+		76811735211C9E070094FC06 /* COCheckoutInvoiceModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutInvoiceModel.h; sourceTree = "<group>"; };
+		76811736211C9E070094FC06 /* CommentShareViewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentShareViewManager.h; sourceTree = "<group>"; };
+		76811737211C9E070094FC06 /* CPACPSManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPACPSManager.h; sourceTree = "<group>"; };
+		76811738211C9E080094FC06 /* COCheckoutPaymentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutPaymentViewController.h; sourceTree = "<group>"; };
+		76811739211C9E080094FC06 /* CommuneCategoryActivityQuestionDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneCategoryActivityQuestionDetailModel.h; sourceTree = "<group>"; };
+		7681173A211C9E080094FC06 /* DJXYTabResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DJXYTabResponse.h; sourceTree = "<group>"; };
+		7681173B211C9E080094FC06 /* FinderArticleCaptchaView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderArticleCaptchaView.h; sourceTree = "<group>"; };
+		7681173C211C9E090094FC06 /* FinderInventoryDetailListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderInventoryDetailListModel.h; sourceTree = "<group>"; };
+		7681173D211C9E090094FC06 /* CommuneUserCenterTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneUserCenterTableViewCell.h; sourceTree = "<group>"; };
+		7681173E211C9E090094FC06 /* COCheckoutReSetAllCouponsReq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutReSetAllCouponsReq.h; sourceTree = "<group>"; };
+		7681173F211C9E0A0094FC06 /* CommuneAnounceView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneAnounceView.h; sourceTree = "<group>"; };
+		76811740211C9E0A0094FC06 /* COCheckoutMainGoodsServiceDetailVM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutMainGoodsServiceDetailVM.h; sourceTree = "<group>"; };
+		76811741211C9E0A0094FC06 /* COCheckoutSelectAddressViewRegionAddressModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutSelectAddressViewRegionAddressModel.h; sourceTree = "<group>"; };
+		76811742211C9E0A0094FC06 /* COCheckoutOrderInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutOrderInfoModel.h; sourceTree = "<group>"; };
+		76811743211C9E0A0094FC06 /* COCheckoutMainShopFloorCreator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutMainShopFloorCreator.h; sourceTree = "<group>"; };
+		76811744211C9E0B0094FC06 /* CCCouponNearByCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCCouponNearByCell.h; sourceTree = "<group>"; };
+		76811745211C9E0B0094FC06 /* CommuneCategoryDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneCategoryDetailViewController.h; sourceTree = "<group>"; };
+		76811746211C9E0B0094FC06 /* COCheckoutWareAttributeLabelDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "COCheckoutWareAttributeLabelDelegate-Protocol.h"; sourceTree = "<group>"; };
+		76811747211C9E0B0094FC06 /* COCheckoutOrderAddressApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutOrderAddressApi.h; sourceTree = "<group>"; };
+		76811748211C9E0C0094FC06 /* COCheckoutContactAddressForeignViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutContactAddressForeignViewCell.h; sourceTree = "<group>"; };
+		76811749211C9E0C0094FC06 /* CBPaymentSuccessDataController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBPaymentSuccessDataController.h; sourceTree = "<group>"; };
+		7681174A211C9E0C0094FC06 /* COCheckoutMainImmediatelyBuyProgressBarVM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutMainImmediatelyBuyProgressBarVM.h; sourceTree = "<group>"; };
+		7681174B211C9E0C0094FC06 /* DJXYSkuInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DJXYSkuInfo.h; sourceTree = "<group>"; };
+		7681174C211C9E0D0094FC06 /* CBPaymentPayFillViewParamModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBPaymentPayFillViewParamModel.h; sourceTree = "<group>"; };
+		7681174D211C9E0D0094FC06 /* CBPPayPwdValidator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBPPayPwdValidator.h; sourceTree = "<group>"; };
+		7681174E211C9E0D0094FC06 /* COCheckoutPKPayment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutPKPayment.h; sourceTree = "<group>"; };
+		7681174F211C9E0E0094FC06 /* FinderInventoryDetailProtocolHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderInventoryDetailProtocolHandler.h; sourceTree = "<group>"; };
+		76811750211C9E0E0094FC06 /* CommentDetailJumpProtocolHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentDetailJumpProtocolHandler.h; sourceTree = "<group>"; };
+		76811751211C9E0E0094FC06 /* CommuneCategoryActivityListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneCategoryActivityListViewController.h; sourceTree = "<group>"; };
+		76811752211C9E0E0094FC06 /* CommuneDetailAnswerHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneDetailAnswerHeaderView.h; sourceTree = "<group>"; };
+		76811753211C9E0F0094FC06 /* CommentDetailVideoCellDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CommentDetailVideoCellDelegate-Protocol.h"; sourceTree = "<group>"; };
+		76811754211C9E0F0094FC06 /* CommuneSearchPalletSingleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneSearchPalletSingleView.h; sourceTree = "<group>"; };
+		76811755211C9E0F0094FC06 /* COCheckoutAddressEditViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutAddressEditViewController.h; sourceTree = "<group>"; };
+		76811756211C9E100094FC06 /* DownloadManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadManager.h; sourceTree = "<group>"; };
+		76811757211C9E100094FC06 /* COCheckoutElectroInvoiceModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutElectroInvoiceModel.h; sourceTree = "<group>"; };
+		76811758211C9E100094FC06 /* CommuneCategoryPublishAnswerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneCategoryPublishAnswerViewController.h; sourceTree = "<group>"; };
+		76811759211C9E110094FC06 /* COCheckoutMainShipmentSopVenderSelfDeliveryStoreVO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutMainShipmentSopVenderSelfDeliveryStoreVO.h; sourceTree = "<group>"; };
+		7681175A211C9E110094FC06 /* CommuneUserAdViewDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CommuneUserAdViewDelegate-Protocol.h"; sourceTree = "<group>"; };
+		7681175B211C9E110094FC06 /* FinalSearchSortTabView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinalSearchSortTabView.h; sourceTree = "<group>"; };
+		7681175C211C9E120094FC06 /* CCNearByCouponSubView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCNearByCouponSubView.h; sourceTree = "<group>"; };
+		7681175D211C9E130094FC06 /* CommuneCategoryPublishDao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneCategoryPublishDao.h; sourceTree = "<group>"; };
+		7681175E211C9E140094FC06 /* COCheckoutSuccessViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutSuccessViewController.h; sourceTree = "<group>"; };
+		7681175F211C9E150094FC06 /* COCheckoutCardManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutCardManager.h; sourceTree = "<group>"; };
+		76811760211C9E150094FC06 /* CommuneRealNameAuthModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneRealNameAuthModel.h; sourceTree = "<group>"; };
+		76811761211C9E150094FC06 /* DJXYHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DJXYHomeViewController.h; sourceTree = "<group>"; };
+		76811762211C9E160094FC06 /* COCheckoutImmediatelyBuyHistoryPriceModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutImmediatelyBuyHistoryPriceModel.h; sourceTree = "<group>"; };
+		76811763211C9E170094FC06 /* CBPMBProgressHUDDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CBPMBProgressHUDDelegate-Protocol.h"; sourceTree = "<group>"; };
+		76811764211C9E170094FC06 /* COCheckoutPresalePaymentStepModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutPresalePaymentStepModel.h; sourceTree = "<group>"; };
+		76811765211C9E180094FC06 /* FinderFeedbackView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderFeedbackView.h; sourceTree = "<group>"; };
+		76811766211C9E190094FC06 /* CCCouponNavBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCCouponNavBar.h; sourceTree = "<group>"; };
+		76811767211C9E190094FC06 /* FinderHotSmallArticleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderHotSmallArticleCell.h; sourceTree = "<group>"; };
+		76811768211C9E190094FC06 /* CCCouponGiftTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCCouponGiftTableViewCell.h; sourceTree = "<group>"; };
+		76811769211C9E1A0094FC06 /* COCheckoutCouponTipsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutCouponTipsView.h; sourceTree = "<group>"; };
+		7681176A211C9E1A0094FC06 /* FinderHotResponseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderHotResponseModel.h; sourceTree = "<group>"; };
+		7681176B211C9E1A0094FC06 /* FinderArticleDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderArticleDetailViewController.h; sourceTree = "<group>"; };
+		7681176C211C9E1A0094FC06 /* CBPaymentPayReturnModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBPaymentPayReturnModel.h; sourceTree = "<group>"; };
+		7681176D211C9E1B0094FC06 /* FinderAttentionPositionSku.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderAttentionPositionSku.h; sourceTree = "<group>"; };
+		7681176E211C9E1B0094FC06 /* CCCouponSearchListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCCouponSearchListView.h; sourceTree = "<group>"; };
+		7681176F211C9E1B0094FC06 /* Decoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Decoder.h; sourceTree = "<group>"; };
+		76811770211C9E1C0094FC06 /* COCheckoutAddressSearchRegionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutAddressSearchRegionModel.h; sourceTree = "<group>"; };
+		76811771211C9E1C0094FC06 /* FeedbackImageListViewDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FeedbackImageListViewDelegate-Protocol.h"; sourceTree = "<group>"; };
+		76811772211C9E1C0094FC06 /* FinderArticleDetailWebviewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderArticleDetailWebviewModel.h; sourceTree = "<group>"; };
+		76811773211C9E1D0094FC06 /* FinderArticleDetailTagSetDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderArticleDetailTagSetDataModel.h; sourceTree = "<group>"; };
+		76811774211C9E1D0094FC06 /* COCheckoutOrderVirtualPayModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutOrderVirtualPayModel.h; sourceTree = "<group>"; };
+		76811775211C9E1D0094FC06 /* COCheckoutToastGoods.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutToastGoods.h; sourceTree = "<group>"; };
+		76811776211C9E1D0094FC06 /* CommuneSearchTextProduct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneSearchTextProduct.h; sourceTree = "<group>"; };
+		76811777211C9E1E0094FC06 /* COCheckoutBubbleButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutBubbleButton.h; sourceTree = "<group>"; };
+		76811778211C9E1E0094FC06 /* COCheckoutMainPresaleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutMainPresaleView.h; sourceTree = "<group>"; };
+		76811779211C9E1E0094FC06 /* FinderArticleDetailSourceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderArticleDetailSourceCell.h; sourceTree = "<group>"; };
+		7681177A211C9E1F0094FC06 /* COCheckoutGetCashCouponsNewApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutGetCashCouponsNewApi.h; sourceTree = "<group>"; };
+		7681177B211C9E1F0094FC06 /* CBPUserNameValidator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBPUserNameValidator.h; sourceTree = "<group>"; };
+		7681177C211C9E1F0094FC06 /* COCheckOutSelectHourIndexPath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckOutSelectHourIndexPath.h; sourceTree = "<group>"; };
+		7681177D211C9E1F0094FC06 /* COCheckoutGetSelfPickSiteListAM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutGetSelfPickSiteListAM.h; sourceTree = "<group>"; };
+		7681177E211C9E200094FC06 /* CommuneHomeTemplateEntryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneHomeTemplateEntryModel.h; sourceTree = "<group>"; };
+		7681177F211C9E200094FC06 /* DJXYContainerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DJXYContainerViewController.h; sourceTree = "<group>"; };
+		76811780211C9E200094FC06 /* CYRLayoutManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYRLayoutManager.h; sourceTree = "<group>"; };
+		76811781211C9E200094FC06 /* CCCAssignmentHistoryTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCCAssignmentHistoryTableView.h; sourceTree = "<group>"; };
+		76811782211C9E210094FC06 /* FinderAttentionBannerCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderAttentionBannerCell.h; sourceTree = "<group>"; };
+		76811783211C9E210094FC06 /* DPGDetailLoadMoreCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPGDetailLoadMoreCellModel.h; sourceTree = "<group>"; };
+		76811784211C9E210094FC06 /* COCheckoutVatQualificationInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutVatQualificationInfoView.h; sourceTree = "<group>"; };
+		76811785211C9E210094FC06 /* DJXYHomeSkuModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DJXYHomeSkuModel.h; sourceTree = "<group>"; };
+		76811786211C9E220094FC06 /* CommuneCategoryDetailQuestionCategoryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneCategoryDetailQuestionCategoryModel.h; sourceTree = "<group>"; };
+		76811787211C9E220094FC06 /* FinderAttentionTodayRecCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderAttentionTodayRecCell.h; sourceTree = "<group>"; };
+		76811788211C9E220094FC06 /* FinderHomeWebViewContentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderHomeWebViewContentModel.h; sourceTree = "<group>"; };
+		76811789211C9E230094FC06 /* COCheckoutVenderShipmentSaveParamsUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutVenderShipmentSaveParamsUtils.h; sourceTree = "<group>"; };
+		7681178A211C9E230094FC06 /* DJXYNavView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DJXYNavView.h; sourceTree = "<group>"; };
+		7681178B211C9E230094FC06 /* CCCouponSearchBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCCouponSearchBar.h; sourceTree = "<group>"; };
+		7681178C211C9E240094FC06 /* DPGDetailSimilarArticleCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPGDetailSimilarArticleCollectionCell.h; sourceTree = "<group>"; };
+		7681178D211C9E240094FC06 /* FinderFollowGiftDetailView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderFollowGiftDetailView.h; sourceTree = "<group>"; };
+		7681178E211C9E240094FC06 /* CommuneCategoryActivityGuestsScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneCategoryActivityGuestsScrollView.h; sourceTree = "<group>"; };
+		7681178F211C9E240094FC06 /* DJXYHomeAtcFloorModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DJXYHomeAtcFloorModel.h; sourceTree = "<group>"; };
+		76811790211C9E250094FC06 /* CBPPhoneNumberInputBox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBPPhoneNumberInputBox.h; sourceTree = "<group>"; };
+		76811791211C9E250094FC06 /* COCheckoutInvoiceVatView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutInvoiceVatView.h; sourceTree = "<group>"; };
+		76811792211C9E250094FC06 /* FinderDataCacheManger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderDataCacheManger.h; sourceTree = "<group>"; };
+		76811793211C9E260094FC06 /* FinderAttentionListCacheManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderAttentionListCacheManager.h; sourceTree = "<group>"; };
+		76811794211C9E260094FC06 /* COCheckoutTagLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutTagLabel.h; sourceTree = "<group>"; };
+		76811795211C9E260094FC06 /* COCheckoutUnusualAdditionalView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutUnusualAdditionalView.h; sourceTree = "<group>"; };
+		76811796211C9E260094FC06 /* FinderArticleDetailFloatSkuCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderArticleDetailFloatSkuCell.h; sourceTree = "<group>"; };
+		76811797211C9E260094FC06 /* DidTapSegmentBtnDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DidTapSegmentBtnDelegate-Protocol.h"; sourceTree = "<group>"; };
+		76811798211C9E270094FC06 /* FinderCellModelProtocol-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FinderCellModelProtocol-Protocol.h"; sourceTree = "<group>"; };
+		76811799211C9E270094FC06 /* COCheckoutCardCellDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "COCheckoutCardCellDelegate-Protocol.h"; sourceTree = "<group>"; };
+		7681179A211C9E270094FC06 /* CCCouponWelfareView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCCouponWelfareView.h; sourceTree = "<group>"; };
+		7681179B211C9E280094FC06 /* FinderAttentionVideoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderAttentionVideoCell.h; sourceTree = "<group>"; };
+		7681179C211C9E280094FC06 /* CommuneCategoryActivityDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneCategoryActivityDetailModel.h; sourceTree = "<group>"; };
+		7681179D211C9E280094FC06 /* FinderArticleDetailWordCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderArticleDetailWordCell.h; sourceTree = "<group>"; };
+		7681179E211C9E290094FC06 /* COCheckoutNotifyController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutNotifyController.h; sourceTree = "<group>"; };
+		7681179F211C9E290094FC06 /* COCheckoutShopToastView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutShopToastView.h; sourceTree = "<group>"; };
+		768117A0211C9E290094FC06 /* FinderFrameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderFrameViewController.h; sourceTree = "<group>"; };
+		768117A1211C9E2A0094FC06 /* CommuneListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneListCell.h; sourceTree = "<group>"; };
+		768117A2211C9E2A0094FC06 /* DPGDetailFloorAuthorCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPGDetailFloorAuthorCell.h; sourceTree = "<group>"; };
+		768117A3211C9E2A0094FC06 /* FinderArticleDetailFirstLevelCommentCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderArticleDetailFirstLevelCommentCell.h; sourceTree = "<group>"; };
+		768117A4211C9E2B0094FC06 /* CBPaymentPayWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBPaymentPayWebViewController.h; sourceTree = "<group>"; };
+		768117A5211C9E2B0094FC06 /* DPGDetailElementModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPGDetailElementModel.h; sourceTree = "<group>"; };
+		768117A6211C9E2B0094FC06 /* COCheckoutOrderAddressResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutOrderAddressResult.h; sourceTree = "<group>"; };
+		768117A7211C9E2B0094FC06 /* CommentServiceSkuInstallModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentServiceSkuInstallModel.h; sourceTree = "<group>"; };
+		768117A8211C9E2C0094FC06 /* CBPaymentInfoDetailTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBPaymentInfoDetailTableViewCell.h; sourceTree = "<group>"; };
+		768117A9211C9E2C0094FC06 /* CommuneCategoryDetailQuestionDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CommuneCategoryDetailQuestionDelegate-Protocol.h"; sourceTree = "<group>"; };
+		768117AA211C9E2C0094FC06 /* CCCouponWelfareBGView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCCouponWelfareBGView.h; sourceTree = "<group>"; };
+		768117AB211C9E2D0094FC06 /* CommuneRollingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneRollingView.h; sourceTree = "<group>"; };
+		768117AC211C9E2D0094FC06 /* CCMarketResPosTotalView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCMarketResPosTotalView.h; sourceTree = "<group>"; };
+		768117AD211C9E2D0094FC06 /* FinderFirstCouponBoardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderFirstCouponBoardView.h; sourceTree = "<group>"; };
+		768117AE211C9E2E0094FC06 /* COCheckoutUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutUtils.h; sourceTree = "<group>"; };
+		768117AF211C9E2E0094FC06 /* COCheckoutCouponNoSupportGoodsViewLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutCouponNoSupportGoodsViewLayout.h; sourceTree = "<group>"; };
+		768117B0211C9E2E0094FC06 /* COCheckoutMainVenderFreightRiskRM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutMainVenderFreightRiskRM.h; sourceTree = "<group>"; };
+		768117B1211C9E2F0094FC06 /* COCheckoutShippingAddressViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutShippingAddressViewModel.h; sourceTree = "<group>"; };
+		768117B2211C9E2F0094FC06 /* FinderHotBigVideoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderHotBigVideoCell.h; sourceTree = "<group>"; };
+		768117B3211C9E2F0094FC06 /* COCheckoutOrderInvoicePhoneCardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutOrderInvoicePhoneCardView.h; sourceTree = "<group>"; };
+		768117B4211C9E300094FC06 /* FinderArticlePublisherContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderArticlePublisherContentView.h; sourceTree = "<group>"; };
+		768117B5211C9E300094FC06 /* CBPaymentPayFillViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBPaymentPayFillViewController.h; sourceTree = "<group>"; };
+		768117B6211C9E300094FC06 /* CCBeanReceiveMaskiew.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCBeanReceiveMaskiew.h; sourceTree = "<group>"; };
+		768117B7211C9E300094FC06 /* COCheckoutMainReturnWithoutWorryVM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutMainReturnWithoutWorryVM.h; sourceTree = "<group>"; };
+		768117B8211C9E310094FC06 /* CYRTextStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYRTextStorage.h; sourceTree = "<group>"; };
+		768117B9211C9E310094FC06 /* COCheckoutCoordinateRegionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutCoordinateRegionModel.h; sourceTree = "<group>"; };
+		768117BA211C9E310094FC06 /* CBPCaptchaValidator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBPCaptchaValidator.h; sourceTree = "<group>"; };
+		768117BB211C9E320094FC06 /* DJXYSwInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DJXYSwInfo.h; sourceTree = "<group>"; };
+		768117BC211C9E320094FC06 /* CBPaymentTypeCellViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBPaymentTypeCellViewModel.h; sourceTree = "<group>"; };
+		768117BD211C9E320094FC06 /* COShipmentOnlyDateView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COShipmentOnlyDateView.h; sourceTree = "<group>"; };
+		768117BE211C9E320094FC06 /* COCheckoutCoordinateToAddressApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutCoordinateToAddressApi.h; sourceTree = "<group>"; };
+		768117BF211C9E330094FC06 /* CBPayResultDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBPayResultDataModel.h; sourceTree = "<group>"; };
+		768117C0211C9E330094FC06 /* COCheckoutEasyBuyGetSelfPickListResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutEasyBuyGetSelfPickListResult.h; sourceTree = "<group>"; };
+		768117C1211C9E330094FC06 /* COCheckoutVenderShipmentProtocolView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutVenderShipmentProtocolView.h; sourceTree = "<group>"; };
+		768117C2211C9E340094FC06 /* CommentCenterBulletinBoard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentCenterBulletinBoard.h; sourceTree = "<group>"; };
+		768117C3211C9E340094FC06 /* COCheckoutRouterProductDetailInfoReq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutRouterProductDetailInfoReq.h; sourceTree = "<group>"; };
+		768117C4211C9E340094FC06 /* COCheckoutImmediatelyBuyProgressBarModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutImmediatelyBuyProgressBarModel.h; sourceTree = "<group>"; };
+		768117C5211C9E350094FC06 /* CCCSignRecCouponCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCCSignRecCouponCell.h; sourceTree = "<group>"; };
+		768117C6211C9E350094FC06 /* COCheckoutIDInputView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutIDInputView.h; sourceTree = "<group>"; };
+		768117C7211C9E350094FC06 /* CommuneCategoryPublishViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneCategoryPublishViewController.h; sourceTree = "<group>"; };
+		768117C8211C9E360094FC06 /* FinderArticleDetailPraiseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderArticleDetailPraiseCell.h; sourceTree = "<group>"; };
+		768117C9211C9E360094FC06 /* COCheckoutMainVenderCommodityRM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutMainVenderCommodityRM.h; sourceTree = "<group>"; };
+		768117CA211C9E360094FC06 /* COCheckoutLicenseToastView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutLicenseToastView.h; sourceTree = "<group>"; };
+		768117CB211C9E360094FC06 /* DPGDetailSimilarArticleModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPGDetailSimilarArticleModel.h; sourceTree = "<group>"; };
+		768117CC211C9E370094FC06 /* CCCouponAggregatListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCCouponAggregatListView.h; sourceTree = "<group>"; };
+		768117CD211C9E370094FC06 /* CommuneSearchProduct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneSearchProduct.h; sourceTree = "<group>"; };
+		768117CE211C9E370094FC06 /* COCheckoutGetAddressByPinResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutGetAddressByPinResult.h; sourceTree = "<group>"; };
+		768117CF211C9E370094FC06 /* COCheckOutJzdChooseDateHourCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckOutJzdChooseDateHourCollectionViewCell.h; sourceTree = "<group>"; };
+		768117D0211C9E380094FC06 /* FinderHotSmallVideoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderHotSmallVideoModel.h; sourceTree = "<group>"; };
+		768117D1211C9E380094FC06 /* COCheckoutMTAHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutMTAHelper.h; sourceTree = "<group>"; };
+		768117D2211C9E380094FC06 /* COCheckoutMainCoudanVM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutMainCoudanVM.h; sourceTree = "<group>"; };
+		768117D3211C9E390094FC06 /* CommuneQuestionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneQuestionModel.h; sourceTree = "<group>"; };
+		768117D4211C9E390094FC06 /* COCheckoutMainReceiverFloorCreator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutMainReceiverFloorCreator.h; sourceTree = "<group>"; };
+		768117D5211C9E390094FC06 /* DiscussionCounterForProductModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiscussionCounterForProductModel.h; sourceTree = "<group>"; };
+		768117D6211C9E390094FC06 /* FinderAttentionAssisantControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderAttentionAssisantControl.h; sourceTree = "<group>"; };
+		768117D7211C9E3A0094FC06 /* DPGDetailAttentionFollowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPGDetailAttentionFollowView.h; sourceTree = "<group>"; };
+		768117D8211C9E3A0094FC06 /* DPGDetailMTA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPGDetailMTA.h; sourceTree = "<group>"; };
+		768117D9211C9E3A0094FC06 /* CommuneUserCenterDataSourceProtocol-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CommuneUserCenterDataSourceProtocol-Protocol.h"; sourceTree = "<group>"; };
+		768117DA211C9E3A0094FC06 /* COCheckoutMainReturnWithoutWorryView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutMainReturnWithoutWorryView.h; sourceTree = "<group>"; };
+		768117DB211C9E3B0094FC06 /* DJXYPageSegmentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DJXYPageSegmentView.h; sourceTree = "<group>"; };
+		768117DC211C9E3B0094FC06 /* COCheckoutAddressSelectController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutAddressSelectController.h; sourceTree = "<group>"; };
+		768117DD211C9E3B0094FC06 /* CommuneCategoryDetailPageAnswerCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneCategoryDetailPageAnswerCell.h; sourceTree = "<group>"; };
+		768117DE211C9E3C0094FC06 /* COCheckoutMainImmediatelyBuyHistoryView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutMainImmediatelyBuyHistoryView.h; sourceTree = "<group>"; };
+		768117DF211C9E3C0094FC06 /* COCheckoutCoudanCardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutCoudanCardView.h; sourceTree = "<group>"; };
+		768117E0211C9E3C0094FC06 /* CDLongAudioSourceFader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDLongAudioSourceFader.h; sourceTree = "<group>"; };
+		768117E1211C9E3C0094FC06 /* FinanceCardContentInfoComposeProtocol-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FinanceCardContentInfoComposeProtocol-Protocol.h"; sourceTree = "<group>"; };
+		768117E2211C9E3D0094FC06 /* CCCouponCenterBaseDataAccess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCCouponCenterBaseDataAccess.h; sourceTree = "<group>"; };
+		768117E3211C9E3D0094FC06 /* CouponCenterJumpProtocolHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CouponCenterJumpProtocolHandler.h; sourceTree = "<group>"; };
+		768117E4211C9E3D0094FC06 /* CDLongAudioSourceDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CDLongAudioSourceDelegate-Protocol.h"; sourceTree = "<group>"; };
+		768117E5211C9E3E0094FC06 /* COCheckoutBeanModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutBeanModel.h; sourceTree = "<group>"; };
+		768117E6211C9E3E0094FC06 /* COCheckoutGetGiftCardRM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutGetGiftCardRM.h; sourceTree = "<group>"; };
+		768117E7211C9E3E0094FC06 /* COCheckoutMyAddressCellDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "COCheckoutMyAddressCellDelegate-Protocol.h"; sourceTree = "<group>"; };
+		768117E8211C9E3F0094FC06 /* COCheckoutMainInputView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutMainInputView.h; sourceTree = "<group>"; };
+		768117E9211C9E3F0094FC06 /* CBPaymentPayBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBPaymentPayBaseViewController.h; sourceTree = "<group>"; };
+		768117EA211C9E3F0094FC06 /* CommuneCategoryListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneCategoryListViewController.h; sourceTree = "<group>"; };
+		768117EB211C9E3F0094FC06 /* CommuneUserButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneUserButton.h; sourceTree = "<group>"; };
+		768117EC211C9E3F0094FC06 /* CommuneCheckButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneCheckButton.h; sourceTree = "<group>"; };
+		768117ED211C9E400094FC06 /* CommunePublishOpenPushTipToastView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommunePublishOpenPushTipToastView.h; sourceTree = "<group>"; };
+		768117EE211C9E400094FC06 /* FinderArticleInputView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderArticleInputView.h; sourceTree = "<group>"; };
+		768117EF211C9E400094FC06 /* CBPIDCardNumberInputBox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBPIDCardNumberInputBox.h; sourceTree = "<group>"; };
+		768117F0211C9E400094FC06 /* CCCouponListViewDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CCCouponListViewDelegate-Protocol.h"; sourceTree = "<group>"; };
+		768117F1211C9E410094FC06 /* CCCouponLoopSignInCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCCouponLoopSignInCell.h; sourceTree = "<group>"; };
+		768117F2211C9E410094FC06 /* CommuneUserUnauthTextLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneUserUnauthTextLabel.h; sourceTree = "<group>"; };
+		768117F3211C9E410094FC06 /* CountryListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountryListViewController.h; sourceTree = "<group>"; };
+		768117F4211C9E420094FC06 /* DJXYPageScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DJXYPageScrollView.h; sourceTree = "<group>"; };
+		768117F5211C9E420094FC06 /* COCheckoutInvoiceCompanyTaxTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutInvoiceCompanyTaxTextField.h; sourceTree = "<group>"; };
+		768117F6211C9E420094FC06 /* COCheckoutMainGoodsServiceVM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutMainGoodsServiceVM.h; sourceTree = "<group>"; };
+		768117F7211C9E430094FC06 /* FinderHotThreePicArticleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderHotThreePicArticleCell.h; sourceTree = "<group>"; };
+		768117F8211C9E430094FC06 /* CCCouponReceiveBeanView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCCouponReceiveBeanView.h; sourceTree = "<group>"; };
+		768117F9211C9E430094FC06 /* COCheckoutUseBalancePayApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutUseBalancePayApi.h; sourceTree = "<group>"; };
+		768117FA211C9E440094FC06 /* FinderCommentDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderCommentDetailViewController.h; sourceTree = "<group>"; };
+		768117FB211C9E440094FC06 /* CommuneCategoryRecommend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneCategoryRecommend.h; sourceTree = "<group>"; };
+		768117FC211C9E440094FC06 /* CommuneDetailRecommendQuestionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneDetailRecommendQuestionCell.h; sourceTree = "<group>"; };
+		768117FD211C9E440094FC06 /* COCheckoutAddressListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutAddressListController.h; sourceTree = "<group>"; };
+		768117FE211C9E450094FC06 /* CommuneCategoryActivityRecommandProductScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneCategoryActivityRecommandProductScrollView.h; sourceTree = "<group>"; };
+		768117FF211C9E450094FC06 /* CountryListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountryListCell.h; sourceTree = "<group>"; };
+		76811800211C9E450094FC06 /* COCheckoutGetJZDTimeRangApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutGetJZDTimeRangApi.h; sourceTree = "<group>"; };
+		76811801211C9E450094FC06 /* COCheckoutVenderShipmentProtocolInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutVenderShipmentProtocolInfo.h; sourceTree = "<group>"; };
+		76811802211C9E450094FC06 /* COCheckoutImmediatelyBuyOnlyOneItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutImmediatelyBuyOnlyOneItemView.h; sourceTree = "<group>"; };
+		76811803211C9E460094FC06 /* FeedbackImgEnlargeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedbackImgEnlargeViewController.h; sourceTree = "<group>"; };
+		76811804211C9E460094FC06 /* COCheckoutGetCardsGiftsApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutGetCardsGiftsApi.h; sourceTree = "<group>"; };
+		76811805211C9E460094FC06 /* FinderFollowRecommendLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderFollowRecommendLabel.h; sourceTree = "<group>"; };
+		76811806211C9E470094FC06 /* FinderHomeScrollObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderHomeScrollObserver.h; sourceTree = "<group>"; };
+		76811807211C9E470094FC06 /* CCCouponSignInEntranceViewDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CCCouponSignInEntranceViewDelegate-Protocol.h"; sourceTree = "<group>"; };
+		76811808211C9E470094FC06 /* COCheckoutMainBasicVM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutMainBasicVM.h; sourceTree = "<group>"; };
+		76811809211C9E470094FC06 /* COCheckoutVenderShipmentVenderPickShipmentVM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutVenderShipmentVenderPickShipmentVM.h; sourceTree = "<group>"; };
+		7681180A211C9E480094FC06 /* CommentSecondDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentSecondDetailViewController.h; sourceTree = "<group>"; };
+		7681180B211C9E480094FC06 /* COCheckoutYunFeiDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutYunFeiDetailModel.h; sourceTree = "<group>"; };
+		7681180C211C9E480094FC06 /* CommuneCategoryListTipCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneCategoryListTipCell.h; sourceTree = "<group>"; };
+		7681180D211C9E490094FC06 /* FinderAttentionBrandWallModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderAttentionBrandWallModel.h; sourceTree = "<group>"; };
+		7681180E211C9E490094FC06 /* FeedBackRecentOptimizeTableHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedBackRecentOptimizeTableHeaderView.h; sourceTree = "<group>"; };
+		7681180F211C9E490094FC06 /* DJXYJumpModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DJXYJumpModel.h; sourceTree = "<group>"; };
+		76811810211C9E490094FC06 /* FinderArticleDetailSubCatTitleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderArticleDetailSubCatTitleCell.h; sourceTree = "<group>"; };
+		76811811211C9E4A0094FC06 /* COCheckoutSiteResp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutSiteResp.h; sourceTree = "<group>"; };
+		76811812211C9E4A0094FC06 /* CBPaymentPayParamModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBPaymentPayParamModel.h; sourceTree = "<group>"; };
+		76811813211C9E4A0094FC06 /* COCheckoutJdBeanUseRuleRM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutJdBeanUseRuleRM.h; sourceTree = "<group>"; };
+		76811814211C9E4A0094FC06 /* COCheckoutsecurityPasswordBlockResourceModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutsecurityPasswordBlockResourceModel.h; sourceTree = "<group>"; };
+		76811815211C9E4B0094FC06 /* CommuneUserCenterCategoryFollowDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneUserCenterCategoryFollowDataSource.h; sourceTree = "<group>"; };
+		76811816211C9E4B0094FC06 /* COCheckoutVerificationCodeDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "COCheckoutVerificationCodeDelegate-Protocol.h"; sourceTree = "<group>"; };
+		76811817211C9E4B0094FC06 /* COCheckoutMainPresaleInfoVM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutMainPresaleInfoVM.h; sourceTree = "<group>"; };
+		76811818211C9E4B0094FC06 /* COCheckoutSwitch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutSwitch.h; sourceTree = "<group>"; };
+		76811819211C9E4C0094FC06 /* CommuneCategoryPublishQuestionSubmitView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneCategoryPublishQuestionSubmitView.h; sourceTree = "<group>"; };
+		7681181A211C9E4C0094FC06 /* FeedbackImgEnlargeViewControllerDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FeedbackImgEnlargeViewControllerDelegate-Protocol.h"; sourceTree = "<group>"; };
+		7681181B211C9E4C0094FC06 /* CommentCenterJumpProtocolHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentCenterJumpProtocolHandler.h; sourceTree = "<group>"; };
+		7681181C211C9E4D0094FC06 /* COCheckoutMainVenderProductVORM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutMainVenderProductVORM.h; sourceTree = "<group>"; };
+		7681181D211C9E4D0094FC06 /* COCheckoutOrderWareCarriedView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutOrderWareCarriedView.h; sourceTree = "<group>"; };
+		7681181E211C9E4D0094FC06 /* communeReportButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = communeReportButton.h; sourceTree = "<group>"; };
+		7681181F211C9E4D0094FC06 /* FinderArticleDetailBannerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderArticleDetailBannerModel.h; sourceTree = "<group>"; };
+		76811820211C9E4E0094FC06 /* CCCouponMarketListViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCCouponMarketListViewModel.h; sourceTree = "<group>"; };
+		76811821211C9E4E0094FC06 /* COCheckoutMainShipmentMidSmallSaveInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutMainShipmentMidSmallSaveInfo.h; sourceTree = "<group>"; };
+		76811822211C9E4E0094FC06 /* FinalSearchSortTabViewDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FinalSearchSortTabViewDelegate-Protocol.h"; sourceTree = "<group>"; };
+		76811823211C9E4F0094FC06 /* FeedBackInputViewDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FeedBackInputViewDelegate-Protocol.h"; sourceTree = "<group>"; };
+		76811824211C9E4F0094FC06 /* COCheckoutCouponsClassifyModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutCouponsClassifyModel.h; sourceTree = "<group>"; };
+		76811825211C9E4F0094FC06 /* CommentDetailReplyCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentDetailReplyCellView.h; sourceTree = "<group>"; };
+		76811826211C9E500094FC06 /* COCheckoutPKPaymentPickerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutPKPaymentPickerViewController.h; sourceTree = "<group>"; };
+		76811827211C9E500094FC06 /* CBPaymentPayVerifyViewReturnModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBPaymentPayVerifyViewReturnModel.h; sourceTree = "<group>"; };
+		76811828211C9E500094FC06 /* COCheckoutVenderShipmentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutVenderShipmentViewController.h; sourceTree = "<group>"; };
+		76811829211C9E510094FC06 /* COCheckoutDateViewState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutDateViewState.h; sourceTree = "<group>"; };
+		7681182A211C9E510094FC06 /* COCheckoutShippingAddressNormalView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutShippingAddressNormalView.h; sourceTree = "<group>"; };
+		7681182B211C9E510094FC06 /* EBookProtocolScheme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EBookProtocolScheme.h; sourceTree = "<group>"; };
+		7681182C211C9E520094FC06 /* COCheckoutMainVenderAffiliatedVORM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutMainVenderAffiliatedVORM.h; sourceTree = "<group>"; };
+		7681182D211C9E520094FC06 /* FinderArticelDetailIconFollowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderArticelDetailIconFollowView.h; sourceTree = "<group>"; };
+		7681182E211C9E520094FC06 /* COCheckoutGsdShipmentRM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutGsdShipmentRM.h; sourceTree = "<group>"; };
+		7681182F211C9E520094FC06 /* COCheckoutMainPresaleStepVM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutMainPresaleStepVM.h; sourceTree = "<group>"; };
+		76811830211C9E530094FC06 /* DES_Voice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DES_Voice.h; sourceTree = "<group>"; };
+		76811831211C9E530094FC06 /* COCheckoutInvoiceCheckViewDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "COCheckoutInvoiceCheckViewDelegate-Protocol.h"; sourceTree = "<group>"; };
+		76811832211C9E530094FC06 /* COCheckoutInvoiceAddressVM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutInvoiceAddressVM.h; sourceTree = "<group>"; };
+		76811833211C9E530094FC06 /* FinderAttentionLastTimeSeeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinderAttentionLastTimeSeeModel.h; sourceTree = "<group>"; };
+		76811834211C9E540094FC06 /* COCheckoutMainMutableGoodsVM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutMainMutableGoodsVM.h; sourceTree = "<group>"; };
+		76811835211C9E540094FC06 /* FinanceCardContentInfoDefaultStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinanceCardContentInfoDefaultStyle.h; sourceTree = "<group>"; };
+		76811836211C9E540094FC06 /* CommuneAdView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneAdView.h; sourceTree = "<group>"; };
+		76811837211C9E540094FC06 /* CouponNearByViewControllerDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CouponNearByViewControllerDelegate-Protocol.h"; sourceTree = "<group>"; };
+		76811838211C9E540094FC06 /* CommuneRewardLogoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommuneRewardLogoView.h; sourceTree = "<group>"; };
+		76811839211C9E550094FC06 /* COCheckoutCloudLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutCloudLabel.h; sourceTree = "<group>"; };
+		7681183A211C9E550094FC06 /* COCheckoutBubbleButtonVM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutBubbleButtonVM.h; sourceTree = "<group>"; };
+		7681183B211C9E550094FC06 /* COCheckoutBigItemJsdRM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutBigItemJsdRM.h; sourceTree = "<group>"; };
+		7681183C211C9E550094FC06 /* COCheckoutMainAddressVM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutMainAddressVM.h; sourceTree = "<group>"; };
+		7681183D211C9E560094FC06 /* COCheckoutMainPresaleTipsVM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutMainPresaleTipsVM.h; sourceTree = "<group>"; };
+		7681183E211C9E560094FC06 /* EditUserInfoViewCellDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EditUserInfoViewCellDelegate-Protocol.h"; sourceTree = "<group>"; };
+		7681183F211C9E560094FC06 /* COCheckoutGiftCardInfosModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COCheckoutGiftCardInfosModel.h; sourceTree = "<group>"; };
 		76824FC31FFB6EDC00FAEB2C /* JDHomeGoodsCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDHomeGoodsCategoryCell.swift; sourceTree = "<group>"; };
 		76992B301FF627C50028F677 /* NavigatorScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorScrollView.swift; sourceTree = "<group>"; };
 		76992B321FF62BED0028F677 /* JDHomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDHomeViewCell.swift; sourceTree = "<group>"; };
@@ -918,6 +1468,556 @@
 		768114C0211C9CA60094FC06 /* JDHeader */ = {
 			isa = PBXGroup;
 			children = (
+				768116BB211C9DEA0094FC06 /* CBPaymentCheckPwdParamModel.h */,
+				76811702211C9DFB0094FC06 /* CBPaymentCheckPwdProtocal-Protocol.h */,
+				768117A8211C9E2C0094FC06 /* CBPaymentInfoDetailTableViewCell.h */,
+				768116D3211C9DEE0094FC06 /* CBPaymentInfoViewController.h */,
+				768117E9211C9E3F0094FC06 /* CBPaymentPayBaseViewController.h */,
+				76811640211C9DD00094FC06 /* CBPaymentPayCaptchaViewParamModel.h */,
+				768117B5211C9E300094FC06 /* CBPaymentPayFillViewController.h */,
+				7681174C211C9E0D0094FC06 /* CBPaymentPayFillViewParamModel.h */,
+				76811812211C9E4A0094FC06 /* CBPaymentPayParamModel.h */,
+				76811721211C9E020094FC06 /* CBPaymentPayPasswordDataHandler.h */,
+				7681176C211C9E1A0094FC06 /* CBPaymentPayReturnModel.h */,
+				768116C8211C9DED0094FC06 /* CBPaymentPayVerifyViewController.h */,
+				768116A7211C9DE70094FC06 /* CBPaymentPayVerifyViewModel.h */,
+				76811719211C9E000094FC06 /* CBPaymentPayVerifyViewParamModel.h */,
+				76811827211C9E500094FC06 /* CBPaymentPayVerifyViewReturnModel.h */,
+				768117A4211C9E2B0094FC06 /* CBPaymentPayWebViewController.h */,
+				7681161E211C9DCA0094FC06 /* CBPaymentSetupDataController.h */,
+				76811749211C9E0C0094FC06 /* CBPaymentSuccessDataController.h */,
+				768117BC211C9E320094FC06 /* CBPaymentTypeCellViewModel.h */,
+				7681163E211C9DD00094FC06 /* CBPaymentTypeViewControllerDelegate-Protocol.h */,
+				768117BF211C9E330094FC06 /* CBPayResultDataModel.h */,
+				768117BA211C9E310094FC06 /* CBPCaptchaValidator.h */,
+				7681168B211C9DE10094FC06 /* CBPCVV2InputBox.h */,
+				768117EF211C9E400094FC06 /* CBPIDCardNumberInputBox.h */,
+				76811712211C9DFD0094FC06 /* CBPIDCardNumberValidator.h */,
+				76811763211C9E170094FC06 /* CBPMBProgressHUDDelegate-Protocol.h */,
+				7681174D211C9E0D0094FC06 /* CBPPayPwdValidator.h */,
+				76811790211C9E250094FC06 /* CBPPhoneNumberInputBox.h */,
+				7681177B211C9E1F0094FC06 /* CBPUserNameValidator.h */,
+				76811682211C9DDF0094FC06 /* CBPValidDataInputBox.h */,
+				768117B6211C9E300094FC06 /* CCBeanReceiveMaskiew.h */,
+				76811781211C9E200094FC06 /* CCCAssignmentHistoryTableView.h */,
+				768116C9211C9DED0094FC06 /* CCCMainCouponView.h */,
+				768116CD211C9DEE0094FC06 /* CCCMyAssignmentCouponView.h */,
+				768116B4211C9DE90094FC06 /* CCCNoAssignmentCouponView.h */,
+				76811667211C9DD90094FC06 /* CCConvergeListViewModel.h */,
+				768117CC211C9E370094FC06 /* CCCouponAggregatListView.h */,
+				768116F9211C9DFA0094FC06 /* CCCouponBeanView.h */,
+				768117E2211C9E3D0094FC06 /* CCCouponCenterBaseDataAccess.h */,
+				76811697211C9DE40094FC06 /* CCCouponCenterBaseViewModel.h */,
+				768116B0211C9DE80094FC06 /* CCCouponCenterListViewModel.h */,
+				768116A1211C9DE50094FC06 /* CCCouponCenterUnityHandle.h */,
+				768116CE211C9DEE0094FC06 /* CCCouponComplexCell.h */,
+				76811624211C9DCB0094FC06 /* CCCouponCPlanHeaderView.h */,
+				7681172B211C9E040094FC06 /* CCCouponEqualSpaceFlowLayoutDelegate-Protocol.h */,
+				768116E9211C9DF60094FC06 /* CCCouponGiftCollectionView.h */,
+				76811768211C9E190094FC06 /* CCCouponGiftTableViewCell.h */,
+				768117F0211C9E400094FC06 /* CCCouponListViewDelegate-Protocol.h */,
+				768117F1211C9E410094FC06 /* CCCouponLoopSignInCell.h */,
+				768116AB211C9DE70094FC06 /* CCCouponMarketBuyView.h */,
+				76811820211C9E4E0094FC06 /* CCCouponMarketListViewModel.h */,
+				76811703211C9DFB0094FC06 /* CCCouponMyAssignMentAndRevocationView.h */,
+				7681163A211C9DCF0094FC06 /* CCCouponMyAssignmentInstructionView.h */,
+				76811766211C9E190094FC06 /* CCCouponNavBar.h */,
+				76811744211C9E0B0094FC06 /* CCCouponNearByCell.h */,
+				76811628211C9DCC0094FC06 /* CCCouponPageBannerView.h */,
+				768117F8211C9E430094FC06 /* CCCouponReceiveBeanView.h */,
+				768116EC211C9DF70094FC06 /* CCCouponResPosCell.h */,
+				7681178B211C9E230094FC06 /* CCCouponSearchBar.h */,
+				768116F4211C9DF80094FC06 /* CCCouponSearchCell.h */,
+				7681176E211C9E1B0094FC06 /* CCCouponSearchListView.h */,
+				768116E2211C9DF30094FC06 /* CCCouponSignInEntranceView.h */,
+				76811807211C9E470094FC06 /* CCCouponSignInEntranceViewDelegate-Protocol.h */,
+				76811680211C9DDE0094FC06 /* CCCouponTagView.h */,
+				768117AA211C9E2C0094FC06 /* CCCouponWelfareBGView.h */,
+				768116C4211C9DEC0094FC06 /* CCCouponWelfareCell.h */,
+				768116BC211C9DEB0094FC06 /* CCCouponWelfareEnterView.h */,
+				76811731211C9E060094FC06 /* CCCouponWelfareGfitCell.h */,
+				7681179A211C9E270094FC06 /* CCCouponWelfareView.h */,
+				768116BD211C9DEB0094FC06 /* CCCouponWelfareWithBannerView.h */,
+				76811726211C9E030094FC06 /* CCCPageControl.h */,
+				768116A0211C9DE50094FC06 /* CCCScenarioViewFlowLayout.h */,
+				768117C5211C9E350094FC06 /* CCCSignRecCouponCell.h */,
+				76811677211C9DDC0094FC06 /* CCCViceCouponTrailerView.h */,
+				76811724211C9E020094FC06 /* CCMarketResPosDetailView.h */,
+				768117AC211C9E2D0094FC06 /* CCMarketResPosTotalView.h */,
+				7681175C211C9E120094FC06 /* CCNearByCouponSubView.h */,
+				7681161C211C9DC90094FC06 /* CCNearByCouponView.h */,
+				76811639211C9DCF0094FC06 /* CDAsynchInitialiser.h */,
+				768116EA211C9DF60094FC06 /* CDAudioInterruptProtocol-Protocol.h */,
+				76811656211C9DD50094FC06 /* CDBufferManager.h */,
+				768116BA211C9DEA0094FC06 /* CDFloatInterpolator.h */,
+				768117E4211C9E3D0094FC06 /* CDLongAudioSourceDelegate-Protocol.h */,
+				768117E0211C9E3C0094FC06 /* CDLongAudioSourceFader.h */,
+				7681170D211C9DFD0094FC06 /* CDSoundSourcePanner.h */,
+				76811689211C9DE00094FC06 /* ChooseShipmentDateDelegate-Protocol.h */,
+				7681161A211C9DC90094FC06 /* CloseJDAppProtocolHandler.h */,
+				76811688211C9DE00094FC06 /* CloseJDappProtocolScheme.h */,
+				76811732211C9E060094FC06 /* COCheckoutAbstractApi.h */,
+				7681161B211C9DC90094FC06 /* COCheckoutAddressBaseInfoView.h */,
+				76811755211C9E0F0094FC06 /* COCheckoutAddressEditViewController.h */,
+				768117FD211C9E440094FC06 /* COCheckoutAddressListController.h */,
+				76811770211C9E1C0094FC06 /* COCheckoutAddressSearchRegionModel.h */,
+				768116E8211C9DF60094FC06 /* COCheckoutAddressSearchResult.h */,
+				768117DC211C9E3B0094FC06 /* COCheckoutAddressSelectController.h */,
+				7681162A211C9DCC0094FC06 /* COCheckoutAddressTableViewCellModel.h */,
+				768117E5211C9E3E0094FC06 /* COCheckoutBeanModel.h */,
+				7681183B211C9E550094FC06 /* COCheckoutBigItemJsdRM.h */,
+				76811777211C9E1E0094FC06 /* COCheckoutBubbleButton.h */,
+				7681183A211C9E550094FC06 /* COCheckoutBubbleButtonVM.h */,
+				7681165C211C9DD60094FC06 /* COCheckoutButtonCheckBox.h */,
+				768116F6211C9DF90094FC06 /* COCheckoutButtonDisCheckBox.h */,
+				76811799211C9E270094FC06 /* COCheckoutCardCellDelegate-Protocol.h */,
+				7681175F211C9E150094FC06 /* COCheckoutCardManager.h */,
+				76811671211C9DDB0094FC06 /* COCheckoutCardViewController.h */,
+				76811701211C9DFB0094FC06 /* COCheckoutCartItemAttributeResourceModel.h */,
+				768116E4211C9DF40094FC06 /* COCheckoutCartModuleCoudanItemModel.h */,
+				76811665211C9DD80094FC06 /* COCheckoutChooseButton.h */,
+				768116E6211C9DF50094FC06 /* COCheckoutChooseButtonColorVM.h */,
+				768116B5211C9DE90094FC06 /* COCheckoutClickMessageModel.h */,
+				76811839211C9E550094FC06 /* COCheckoutCloudLabel.h */,
+				768116E5211C9DF50094FC06 /* COCheckoutConsignmentCodeView.h */,
+				76811748211C9E0C0094FC06 /* COCheckoutContactAddressForeignViewCell.h */,
+				76811704211C9DFB0094FC06 /* COCheckoutContactAddressTagModel.h */,
+				76811646211C9DD20094FC06 /* COCheckoutCoordinateAddressModel.h */,
+				768117B9211C9E310094FC06 /* COCheckoutCoordinateRegionModel.h */,
+				768117BE211C9E320094FC06 /* COCheckoutCoordinateToAddressApi.h */,
+				768117DF211C9E3C0094FC06 /* COCheckoutCoudanCardView.h */,
+				76811663211C9DD80094FC06 /* COCheckoutCountdownView.h */,
+				76811681211C9DDF0094FC06 /* COCheckoutCouponNoSupportGoodsView.h */,
+				768117AF211C9E2E0094FC06 /* COCheckoutCouponNoSupportGoodsViewLayout.h */,
+				76811824211C9E4F0094FC06 /* COCheckoutCouponsClassifyModel.h */,
+				76811769211C9E1A0094FC06 /* COCheckoutCouponTipsView.h */,
+				76811829211C9E510094FC06 /* COCheckoutDateViewState.h */,
+				768116A4211C9DE60094FC06 /* COCheckoutDecorationView.h */,
+				76811658211C9DD60094FC06 /* COCheckoutDelAddressApi.h */,
+				76811666211C9DD90094FC06 /* COCheckoutDropDownListView.h */,
+				768116DD211C9DF00094FC06 /* COCheckoutEasyBuyDeleteAddressResult.h */,
+				768117C0211C9E330094FC06 /* COCheckoutEasyBuyGetSelfPickListResult.h */,
+				76811757211C9E100094FC06 /* COCheckoutElectroInvoiceModel.h */,
+				7681163D211C9DD00094FC06 /* COCheckoutFreightDetail.h */,
+				768117CE211C9E370094FC06 /* COCheckoutGetAddressByPinResult.h */,
+				76811804211C9E460094FC06 /* COCheckoutGetCardsGiftsApi.h */,
+				7681177A211C9E1F0094FC06 /* COCheckoutGetCashCouponsNewApi.h */,
+				768117E6211C9E3E0094FC06 /* COCheckoutGetGiftCardRM.h */,
+				76811800211C9E450094FC06 /* COCheckoutGetJZDTimeRangApi.h */,
+				76811659211C9DD60094FC06 /* COCheckoutGetSelfDeliveryStoresAM.h */,
+				768116C7211C9DED0094FC06 /* COCheckoutGetSelfDeliveryStoresApi.h */,
+				76811661211C9DD80094FC06 /* COCheckoutGetSelfDeliveryStoresRM.h */,
+				7681177D211C9E1F0094FC06 /* COCheckoutGetSelfPickSiteListAM.h */,
+				7681183F211C9E560094FC06 /* COCheckoutGiftCardInfosModel.h */,
+				76811641211C9DD00094FC06 /* COCheckoutGoodsViewModel.h */,
+				7681182E211C9E520094FC06 /* COCheckoutGsdShipmentRM.h */,
+				768117C6211C9E350094FC06 /* COCheckoutIDInputView.h */,
+				76811715211C9DFE0094FC06 /* COCheckoutIDInputViewDelegate-Protocol.h */,
+				76811762211C9E160094FC06 /* COCheckoutImmediatelyBuyHistoryPriceModel.h */,
+				76811802211C9E450094FC06 /* COCheckoutImmediatelyBuyOnlyOneItemView.h */,
+				768117C4211C9E340094FC06 /* COCheckoutImmediatelyBuyProgressBarModel.h */,
+				76811832211C9E530094FC06 /* COCheckoutInvoiceAddressVM.h */,
+				76811831211C9E530094FC06 /* COCheckoutInvoiceCheckViewDelegate-Protocol.h */,
+				768117F5211C9E420094FC06 /* COCheckoutInvoiceCompanyTaxTextField.h */,
+				76811723211C9E020094FC06 /* COCheckoutInvoiceDistributeBaseView.h */,
+				768116DA211C9DF00094FC06 /* COCheckoutInvoiceDistributeViewDelegate-Protocol.h */,
+				76811735211C9E070094FC06 /* COCheckoutInvoiceModel.h */,
+				76811716211C9DFF0094FC06 /* COCheckoutInvoicePersonInfoDelagate-Protocol.h */,
+				76811674211C9DDC0094FC06 /* COCheckoutInvoicePersonInfoView.h */,
+				76811622211C9DCA0094FC06 /* COCheckoutInvoiceReceivePersonInfoView.h */,
+				7681164F211C9DD40094FC06 /* COCheckoutInvoiceVatDelegate-Protocol.h */,
+				76811791211C9E250094FC06 /* COCheckoutInvoiceVatView.h */,
+				76811636211C9DCE0094FC06 /* COCheckoutItemsViewController.h */,
+				76811813211C9E4A0094FC06 /* COCheckoutJdBeanUseRuleRM.h */,
+				768117CF211C9E370094FC06 /* COCheckOutJzdChooseDateHourCollectionViewCell.h */,
+				768116C3211C9DEC0094FC06 /* COCheckoutKeyboardTitleBarButtonItem.h */,
+				76811714211C9DFE0094FC06 /* COCheckoutKeyboardToolbar.h */,
+				768117CA211C9E360094FC06 /* COCheckoutLicenseToastView.h */,
+				7681183C211C9E550094FC06 /* COCheckoutMainAddressVM.h */,
+				7681165F211C9DD70094FC06 /* COCheckoutMainApiProtocol-Protocol.h */,
+				76811808211C9E470094FC06 /* COCheckoutMainBasicVM.h */,
+				7681164D211C9DD30094FC06 /* COCheckoutMainBillFloorCreator.h */,
+				76811653211C9DD40094FC06 /* COCheckoutMainConfigurationView.h */,
+				76811705211C9DFB0094FC06 /* COCheckoutMainCoudanView.h */,
+				768117D2211C9E380094FC06 /* COCheckoutMainCoudanVM.h */,
+				768116AD211C9DE80094FC06 /* COCheckoutMainGoodsDetailVM.h */,
+				76811740211C9E0A0094FC06 /* COCheckoutMainGoodsServiceDetailVM.h */,
+				768117F6211C9E420094FC06 /* COCheckoutMainGoodsServiceVM.h */,
+				76811700211C9DFB0094FC06 /* COCheckoutMainIDCardFloorCreator.h */,
+				76811651211C9DD40094FC06 /* COCheckoutMainImmediatelyBuyCountModel.h */,
+				768116D2211C9DEE0094FC06 /* COCheckoutMainImmediatelyBuyFloorCreator.h */,
+				768117DE211C9E3C0094FC06 /* COCheckoutMainImmediatelyBuyHistoryView.h */,
+				7681174A211C9E0C0094FC06 /* COCheckoutMainImmediatelyBuyProgressBarVM.h */,
+				7681164E211C9DD30094FC06 /* COCheckoutMainImmediatelyBuyView.h */,
+				768117E8211C9E3F0094FC06 /* COCheckoutMainInputView.h */,
+				7681171E211C9E010094FC06 /* COCheckoutMainMutableGoodsView.h */,
+				76811834211C9E540094FC06 /* COCheckoutMainMutableGoodsVM.h */,
+				768116DB211C9DF00094FC06 /* COCheckoutMainPresaleAgreementFloorCreator.h */,
+				76811817211C9E4B0094FC06 /* COCheckoutMainPresaleInfoVM.h */,
+				7681182F211C9E520094FC06 /* COCheckoutMainPresaleStepVM.h */,
+				7681183D211C9E560094FC06 /* COCheckoutMainPresaleTipsVM.h */,
+				76811778211C9E1E0094FC06 /* COCheckoutMainPresaleView.h */,
+				7681163C211C9DCF0094FC06 /* COCheckoutmainProgressView.h */,
+				768117D4211C9E390094FC06 /* COCheckoutMainReceiverFloorCreator.h */,
+				768117DA211C9E3A0094FC06 /* COCheckoutMainReturnWithoutWorryView.h */,
+				768117B7211C9E300094FC06 /* COCheckoutMainReturnWithoutWorryVM.h */,
+				7681165A211C9DD60094FC06 /* COCheckoutMainShipmentBigSaveInfo.h */,
+				76811821211C9E4E0094FC06 /* COCheckoutMainShipmentMidSmallSaveInfo.h */,
+				76811759211C9E110094FC06 /* COCheckoutMainShipmentSopVenderSelfDeliveryStoreVO.h */,
+				76811743211C9E0A0094FC06 /* COCheckoutMainShopFloorCreator.h */,
+				76811650211C9DD40094FC06 /* COCheckoutMainSwitchBeanVM.h */,
+				7681182C211C9E520094FC06 /* COCheckoutMainVenderAffiliatedVORM.h */,
+				768117C9211C9E360094FC06 /* COCheckoutMainVenderCommodityRM.h */,
+				768116AE211C9DE80094FC06 /* COCheckoutMainVenderConsolidatorShipment.h */,
+				768117B0211C9E2E0094FC06 /* COCheckoutMainVenderFreightRiskRM.h */,
+				768116F2211C9DF80094FC06 /* COCheckoutMainVenderPagingToastVM.h */,
+				768116FB211C9DFA0094FC06 /* COCheckoutMainVenderPagingView.h */,
+				7681181C211C9E4D0094FC06 /* COCheckoutMainVenderProductVORM.h */,
+				76811729211C9E040094FC06 /* COCheckoutMainVenderSkuVORM.h */,
+				7681165D211C9DD70094FC06 /* COCheckoutMainViewController.h */,
+				768116A9211C9DE70094FC06 /* COCheckoutMainVirtualAssetsFloorCreator.h */,
+				7681161D211C9DC90094FC06 /* COCheckoutMainWeakTimer.h */,
+				768117D1211C9E380094FC06 /* COCheckoutMTAHelper.h */,
+				768117E7211C9E3E0094FC06 /* COCheckoutMyAddressCellDelegate-Protocol.h */,
+				768116A2211C9DE60094FC06 /* COCheckoutNewOrderViewDelegate-Protocol.h */,
+				7681179E211C9E290094FC06 /* COCheckoutNotifyController.h */,
+				76811747211C9E0B0094FC06 /* COCheckoutOrderAddressApi.h */,
+				768117A6211C9E2B0094FC06 /* COCheckoutOrderAddressResult.h */,
+				76811668211C9DD90094FC06 /* COCheckoutOrderInfoCheckoutBarDelegate-Protocol.h */,
+				76811742211C9E0A0094FC06 /* COCheckoutOrderInfoModel.h */,
+				76811673211C9DDC0094FC06 /* COCheckoutOrderInfoStatusModel.h */,
+				768117B3211C9E2F0094FC06 /* COCheckoutOrderInvoicePhoneCardView.h */,
+				76811672211C9DDB0094FC06 /* COCheckoutOrderListWareModelManager.h */,
+				76811774211C9E1D0094FC06 /* COCheckoutOrderVirtualPayModel.h */,
+				7681181D211C9E4D0094FC06 /* COCheckoutOrderWareCarriedView.h */,
+				76811727211C9E030094FC06 /* COCheckoutOrderWareGroupNormalCell.h */,
+				7681165E211C9DD70094FC06 /* COCheckoutOrderWareGroupSubGiftCell.h */,
+				768116CB211C9DED0094FC06 /* COCheckoutOrderWareGroupSuitCell.h */,
+				768116DC211C9DF00094FC06 /* COCheckoutPaymentTypeApi.h */,
+				76811738211C9E080094FC06 /* COCheckoutPaymentViewController.h */,
+				76811629211C9DCC0094FC06 /* COCheckoutPickSiteRM.h */,
+				7681174E211C9E0D0094FC06 /* COCheckoutPKPayment.h */,
+				76811630211C9DCD0094FC06 /* COCheckoutPKPaymentCell.h */,
+				76811826211C9E500094FC06 /* COCheckoutPKPaymentPickerViewController.h */,
+				76811626211C9DCB0094FC06 /* COCheckoutPKSKU.h */,
+				76811621211C9DCA0094FC06 /* COCheckoutPlaceholderBlankView.h */,
+				76811764211C9E170094FC06 /* COCheckoutPresalePaymentStepModel.h */,
+				76811734211C9E060094FC06 /* COCheckoutPriceChangeCellLayout.h */,
+				768116B2211C9DE90094FC06 /* COCheckoutReceivePersonInfoViewDelegate-Protocol.h */,
+				76811623211C9DCB0094FC06 /* COCheckoutRegionModel.h */,
+				7681173E211C9E090094FC06 /* COCheckoutReSetAllCouponsReq.h */,
+				76811686211C9DE00094FC06 /* COCheckoutReturnExchangeGoodView.h */,
+				768116A5211C9DE60094FC06 /* COCheckoutRouterHandler.h */,
+				768116FD211C9DFA0094FC06 /* COCheckoutRouterOrderListHandler.h */,
+				76811722211C9E020094FC06 /* COCheckoutRouterOrderListInfoReq.h */,
+				768117C3211C9E340094FC06 /* COCheckoutRouterProductDetailInfoReq.h */,
+				768116B3211C9DE90094FC06 /* COCheckoutRouterSearchListInfoReq.h */,
+				7681170F211C9DFD0094FC06 /* COCheckoutRouterShareManagerInfoReq.h */,
+				768116B6211C9DEA0094FC06 /* COCheckoutRouterUserManagerHandler.h */,
+				76811814211C9E4A0094FC06 /* COCheckoutsecurityPasswordBlockResourceModel.h */,
+				76811741211C9E0A0094FC06 /* COCheckoutSelectAddressViewRegionAddressModel.h */,
+				768116CA211C9DED0094FC06 /* COCheckoutSelectAddressViewResponseModel.h */,
+				7681177C211C9E1F0094FC06 /* COCheckOutSelectHourIndexPath.h */,
+				7681182A211C9E510094FC06 /* COCheckoutShippingAddressNormalView.h */,
+				7681165B211C9DD60094FC06 /* COCheckoutShippingAddressSimpleView.h */,
+				768116ED211C9DF70094FC06 /* COCheckoutShippingAddressView.h */,
+				768117B1211C9E2F0094FC06 /* COCheckoutShippingAddressViewModel.h */,
+				7681179F211C9E290094FC06 /* COCheckoutShopToastView.h */,
+				76811625211C9DCB0094FC06 /* COCheckoutSiteMapCalloutVM.h */,
+				76811811211C9E4A0094FC06 /* COCheckoutSiteResp.h */,
+				76811685211C9DDF0094FC06 /* COCheckoutSiteVM.h */,
+				76811669211C9DD90094FC06 /* COCheckoutSiteVMProtocol-Protocol.h */,
+				768116CF211C9DEE0094FC06 /* COCheckoutSopVenderPickShipmentVM.h */,
+				7681175E211C9E140094FC06 /* COCheckoutSuccessViewController.h */,
+				76811818211C9E4B0094FC06 /* COCheckoutSwitch.h */,
+				76811683211C9DDF0094FC06 /* COCheckoutSwitchView.h */,
+				76811794211C9E260094FC06 /* COCheckoutTagLabel.h */,
+				768116CC211C9DED0094FC06 /* COCheckoutTaxFeiDetailModel.h */,
+				76811775211C9E1D0094FC06 /* COCheckoutToastGoods.h */,
+				7681168C211C9DE10094FC06 /* COCheckoutToastHelper.h */,
+				768116F3211C9DF80094FC06 /* COCheckoutToastPriceChangeVM.h */,
+				76811795211C9E260094FC06 /* COCheckoutUnusualAdditionalView.h */,
+				768117F9211C9E430094FC06 /* COCheckoutUseBalancePayApi.h */,
+				768116FE211C9DFA0094FC06 /* COCheckoutUseVirtualPropertyToastViewModel.h */,
+				768117AE211C9E2E0094FC06 /* COCheckoutUtils.h */,
+				7681167E211C9DDE0094FC06 /* COCheckoutVatInvoiceModel.h */,
+				76811784211C9E210094FC06 /* COCheckoutVatQualificationInfoView.h */,
+				768116AC211C9DE70094FC06 /* COCheckoutVenderPickShipmentRM.h */,
+				76811632211C9DCE0094FC06 /* COCheckoutVenderShipmentConsolidatorShipmentCreator.h */,
+				7681170A211C9DFC0094FC06 /* COCheckoutVenderShipmentConsolidatorShipmentVM.h */,
+				768116F5211C9DF80094FC06 /* COCheckoutVenderShipmentProtocolCreator.h */,
+				76811801211C9E450094FC06 /* COCheckoutVenderShipmentProtocolInfo.h */,
+				768117C1211C9E330094FC06 /* COCheckoutVenderShipmentProtocolView.h */,
+				76811789211C9E230094FC06 /* COCheckoutVenderShipmentSaveParamsUtils.h */,
+				76811809211C9E470094FC06 /* COCheckoutVenderShipmentVenderPickShipmentVM.h */,
+				76811828211C9E500094FC06 /* COCheckoutVenderShipmentViewController.h */,
+				76811816211C9E4B0094FC06 /* COCheckoutVerificationCodeDelegate-Protocol.h */,
+				76811638211C9DCF0094FC06 /* COCheckoutViewImmediatelyBuyAbstractView.h */,
+				76811746211C9E0B0094FC06 /* COCheckoutWareAttributeLabelDelegate-Protocol.h */,
+				768116F1211C9DF80094FC06 /* COCheckoutWarelistView.h */,
+				7681180B211C9E480094FC06 /* COCheckoutYunFeiDetailModel.h */,
+				768116C0211C9DEB0094FC06 /* CodeTimeModel.h */,
+				7681172E211C9E050094FC06 /* ColorBuyProdctModel.h */,
+				768116E7211C9DF50094FC06 /* CommentAndShareViewController.h */,
+				768117C2211C9E340094FC06 /* CommentCenterBulletinBoard.h */,
+				7681181B211C9E4C0094FC06 /* CommentCenterJumpProtocolHandler.h */,
+				768116D7211C9DEF0094FC06 /* CommentCenterSegmentView.h */,
+				768116C2211C9DEC0094FC06 /* CommentCenterSegmentViewDelegate-Protocol.h */,
+				76811698211C9DE40094FC06 /* CommentCenterTableViewCell.h */,
+				76811750211C9E0E0094FC06 /* CommentDetailJumpProtocolHandler.h */,
+				7681167F211C9DDE0094FC06 /* CommentDetailProductLineView.h */,
+				76811825211C9E4F0094FC06 /* CommentDetailReplyCellView.h */,
+				76811709211C9DFC0094FC06 /* CommentDetailVideoCell.h */,
+				76811753211C9E0F0094FC06 /* CommentDetailVideoCellDelegate-Protocol.h */,
+				76811648211C9DD20094FC06 /* CommentHomeTempateModel.h */,
+				7681180A211C9E480094FC06 /* CommentSecondDetailViewController.h */,
+				768117A7211C9E2B0094FC06 /* CommentServiceSkuInstallModel.h */,
+				7681167B211C9DDD0094FC06 /* CommentShareLogisticsButton.h */,
+				7681168A211C9DE10094FC06 /* CommentShareLogisticsView.h */,
+				76811707211C9DFC0094FC06 /* CommentShareLogisticsViewDelegate-Protocol.h */,
+				76811634211C9DCE0094FC06 /* CommentShareSkuInstallSingleView.h */,
+				7681166A211C9DDA0094FC06 /* CommentShareSkuInstallSingleViewDelegate-Protocol.h */,
+				76811736211C9E070094FC06 /* CommentShareViewManager.h */,
+				7681163F211C9DD00094FC06 /* CommentSuperModel.h */,
+				76811664211C9DD80094FC06 /* Common360BuyDate.h */,
+				76811836211C9E540094FC06 /* CommuneAdView.h */,
+				76811694211C9DE30094FC06 /* CommuneAnounceDelegate-Protocol.h */,
+				7681173F211C9E0A0094FC06 /* CommuneAnounceView.h */,
+				76811733211C9E060094FC06 /* CommuneBeansInfoModel.h */,
+				7681166B211C9DDA0094FC06 /* CommuneCategoryActivityContentCell.h */,
+				768116D9211C9DF00094FC06 /* CommuneCategoryActivityDetailBaseTableViewCell.h */,
+				768116D8211C9DF00094FC06 /* CommuneCategoryActivityDetailJumpDelegate-Protocol.h */,
+				7681179C211C9E280094FC06 /* CommuneCategoryActivityDetailModel.h */,
+				768116A6211C9DE60094FC06 /* CommuneCategoryActivityDetailRecommandShopTableViewCell.h */,
+				76811690211C9DE20094FC06 /* CommuneCategoryActivityGuestsItemView.h */,
+				7681178E211C9E240094FC06 /* CommuneCategoryActivityGuestsScrollView.h */,
+				76811751211C9E0E0094FC06 /* CommuneCategoryActivityListViewController.h */,
+				76811739211C9E080094FC06 /* CommuneCategoryActivityQuestionDetailModel.h */,
+				768117FE211C9E450094FC06 /* CommuneCategoryActivityRecommandProductScrollView.h */,
+				7681168D211C9DE10094FC06 /* CommuneCategoryActivityRecommandProductTableViewCell.h */,
+				7681168E211C9DE10094FC06 /* CommuneCategoryActivityShareModel.h */,
+				768116DE211C9DF00094FC06 /* CommuneCategoryAddProductWarePallet.h */,
+				76811642211C9DD10094FC06 /* CommuneCategoryDetailAnswerDelegate-Protocol.h */,
+				768117DD211C9E3B0094FC06 /* CommuneCategoryDetailPageAnswerCell.h */,
+				768116D4211C9DEF0094FC06 /* CommuneCategoryDetailPageQuestionCell.h */,
+				76811786211C9E220094FC06 /* CommuneCategoryDetailQuestionCategoryModel.h */,
+				768117A9211C9E2C0094FC06 /* CommuneCategoryDetailQuestionDelegate-Protocol.h */,
+				7681169D211C9DE50094FC06 /* CommuneCategoryDetailQuestionModel.h */,
+				76811745211C9E0B0094FC06 /* CommuneCategoryDetailViewController.h */,
+				7681164C211C9DD30094FC06 /* CommuneCategoryListCell.h */,
+				7681180C211C9E480094FC06 /* CommuneCategoryListTipCell.h */,
+				768117EA211C9E3F0094FC06 /* CommuneCategoryListViewController.h */,
+				768116AA211C9DE70094FC06 /* CommuneCategoryPublishAnswerSubmitView.h */,
+				76811758211C9E100094FC06 /* CommuneCategoryPublishAnswerViewController.h */,
+				7681175D211C9E130094FC06 /* CommuneCategoryPublishDao.h */,
+				76811819211C9E4C0094FC06 /* CommuneCategoryPublishQuestionSubmitView.h */,
+				768117C7211C9E350094FC06 /* CommuneCategoryPublishViewController.h */,
+				768117FB211C9E440094FC06 /* CommuneCategoryRecommend.h */,
+				768116D0211C9DEE0094FC06 /* CommuneCategoryRecommendViewDelegate-Protocol.h */,
+				768117EC211C9E3F0094FC06 /* CommuneCheckButton.h */,
+				7681162B211C9DCC0094FC06 /* CommuneCommentContentCell.h */,
+				76811676211C9DDC0094FC06 /* CommuneCommentCustomTextView.h */,
+				76811710211C9DFD0094FC06 /* CommuneCommentQuestionPraiseCell.h */,
+				76811717211C9DFF0094FC06 /* CommuneDetailAnswerHeaderButton.h */,
+				76811752211C9E0E0094FC06 /* CommuneDetailAnswerHeaderView.h */,
+				768116A3211C9DE60094FC06 /* CommuneDetailFolderView.h */,
+				7681166C211C9DDA0094FC06 /* CommuneDetailModel.h */,
+				768117FC211C9E440094FC06 /* CommuneDetailRecommendQuestionCell.h */,
+				7681172D211C9E050094FC06 /* CommuneDetailRecommendQuestionView.h */,
+				7681177E211C9E200094FC06 /* CommuneHomeTemplateEntryModel.h */,
+				768117A1211C9E2A0094FC06 /* CommuneListCell.h */,
+				76811718211C9DFF0094FC06 /* CommuneListModel.h */,
+				768117ED211C9E400094FC06 /* CommunePublishOpenPushTipToastView.h */,
+				768117D3211C9E390094FC06 /* CommuneQuestionModel.h */,
+				76811760211C9E150094FC06 /* CommuneRealNameAuthModel.h */,
+				768116FC211C9DFA0094FC06 /* CommuneRecommendQuestionModel.h */,
+				7681181E211C9E4D0094FC06 /* communeReportButton.h */,
+				76811631211C9DCD0094FC06 /* CommuneRewardInfoDetailModel.h */,
+				76811838211C9E540094FC06 /* CommuneRewardLogoView.h */,
+				768117AB211C9E2D0094FC06 /* CommuneRollingView.h */,
+				76811652211C9DD40094FC06 /* CommuneSearchAssetProduct.h */,
+				768116C1211C9DEC0094FC06 /* CommuneSearchBarDelegate-Protocol.h */,
+				768116FA211C9DFA0094FC06 /* CommuneSearchCell.h */,
+				76811720211C9E010094FC06 /* CommuneSearchMiddleDelegate-Protocol.h */,
+				7681172C211C9E040094FC06 /* CommuneSearchMiddleViewController.h */,
+				76811754211C9E0F0094FC06 /* CommuneSearchPalletSingleView.h */,
+				768117CD211C9E370094FC06 /* CommuneSearchProduct.h */,
+				76811647211C9DD20094FC06 /* CommuneSearchSuggestView.h */,
+				76811776211C9E1D0094FC06 /* CommuneSearchTextProduct.h */,
+				7681167C211C9DDD0094FC06 /* CommuneSSPalletSingleViewDelegate-Protocol.h */,
+				76811660211C9DD70094FC06 /* CommuneTableViewDelegate-Protocol.h */,
+				7681169B211C9DE40094FC06 /* CommuneTableViewWrapperDelegate-Protocol.h */,
+				7681175A211C9E110094FC06 /* CommuneUserAdViewDelegate-Protocol.h */,
+				768117EB211C9E3F0094FC06 /* CommuneUserButton.h */,
+				76811815211C9E4B0094FC06 /* CommuneUserCenterCategoryFollowDataSource.h */,
+				768116B7211C9DEA0094FC06 /* CommuneUserCenterDao.h */,
+				7681171B211C9E000094FC06 /* CommuneUserCenterDataSourceDelegate-Protocol.h */,
+				768117D9211C9E3A0094FC06 /* CommuneUserCenterDataSourceProtocol-Protocol.h */,
+				7681173D211C9E090094FC06 /* CommuneUserCenterTableViewCell.h */,
+				768117F2211C9E410094FC06 /* CommuneUserUnauthTextLabel.h */,
+				7681170E211C9DFD0094FC06 /* ConfigurationCenterManager.h */,
+				768117BD211C9E320094FC06 /* COShipmentOnlyDateView.h */,
+				768117FF211C9E450094FC06 /* CountryListCell.h */,
+				768117F3211C9E410094FC06 /* CountryListViewController.h */,
+				768117E3211C9E3D0094FC06 /* CouponCenterJumpProtocolHandler.h */,
+				76811635211C9DCE0094FC06 /* CouponCenterSearchHistoryManager.h */,
+				7681167A211C9DDD0094FC06 /* CouponCenterSwitchManager.h */,
+				768116DF211C9DF10094FC06 /* CouponCenterUnityJump.h */,
+				76811678211C9DDD0094FC06 /* CouponCenterViewController.h */,
+				76811837211C9E540094FC06 /* CouponNearByViewControllerDelegate-Protocol.h */,
+				7681161F211C9DCA0094FC06 /* CouponViewTableViewCell.h */,
+				76811737211C9E070094FC06 /* CPACPSManager.h */,
+				76811654211C9DD50094FC06 /* CustomTextField.h */,
+				768116D5211C9DEF0094FC06 /* CustomTextFieldDelegate-Protocol.h */,
+				76811780211C9E200094FC06 /* CYRLayoutManager.h */,
+				768117B8211C9E310094FC06 /* CYRTextStorage.h */,
+				76811695211C9DE30094FC06 /* DebugWebViewController.h */,
+				7681176F211C9E1B0094FC06 /* Decoder.h */,
+				76811830211C9E530094FC06 /* DES_Voice.h */,
+				76811797211C9E260094FC06 /* DidTapSegmentBtnDelegate-Protocol.h */,
+				768117D5211C9E390094FC06 /* DiscussionCounterForProductModel.h */,
+				768116A8211C9DE70094FC06 /* DJXYBaseCollectionViewCell.h */,
+				768116F7211C9DF90094FC06 /* DJXYBaseViewController.h */,
+				768116D6211C9DEF0094FC06 /* DJXYBuryUtil.h */,
+				76811711211C9DFD0094FC06 /* DJXYCollectionViewDelegateWaterfallLayout-Protocol.h */,
+				7681177F211C9E200094FC06 /* DJXYContainerViewController.h */,
+				7681178F211C9E240094FC06 /* DJXYHomeAtcFloorModel.h */,
+				7681164B211C9DD30094FC06 /* DJXYHomeShopFloorModel.h */,
+				7681170C211C9DFC0094FC06 /* DJXYHomeSkuFloorModel.h */,
+				76811785211C9E210094FC06 /* DJXYHomeSkuModel.h */,
+				768116E0211C9DF10094FC06 /* DJXYHomeSwFloorModel.h */,
+				76811761211C9E150094FC06 /* DJXYHomeViewController.h */,
+				7681166D211C9DDA0094FC06 /* DJXYInvFloorCell.h */,
+				7681180F211C9E490094FC06 /* DJXYJumpModel.h */,
+				76811692211C9DE20094FC06 /* DJXYMenuItemModel.h */,
+				7681178A211C9E230094FC06 /* DJXYNavView.h */,
+				768117F4211C9E420094FC06 /* DJXYPageScrollView.h */,
+				768117DB211C9E3B0094FC06 /* DJXYPageSegmentView.h */,
+				7681167D211C9DDE0094FC06 /* DJXYPageSegmentViewProtocal-Protocol.h */,
+				768116F8211C9DF90094FC06 /* DJXYPromotionTagsView.h */,
+				7681174B211C9E0C0094FC06 /* DJXYSkuInfo.h */,
+				768117BB211C9E320094FC06 /* DJXYSwInfo.h */,
+				7681173A211C9E080094FC06 /* DJXYTabResponse.h */,
+				7681166E211C9DDA0094FC06 /* DJXYWaterflowShopFloorCell.h */,
+				7681171D211C9E010094FC06 /* DJXYWordInfo.h */,
+				76811756211C9E100094FC06 /* DownloadManager.h */,
+				768117D7211C9E3A0094FC06 /* DPGDetailAttentionFollowView.h */,
+				768116D1211C9DEE0094FC06 /* DPGDetailCellModelProtocol-Protocol.h */,
+				768117A5211C9E2B0094FC06 /* DPGDetailElementModel.h */,
+				768117A2211C9E2A0094FC06 /* DPGDetailFloorAuthorCell.h */,
+				76811687211C9DE00094FC06 /* DPGDetailJumpModel.h */,
+				76811783211C9E210094FC06 /* DPGDetailLoadMoreCellModel.h */,
+				768117D8211C9E3A0094FC06 /* DPGDetailMTA.h */,
+				7681178C211C9E240094FC06 /* DPGDetailSimilarArticleCollectionCell.h */,
+				768117CB211C9E360094FC06 /* DPGDetailSimilarArticleModel.h */,
+				768116EB211C9DF70094FC06 /* DPGDetailTitleRelatedIconModel.h */,
+				7681162D211C9DCD0094FC06 /* DPGDetailViewController.h */,
+				7681168F211C9DE20094FC06 /* DPGDetailViewModel.h */,
+				768116C5211C9DEC0094FC06 /* DrawCorcer.h */,
+				7681182B211C9E510094FC06 /* EBookProtocolScheme.h */,
+				7681183E211C9E560094FC06 /* EditUserInfoViewCellDelegate-Protocol.h */,
+				768116C6211C9DEC0094FC06 /* EmTabNetworkAccess.h */,
+				7681172A211C9E040094FC06 /* FaceRecognitionConfirmViewController.h */,
+				7681162F211C9DCD0094FC06 /* FeedbackAlbumAssetCellDelegate-Protocol.h */,
+				768116EE211C9DF70094FC06 /* FeedbackCategoryBoxViewDelegate-Protocol.h */,
+				76811771211C9E1C0094FC06 /* FeedbackImageListViewDelegate-Protocol.h */,
+				76811696211C9DE30094FC06 /* FeedbackImageModel.h */,
+				76811803211C9E460094FC06 /* FeedbackImgEnlargeViewController.h */,
+				7681181A211C9E4C0094FC06 /* FeedbackImgEnlargeViewControllerDelegate-Protocol.h */,
+				76811823211C9E4F0094FC06 /* FeedBackInputViewDelegate-Protocol.h */,
+				76811713211C9DFE0094FC06 /* FeedbackJumpProtocolHandler.h */,
+				76811655211C9DD50094FC06 /* FeedBackRecentOptimizeCell.h */,
+				7681180E211C9E490094FC06 /* FeedBackRecentOptimizeTableHeaderView.h */,
+				76811725211C9E030094FC06 /* FeedbackViewController.h */,
+				768116BF211C9DEB0094FC06 /* FilerMenuCell.h */,
+				768116FF211C9DFA0094FC06 /* FinalSearchHistoryHotItemsViewDelegate-Protocol.h */,
+				76811637211C9DCE0094FC06 /* FinalSearchListViewController.h */,
+				76811691211C9DE20094FC06 /* FinalSearchShopViewDelegate-Protocol.h */,
+				76811706211C9DFB0094FC06 /* FinalSearchSortAllCateViewController.h */,
+				7681175B211C9E110094FC06 /* FinalSearchSortTabView.h */,
+				76811822211C9E4E0094FC06 /* FinalSearchSortTabViewDelegate-Protocol.h */,
+				76811649211C9DD20094FC06 /* FinalSearchSubPriceView.h */,
+				768116E3211C9DF40094FC06 /* FinalSearchTableHeaderView.h */,
+				768117E1211C9E3C0094FC06 /* FinanceCardContentInfoComposeProtocol-Protocol.h */,
+				76811835211C9E540094FC06 /* FinanceCardContentInfoDefaultStyle.h */,
+				7681172F211C9E050094FC06 /* FinanceCardContentInfoFactory.h */,
+				7681182D211C9E520094FC06 /* FinderArticelDetailIconFollowView.h */,
+				7681173B211C9E080094FC06 /* FinderArticleCaptchaView.h */,
+				76811662211C9DD80094FC06 /* FinderArticleDetailAddCommentModel.h */,
+				7681181F211C9E4D0094FC06 /* FinderArticleDetailBannerModel.h */,
+				76811643211C9DD10094FC06 /* FinderArticleDetailBigSkuModel.h */,
+				76811730211C9E050094FC06 /* FinderArticleDetailCellFactory.h */,
+				768117A3211C9E2A0094FC06 /* FinderArticleDetailFirstLevelCommentCell.h */,
+				76811796211C9E260094FC06 /* FinderArticleDetailFloatSkuCell.h */,
+				7681169F211C9DE50094FC06 /* FinderArticleDetailParamsData.h */,
+				768117C8211C9E360094FC06 /* FinderArticleDetailPraiseCell.h */,
+				768116BE211C9DEB0094FC06 /* FinderArticleDetailPraiseModel.h */,
+				768116B9211C9DEA0094FC06 /* FinderArticleDetailRelevantChannelModel.h */,
+				76811627211C9DCB0094FC06 /* FinderArticleDetailSkuCell.h */,
+				76811779211C9E1E0094FC06 /* FinderArticleDetailSourceCell.h */,
+				76811810211C9E490094FC06 /* FinderArticleDetailSubCatTitleCell.h */,
+				76811773211C9E1D0094FC06 /* FinderArticleDetailTagSetDataModel.h */,
+				76811679211C9DDD0094FC06 /* FinderArticleDetailTagSetViewController.h */,
+				76811675211C9DDC0094FC06 /* FinderArticleDetailVideoCell.h */,
+				7681176B211C9E1A0094FC06 /* FinderArticleDetailViewController.h */,
+				76811633211C9DCE0094FC06 /* FinderArticleDetailWebViewLoadgingView.h */,
+				76811772211C9E1C0094FC06 /* FinderArticleDetailWebviewModel.h */,
+				7681179D211C9E280094FC06 /* FinderArticleDetailWordCell.h */,
+				768116B1211C9DE80094FC06 /* FinderArticleFloatSkuBackView.h */,
+				768117EE211C9E400094FC06 /* FinderArticleInputView.h */,
+				768117B4211C9E300094FC06 /* FinderArticlePublisherContentView.h */,
+				768116EF211C9DF80094FC06 /* FinderArticlePublisherHeadModel.h */,
+				768117D6211C9E390094FC06 /* FinderAttentionAssisantControl.h */,
+				76811782211C9E210094FC06 /* FinderAttentionBannerCell.h */,
+				7681162E211C9DCD0094FC06 /* FinderAttentionBrandWallCell.h */,
+				7681180D211C9E490094FC06 /* FinderAttentionBrandWallModel.h */,
+				76811684211C9DDF0094FC06 /* FinderAttentionCellMTAModel.h */,
+				7681166F211C9DDB0094FC06 /* FinderAttentionContentPreView.h */,
+				76811728211C9E030094FC06 /* FinderAttentionDPGModel.h */,
+				76811833211C9E530094FC06 /* FinderAttentionLastTimeSeeModel.h */,
+				76811793211C9E260094FC06 /* FinderAttentionListCacheManager.h */,
+				768116E1211C9DF30094FC06 /* FinderAttentionModel.h */,
+				76811708211C9DFC0094FC06 /* FinderAttentionMultiPictureView.h */,
+				7681176D211C9E1B0094FC06 /* FinderAttentionPositionSku.h */,
+				76811620211C9DCA0094FC06 /* FinderAttentionResponse.h */,
+				76811644211C9DD10094FC06 /* FinderAttentionTalentCellHeader.h */,
+				76811787211C9E220094FC06 /* FinderAttentionTodayRecCell.h */,
+				7681163B211C9DCF0094FC06 /* FinderAttentionTodayRecModel.h */,
+				7681179B211C9E280094FC06 /* FinderAttentionVideoCell.h */,
+				7681171A211C9E000094FC06 /* FinderBannerFloorModel.h */,
+				76811645211C9DD10094FC06 /* FinderBaseTableViewCell.h */,
+				7681162C211C9DCC0094FC06 /* FinderCellFactory.h */,
+				76811798211C9E270094FC06 /* FinderCellModelProtocol-Protocol.h */,
+				768117FA211C9E440094FC06 /* FinderCommentDetailViewController.h */,
+				76811699211C9DE40094FC06 /* FinderContentModel.h */,
+				76811792211C9E250094FC06 /* FinderDataCacheManger.h */,
+				768116B8211C9DEA0094FC06 /* FinderDeduplicationExproMTA.h */,
+				76811765211C9E180094FC06 /* FinderFeedbackView.h */,
+				768117AD211C9E2D0094FC06 /* FinderFirstCouponBoardView.h */,
+				7681178D211C9E240094FC06 /* FinderFollowGiftDetailView.h */,
+				768116F0211C9DF80094FC06 /* FinderFollowGiftInfoModel.h */,
+				76811693211C9DE30094FC06 /* FinderFollowGiftView.h */,
+				76811805211C9E460094FC06 /* FinderFollowRecommendLabel.h */,
+				76811657211C9DD50094FC06 /* FinderFollowRecommendModel.h */,
+				7681164A211C9DD20094FC06 /* FinderFollowRecommendView.h */,
+				768117A0211C9E290094FC06 /* FinderFrameViewController.h */,
+				76811806211C9E470094FC06 /* FinderHomeScrollObserver.h */,
+				76811788211C9E220094FC06 /* FinderHomeWebViewContentModel.h */,
+				7681169E211C9DE50094FC06 /* FinderHotBannerConfigModel.h */,
+				768117B2211C9E2F0094FC06 /* FinderHotBigVideoCell.h */,
+				7681171C211C9E000094FC06 /* FinderHotBigVideoModel.h */,
+				7681171F211C9E010094FC06 /* FinderHotCellModelProtocol-Protocol.h */,
+				768116AF211C9DE80094FC06 /* FinderHotMTA.h */,
+				7681176A211C9E1A0094FC06 /* FinderHotResponseModel.h */,
+				76811767211C9E190094FC06 /* FinderHotSmallArticleCell.h */,
+				7681169A211C9DE40094FC06 /* FinderHotSmallArticleModel.h */,
+				7681170B211C9DFC0094FC06 /* FinderHotSmallVideoCellLivingRedView.h */,
+				768117D0211C9E380094FC06 /* FinderHotSmallVideoModel.h */,
+				768117F7211C9E430094FC06 /* FinderHotThreePicArticleCell.h */,
+				76811670211C9DDB0094FC06 /* FinderHotViewModel.h */,
+				7681173C211C9E090094FC06 /* FinderInventoryDetailListModel.h */,
+				7681174F211C9E0E0094FC06 /* FinderInventoryDetailProtocolHandler.h */,
+				7681169C211C9DE50094FC06 /* FinderInventoryDetailSkuView.h */,
 				7681153C211C9CE90094FC06 /* __ARCLiteKeyedSubscripting__-Protocol.h */,
 				768115EF211C9D030094FC06 /* __GiftGiverBackgroundView.h */,
 				768114F7211C9CE10094FC06 /* __JDSHAppSearchJumpModel.h */,
