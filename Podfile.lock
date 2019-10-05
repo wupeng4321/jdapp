@@ -1,11 +1,9 @@
 PODS:
   - Alamofire (4.5.1)
   - Kingfisher (4.5.0)
-  - ReactiveCocoa (7.0.1):
-    - ReactiveSwift (~> 3.0)
-  - ReactiveSwift (3.0.0):
-    - Result (~> 3.2)
-  - Result (3.2.4)
+  - ReactiveCocoa (10.1.0):
+    - ReactiveSwift (~> 6.1)
+  - ReactiveSwift (6.1.0)
   - SDCycleScrollView (1.75):
     - SDWebImage (>= 4.0.0)
   - SDWebImage (4.3.3):
@@ -17,7 +15,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.5.0)
   - Kingfisher (~> 4.5.0)
-  - ReactiveCocoa (~> 7.0)
+  - ReactiveCocoa (~> 10.0)
   - SDCycleScrollView (~> 1.75)
   - SnapKit (~> 4.0.0)
   - SwiftyJSON (~> 4.0.0)
@@ -28,7 +26,6 @@ SPEC REPOS:
     - Kingfisher
     - ReactiveCocoa
     - ReactiveSwift
-    - Result
     - SDCycleScrollView
     - SDWebImage
     - SnapKit
@@ -37,14 +34,13 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   Kingfisher: 26ae0473102b77b575da51960c932431e3745407
-  ReactiveCocoa: a1b5d502d0d1534f9a72981a485b297b17127f83
-  ReactiveSwift: d9fe0db33c1aaabecb092e8de83cf52875c0de6f
-  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
+  ReactiveCocoa: 2f1d942d79072eded6d8c3bc7c2a641d40855a56
+  ReactiveSwift: b78c7259f8ca46368238c895ae33a6a3bf9f811c
   SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: 6300232cbf254681b4efd4b85f22b19e49fe5d63
+PODFILE CHECKSUM: 829a2ae737c70f92e88ce21a0c091039d7ad3d72
 
-COCOAPODS: 1.5.2
+COCOAPODS: 1.7.0

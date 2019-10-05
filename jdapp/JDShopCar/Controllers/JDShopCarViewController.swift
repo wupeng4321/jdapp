@@ -131,9 +131,11 @@ class JDShopCarViewController: AllocDellocViewController, UICollectionViewDelega
                 return array.count
             }
         } else {
-            let recommendCounts = recommendJson!["wareInfoList"].count
-            //添加的有一个item为,为你推荐,推荐测评部分,避免放到header部分有悬停效果
-            return recommendCounts > 0 ? recommendCounts + 1 : 0
+            if(recommendJson != nil) {
+                let recommendCounts = recommendJson!["wareInfoList"].count
+                //添加的有一个item为,为你推荐,推荐测评部分,避免放到header部分有悬停效果
+                return recommendCounts > 0 ? recommendCounts + 1 : 0  
+            }
         }
         return 1
     }
